@@ -1,3 +1,30 @@
+""" Method2: Two’s Complement of negative
+
+ref: https://notfalse.net/20/signed-number-representations#2-Two8217s-Complement
+
+ex: 8bit: -128~127 => 254 = -2
+    val = 254 -> 11111110
+    val ^ 0ff -> 11111111
+                 --------
+                 00000001 -> 1, ~1 = -2
+
+@Runtime: 28ms (98.50%)
+@Memory Usage: 13.3 MB (13.55%)
+"""
+def getSum2(a: int, b: int) -> int:
+    # 32bit: -2147483648 ~ 2147483647
+    MAX = 0x7FFFFFFF # 2147483647
+    mask = 0xFFFFFFFF
+
+    while b:
+        carry = a & b
+        a = (a ^ b) & mask      # 確保為32bit
+        b = (carry << 1) & mask # 確保為32bit
+
+    # 如果a是負數，需做修正
+    return a if a <= MAX else ~(a ^ mask)
+
+
 """Bit manipulation
 
 Ref: https://www.youtube.com/watch?v=qq64FrA2UXQ
