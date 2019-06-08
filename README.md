@@ -8,8 +8,8 @@
 ## Tree
 | No. | Title | Solution | Difficulty |
 | --- | ----- | -------- | ---------- |
+| 94  |[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/tree/binary_tree_inorder_traversal.py) | Medium |
 | 100 |[Same Tree](https://leetcode.com/problems/same-tree/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/tree/same_tree.py) | Easy |
-
 
 ## Other
 | No. | Title | Solution | Difficulty |

@@ -1,4 +1,4 @@
-# Definition for a binary search tree
+# Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
         self.val = x
