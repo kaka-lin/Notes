@@ -2,7 +2,8 @@ from linked_list import ListNode
 
 """Two Pointers
 
-Time complexity: O(N)
+Time complexity: O(m+n)
+Space complexity: O(1)
 
 @Runtime: 192ms (91.82%)
 @Memory Usage: 41.8 MB (67.17%)
