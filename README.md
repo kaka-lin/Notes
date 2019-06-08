@@ -21,3 +21,7 @@
 | No. | Title | Solution | Difficulty |
 | --- | ----- | -------- | ---------- |
 | 7   |[Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/other/reverse_integer.py) | Easy |
+| 9   |[Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/other/palindrome_number.py) | Easy |
+
+
+
