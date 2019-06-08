@@ -5,6 +5,11 @@
 | --- | ----- | -------- | ---------- |
 | 1   |[Tow Sum](https://leetcode.com/problems/two-sum/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/array/two_sum.py) | Easy |
 
+## Linked List
+| No. | Title | Solution | Difficulty |
+| --- | ----- | -------- | ---------- |
+| 160 |[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/linked-list/intersection_of_two_linked_list.py) | Easy |
+
 ## Tree
 | No. | Title | Solution | Difficulty |
 | --- | ----- | -------- | ---------- |
