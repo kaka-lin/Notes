@@ -11,6 +11,12 @@
 | 94  |[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/tree/binary_tree_inorder_traversal.py) | Medium |
 | 100 |[Same Tree](https://leetcode.com/problems/same-tree/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/tree/same_tree.py) | Easy |
 
+## Bit manipulation
+| No. | Title | Solution | Difficulty |
+| --- | ----- | -------- | ---------- |
+| 371 |[Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/bit-manipulation/sum_of_two_integers.py) | Easy |
+
+
 ## Other
 | No. | Title | Solution | Difficulty |
 | --- | ----- | -------- | ---------- |
