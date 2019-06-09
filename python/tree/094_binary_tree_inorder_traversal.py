@@ -2,6 +2,8 @@ from tree import TreeNode
 
 """Recursive Approach
 
+Inorder: left -> root -> right
+
 Time complexity: O(N)
 
 @Runtime: 32ms (95.17%)
