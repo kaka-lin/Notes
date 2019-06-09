@@ -1,13 +1,12 @@
-from linked_list import ListNode
-
 """Two Pointers
 
-Time complexity: O(m+n)
-Space complexity: O(1)
+# Time complexity: O(m+n)
+# Space complexity: O(1)
 
-@Runtime: 192ms (91.82%)
-@Memory Usage: 41.8 MB (67.17%)
+# Runtime: 192ms (91.82%)
+# Memory Usage: 41.8 MB (67.17%)
 """
+from linked_list import ListNode
 def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
     if headA is None or headB is None:
         return None

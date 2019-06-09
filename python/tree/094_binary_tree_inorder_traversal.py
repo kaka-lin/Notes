@@ -1,14 +1,13 @@
-from tree import TreeNode
-
 """Recursive Approach
 
 Inorder: left -> root -> right
 
 Time complexity: O(N)
 
-@Runtime: 32ms (95.17%)
-@Memory Usage: 13.3 MB (10.50%)
+# Runtime: 32ms (95.17%)
+# Memory Usage: 13.3 MB (10.50%)
 """
+from tree import TreeNode
 def inorderTraversal(root: TreeNode) -> List[int]:
     if root is None:
         return []

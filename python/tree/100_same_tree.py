@@ -1,5 +1,3 @@
-from tree import TreeNode
-
 """Recursion
 
 Time complexity: O(N)
@@ -7,6 +5,7 @@ Time complexity: O(N)
 @Runtime: 36ms (86.76%)
 @Memory Usage: 13.3 MB (17.64%)
 """
+from tree import TreeNode
 def isSameTree(p: TreeNode, q: TreeNode) -> bool:
     if p is None and q is None:
         return True

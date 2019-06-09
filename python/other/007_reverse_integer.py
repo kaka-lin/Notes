@@ -1,7 +1,7 @@
-"""Reversing a string
+"""String
 
-@Runtime: 40ms (81.25%)
-@Memory Usage: 13.4 MB (12.43%)
+# Runtime: 40ms (81.25%)
+# Memory Usage: 13.4 MB (12.43%)
 """
 def reverse(x: int) -> int:
     if x == 0:
@@ -27,8 +27,8 @@ def reverse(x: int) -> int:
 Repeatedlly "pop" the last digit of x 
 and "push" it to the back of the rev.
 
-@Runtime: 36ms (91.37%)
-@Memory Usage: 13.3 MB (26.14%)
+# Runtime: 36ms (91.37%)
+# Memory Usage: 13.3 MB (26.14%)
 """
 def reverse2(x: int) -> int:
     if x == 0:

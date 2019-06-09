@@ -30,8 +30,8 @@ Conclusion:
     2. Do the "addition (^)
     3. left-shifted carry (<<)
 
-@Runtime: 32ms (93.36%)
-@Memory Usage: 13.3 MB (14.29%)
+# Runtime: 32ms (93.36%)
+# Memory Usage: 13.3 MB (14.29%)
 """
 
 def getSum(a: int, b: int) -> int:
@@ -60,8 +60,8 @@ ex: 8bit: -128~127 => 254 = -2
                  --------
                  00000001 -> 1, ~1 = -2
 
-@Runtime: 28ms (98.50%)
-@Memory Usage: 13.3 MB (13.55%)
+# Runtime: 28ms (98.50%)
+# Memory Usage: 13.3 MB (13.55%)
 """
 def getSum2(a: int, b: int) -> int:
     # 32bit: -2147483648 ~ 2147483647
