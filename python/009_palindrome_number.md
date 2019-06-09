@@ -47,8 +47,8 @@ class Solution:
 
 ### Time complexity: 
 
-- O(n)
+- O(log(x))
 
 ### Space complexity
 
-- O(n)
+- O(1)

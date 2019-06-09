@@ -50,8 +50,6 @@ class Solution:
 
 - O(n)
 
----
-
 ## Solution 2: Bit Manipulation
 
 ### Concept
@@ -72,7 +70,7 @@ class Solution:
     ```
     a xor b xor a = (a xor a) xor b = 0 xor b = b
     ```
-
+---
 - Runtime: 36 ms (97.49%)
 - Memory Usage: 14.7 MB (69.52%)
 

@@ -20,7 +20,7 @@ Ref: https://www.youtube.com/watch?v=qq64FrA2UXQ
 
 ### Explain 
 
-#### key point
+key point
 
 ```
 2 -> 10
@@ -30,7 +30,7 @@ Ref: https://www.youtube.com/watch?v=qq64FrA2UXQ
 explain with `1 + 3`:
 
 ``` 
-       11 => this is called carry
+   11 => this is called carry
 1: 001 
 3: 011
    ---
@@ -58,6 +58,7 @@ if we use "xor(^)":
 3. left-shifted carry (<<)
 
 ---
+
 - Runtime: 32ms (93.36%)
 - Memory Usage: 13.3 MB (14.29%)
 
@@ -95,6 +96,8 @@ Ref: https://notfalse.net/20/signed-number-representations#2-Two8217s-Complement
                  00000001 -> 1, ~1 = -2
 ```
 
+---
+
 - Runtime: 28ms (98.50%)
 - Memory Usage: 13.3 MB (13.55%)
 
@@ -112,3 +115,4 @@ class Solution:
 
         # 如果a是負數，需做修正
         return a if a <= MAX else ~(a ^ mask)
+```
