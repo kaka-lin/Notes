@@ -8,6 +8,7 @@
 ## Linked List
 | No. | Title | Solution | Difficulty |
 | --- | ----- | -------- | ---------- |
+| 21  |[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/linked-list/021_merge_two_sorted_list.md) | Easy |
 | 160 |[Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/linked-list/160_intersection_of_two_linked_list.py) | Easy |
 
 ## Tree
