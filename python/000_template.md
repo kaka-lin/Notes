@@ -10,8 +10,8 @@
 
 ## Solution:
 
-- Runtime:
-- Memory Usage:
+- Runtime: ms (%)
+- Memory Usage: MB (%)
 
 ```python
 ```
