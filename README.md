@@ -17,6 +17,7 @@
 |  100  | [Same Tree](https://leetcode.com/problems/same-tree/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/100_same_tree.md) | Tree | Easy |
 |  136  | [Single Number](https://leetcode.com/problems/single-number/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/136_single_number.md) | List, Hash Table, Bit Manipulation | Easy |
 |  160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/160_intersection_of_two_linked_list.md) | Linked List | Easy |
+|  167  | [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/167_two_sum_II_input_array_is_sorted.md) | Array, Two Pointers, Binary Search | Easy |
 |  191  | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/191_number_of_1_bits.md) | Bit Manipulation | Easy |
 |  242  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/242_valid_anagram.md) | Hash Table | Easy |
 |  371  | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/371_sum_of_two_integers.md) | Bit Manipulation | Easy |
