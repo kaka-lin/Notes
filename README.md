@@ -9,6 +9,7 @@
 |  13   | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/013_roman_to_integer.md) | Math, String | Easy |
 |  21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/021_merge_two_sorted_list.md) | Linked List | Easy |
 |  27   | [Remove Element](https://leetcode.com/problems/remove-element/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/027_remove_element.md) | Array, Two Pointers | Easy |
+|  28  | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/028_implement_strStr().md) | String, Two Pointers | Easy |
 |  53   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/053_maximum_subarray.md) | Dynamic Programming | Easy |
 |  70   | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/070_climbing_stairs.md) | Dynamic Programming | Easy |
 |  83   | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/083_remove_duplicates_from_sorted_list.md) | Linked List | Easy |
