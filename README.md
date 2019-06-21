@@ -7,7 +7,7 @@
 |   7   | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/007_reverse_integer.md) | | Easy |
 |   9   | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/009_palindrome_number.md) | | Easy |
 |  13   | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/013_roman_to_integer.md) | Math, String | Easy |
-|  19   | [Remove Nth Node From End of Listr](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/019_remove_nth_node_from_end_of_list.md) | Linked List, Two Pointers | Medium |
+|  19   | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/019_remove_nth_node_from_end_of_list.md) | Linked List, Two Pointers | Medium |
 |  21   | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/021_merge_two_sorted_list.md) | Linked List | Easy |
 |  27   | [Remove Element](https://leetcode.com/problems/remove-element/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/027_remove_element.md) | Array, Two Pointers | Easy |
 |  28  | [Implement strStr()](https://leetcode.com/problems/implement-strstr/) | [Python](https://github.com/kaka-lin/leetcode/tree/master/python/028_implement_strStr().md) | String, Two Pointers | Easy |

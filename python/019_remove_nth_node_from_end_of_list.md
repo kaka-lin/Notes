@@ -15,14 +15,14 @@ After removing the second node from the end, the linked list becomes 1->2->3->5.
 
 ## Solution:
 
-1. Using `dummy head1 to treat special case (like the node we want to delete is the head in the linked list).
+1. Using `dummy head` to treat special case (like the node we want to delete is the head in the linked list).
 
 2. Using a table to save `current node`:
 
     - we can know the length of the linked list
     - we can quickly to get the node that we want to delete and the previous node through an index.
-    - we specify `prevous.next as delete.next` (delete: the node we want to delete)
-    - we specify `delete.next as None`
+    - we specify `prevous.next` as `delete.next` (delete: the node we want to delete)
+    - we specify `delete.next` as `None`
     - return `dummy.next`
 
     ```
