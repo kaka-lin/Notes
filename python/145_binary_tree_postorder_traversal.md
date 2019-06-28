@@ -1,13 +1,13 @@
-# 94. Binary Tree Inorder Traversal
+# 145. Binary Tree Postorder Traversal
 
 #### Discription
 
-Given a binary tree, return the `inorder` traversal of its nodes' values.
+Given a binary tree, return the `postorder` traversal of its nodes' values.
 
 inorder:
 
 ```
-left tree -> root tree -> right tree
+left tree -> rigth tree -> root tree
 ``` 
 
 #### Example:
@@ -20,13 +20,13 @@ Input: [1,null,2,3]
     /
    3
 
-Output: [1,3,2]
+Output: [3,2,1]
 ```
 
 ## Solution 1: Recursive
 
-- Runtime: 32 ms (91.99%)
-- Memory Usage: 13.2 MB (56.18%)
+- Runtime: 32 ms (91.82%)
+- Memory Usage: 13 MB (95.36%)
 
 ```python
 # Definition for a binary tree node.
@@ -37,22 +37,22 @@ Output: [1,3,2]
 #         self.right = None
 
 class Solution:
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
         if root is None:
             return []
 
-        ans = []
-        self._inorderTraversal(root, ans)
-        return ans
+        array = []
+        self.postorderHelper(root, array)
+        return array
 
-    def _inorderTraversal(self, node: TreeNode, ans: List[int]):
-        if node.left:
-            self._inorderTraversal(node.left, ans)
+    def postorderHelper(self, root: TreeNode, array: List[int]):
+        if root.left:
+            self.postorderHelper(root.left, array)
 
-        ans.append(node.val)
+        if root.right:
+            self.postorderHelper(root.right, array)
 
-        if node.right:
-            self._inorderTraversal(node.right, ans)
+        array.append(root.val)
 ```
 
 ### Time complexity: 
@@ -66,8 +66,8 @@ class Solution:
 
 ## Solution 2: Iterating
 
-- Runtime: 32 ms (91.99%)
-- Memory Usage: 13.1 MB (62.12%)
+- Runtime: 36 ms (75.55%)
+- Memory Usage: 13.2 MB (37.93%)
 
 ```python
 # Definition for a binary tree node.
@@ -78,7 +78,8 @@ class Solution:
 #         self.right = None
 
 class Solution:
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
+        pre = None
         array = []
         stack = []
 
@@ -88,8 +89,15 @@ class Solution:
                 root = root.left
 
             root = stack.pop()
+
+            if root.right and pre != root.right:
+                stack.append(root)
+                root = root.right
+                continue
+
             array.append(root.val)
-            root = root.right
+            pre = root
+            root = None
 
         return array
 ```
