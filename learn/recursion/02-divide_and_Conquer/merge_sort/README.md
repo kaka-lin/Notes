@@ -4,7 +4,7 @@ One of the classic examples of the divide-and-conquer algorithm is the merge sor
 
 ## Intuition
 
-There are two apporaches to implement the merge sort algorithm: `top-down` or `bottom-up`.
+There are two apporaches to implement the merge sort algorithm: [top-down](#topdown) or [bottom-up](#bottomup).
 
 The merge sort algorithm can be divided into three steps, like all `divide-and-conquer` algorithms.
 
@@ -12,7 +12,9 @@ The merge sort algorithm can be divided into three steps, like all `divide-and-c
     2. Sort each of the sublists recursively. (Conquer)
     3. Merge the sorted sublists to produce new sorted list. (Combine)
 
-## Top-down Approach (Using recursion):
+<span id="topdown">
+
+## 1. Top-down Approach (Recursion):
 
     1. In the first step, we divide the list into two sublists. (Divide)
     2. The in the next step, we recursively sort the sublists in the previous step. (Conquer)
@@ -28,11 +30,25 @@ We demonstrate an example of the merge process as following:
 
 <img src="./img/merge_sort_merge.gif">
 
+<span id="bottomup">
+
 ### Other gifs of merge sort
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif">
 
+## 2. Bottom-up Approach (Iteratively)
 
+In the `bottom-up` approach
+
+    1. In the first, We divide the list into the sublists of a single element. (Divide)
+    2. Each of the sublists is then sorted already. (Conquer)
+    3. Finally we merge the sublist two at a time until a single list remains. (Combine)
+
+<p>
+    <img src="./img/bottomup_mergesort.png" />
+    <br>
+    <center><em>Fig.2  Bottom-up Merge Sort</em></center> 
+</p>
 
 ## Reference
 

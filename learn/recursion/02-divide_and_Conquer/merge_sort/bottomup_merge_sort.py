@@ -1,16 +1,26 @@
+""" Bottom-up Merge Sort
+
+Iteratively
+
+"""
+
 from typing import List
 
-def merge_sort(num_lists: List[int]) -> List[int]:
-    # bottom case: empty or list of  a single element.
-    if len(num_lists) <= 1:
-        return num_lists
+def merge_sort(nums: List[int]) -> List[int]:
+    length = len(nums)
+    size = 1
+    result = nums
+
+    while size < length:
+        for index in range(0, length, size * 2):
+            left = result[index : index + size]
+            right = result[index + size : index + size * 2]
+            result[index : index + size * 2] = merge(left, right)
+
+        size *= 2
     
-    mid = len(num_lists) // 2
-    left = merge_sort(num_lists[:mid])
-    right = merge_sort(num_lists[mid:])
-
-    return merge(left, right)
-
+    return result
+        
 def merge(left: List[int], right: List[int]) -> List[int]:
     result = []
     while left and right:
