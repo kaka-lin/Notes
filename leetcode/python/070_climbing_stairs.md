@@ -31,19 +31,18 @@ Explanation: There are three ways to climb to the top.
 
 ## Solution: Dynamic Programming (Bottom-up)
 
-- Runtime: 28 ms (98.21%)
-- Memory Usage: 13.1 MB (59.73%)
+- Runtime: 24 ms (93.8%)
+- Memory Usage: 12.8 MB (100%)
 
 ```python
 class Solution:
     def climbStairs(self, n: int) -> int:
-        if n == 1:
-            return 1
+        if n <= 2:
+            return n
 
         table = [0] * (n+1)
         table[1] = 1
         table[2] = 2
-
         for i in range(3, n+1):
             table[i] = table[i-1] + table[i-2]
 
