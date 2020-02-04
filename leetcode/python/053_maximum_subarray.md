@@ -12,7 +12,55 @@ Output: 6
 Explanation: [4,-1,2,1] has the largest sum = 6.
 ```
 
-## Solution: Dynamic Programming
+## Solution 1: Divide and Conquer
+
+Ref: [divide and conquer - maximum subarray](https://github.com/kaka-lin/Notes/tree/master/knowledge/recursion/02_divide_and_Conquer/maximum_subarray)
+
+- Runtime: 124 ms (7.29%)
+- Memory Usage: 13.6 MB (65.85%)
+
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        if len(nums) == 1:
+            return nums[0]
+    
+        k = len(nums) // 2
+        left_sum = self.maxSubArray(nums[:k])
+        right_sum = self.maxSubArray(nums[k:])
+        middle_sum = self.maxCrossSubArray(nums[:k], nums[k:])
+
+        return max(left_sum, right_sum, middle_sum)
+    
+    def maxCrossSubArray(self, left, right):
+        
+        left_sum = float("-inf")
+        _sum = 0
+        for index in range(len(left)-1, -1, -1):
+            _sum += left[index]
+            if _sum > left_sum:
+                left_sum = _sum
+
+        right_sum = float("-inf")
+        _sum = 0
+        for index in range(len(right)):
+            _sum += right[index]
+            if _sum > right_sum:
+                right_sum = _sum
+        
+        return left_sum + right_sum
+        
+```
+
+### Time complexity
+
+- $O(nlogn)$
+
+### Space complexity
+
+- $O(nlogn)$
+
+## Solution 2: Dynamic Programming
 
 If sum[i-1] is negative, it will only make a smaller sum, so if sum[i-1] is negative, we let sum[i] is nums[i], and we add only if sum[i-1] is non-negative.
 
@@ -44,8 +92,8 @@ class Solution:
 
 ### Time complexity
 
-- O(n)
+- $O(n)$
 
 ### Space complexity
 
-- O(n)
+- $O(n)$
