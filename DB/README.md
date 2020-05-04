@@ -1,6 +1,6 @@
 # Database
 
-- [Database basics](https://github.com/kaka-lin/Notes/tree/master/Db/db-basics.md)
+- [Database basics](https://github.com/kaka-lin/Notes/tree/master/DB/db-basics.md)
 
 ## Prepare
 
@@ -29,5 +29,5 @@ $ pip3 install -r requirements.txt
 
 ## Relational database (關聯式資料庫)
 
-- [SQLite](https://github.com/kaka-lin/Notes/tree/master/Db/SQLite)
+- [SQLite](https://github.com/kaka-lin/Notes/tree/master/DB/SQLite)
 - [MySQL]()
