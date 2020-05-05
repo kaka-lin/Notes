@@ -10,12 +10,23 @@
 
 ```bash
 $ sudo apt-get update && sudo apt-get upgrade
-$ sudo apt-get install sqlite3
+
+# install SQlite
+$ sudo apt install sqlite3
+
+# install MySQL
+$ sudo apt install mysql-server
+$ sudo apt install mysql-client
+$ sudo apt install libmysqlclient-dev
 ```
 
 #### Mac
 
 ```bash
+# install SQLite
+$ brew install sqlite
+
+# install MySQL
 $ brew install openssl
 $ brew install mysql
 $ brew install mysql-connector-c
@@ -30,4 +41,4 @@ $ pip3 install -r requirements.txt
 ## Relational database (關聯式資料庫)
 
 - [SQLite](https://github.com/kaka-lin/Notes/tree/master/DB/SQLite)
-- [MySQL]()
+- [MySQL](https://github.com/kaka-lin/Notes/tree/master/DB/MySQL)
