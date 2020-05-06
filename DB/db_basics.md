@@ -1,6 +1,6 @@
-# Database Intro
+# Database Basics
 
-- [Database Intro](#database-intro)
+- [Database Basics](#database-basics)
   - [What is a Database](#what-is-a-database)
     - [The basic functions for manipulating a database: CRUD](#the-basic-functions-for-manipulating-a-database-crud)
   - [Database Management System (DBMS)](#database-management-system-dbms)
