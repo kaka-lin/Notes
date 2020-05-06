@@ -32,7 +32,6 @@
 
 ![](./images/crud.png)
 
-
 ## Database Management System (DBMS)
 
 資料庫是儲存資料的地方，但是如果資料只是儲存到電腦的檔案中，其效用並不大，因此我們需要一套能夠讓我們很方便的管理這些資料庫檔案的軟體，就是所謂的`資料庫管理系統(Database Management System, DBMS)`
@@ -71,12 +70,10 @@ Database System = Database + DBMS
 
     * Image reference: [陳建成老師 - 資料庫系統](http://cc.cust.edu.tw/~ccchen/4_2.html)
 
-
 而現今主流的資料庫類型為：
 
 1. [關聯式資料庫(Relational Database Management System, RDBMS)](https://zh.wikipedia.org/zh-tw/%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93)
 2. [NoSQL(Not Only SQL)資料庫](https://zh.wikipedia.org/wiki/NoSQL)
-
 
 ### 關聯式資料庫
 
