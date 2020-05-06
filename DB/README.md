@@ -1,6 +1,6 @@
-# Database
+# Database Learning Notes
 
-- [Database basics](https://github.com/kaka-lin/Notes/tree/master/DB/db-basics.md)
+- [Database Intro](https://github.com/kaka-lin/Notes/tree/master/DB/db_intro.md)
 
 ## Prepare
 
