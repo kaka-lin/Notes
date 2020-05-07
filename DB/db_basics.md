@@ -191,6 +191,23 @@ SQL語法使用分號`;`當作結尾，英文不分大小寫，單字間使用�
 
 - [微軟-資料類型 (Transact-SQL)](https://docs.microsoft.com/zh-tw/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15)
 
+---
+
 ## Object Relational Mapping (ORM)
 
-用接近一般程式語言的方式來操作資料庫，不需直接執行SQL語法
+Object Relational Mapping (ORM): 物件關聯對映
+
+    
+    將關聯式資料庫映射至物件導向的資料抽象化技術，
+    讓程式開發人員可以用操作物件的方式對資料庫進行操作，
+    而不是直接使用SQL語法對資料庫進行操作。
+
+- 優點：
+  - 通用性：可以不用管底層的資料庫是使用哪種，僅須使用同一套語法攥寫即可，靈活性與擴展性佳。
+  - 安全性：可以防止SQL injection (SQL注入) 攻擊
+    - 就是駭客在傳輸到網站Server的資料裡直接寫SQL，當我們網站某段SQL直接讀取駭客傳來的資料並執行時，如果傳來的是正常的資料就會沒事，如果傳來的是SQL語句，且包含惡意（如：DELETE）就會讓網站資料被移除。
+  - 簡化性：使得我們資料庫結構化，如ORM可以將MySQL轉換成Python工程師可以讀懂的Class，可讀性高。
+
+- 缺點：
+  - 效能：自動化進行關聯式資料庫的Mapping一定需要消耗一定的效能。
+  - 複雜的查詢上ORM仍然力不從心，如：多表聯查、where條件複雜的查詢時。

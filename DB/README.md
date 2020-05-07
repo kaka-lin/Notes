@@ -2,43 +2,17 @@
 
 - [Database Basics](https://github.com/kaka-lin/Notes/tree/master/DB/db_basics.md)
 
-## Prepare
+- Relational database (關聯式資料庫)
+  - [SQLite](https://github.com/kaka-lin/Notes/tree/master/DB/SQLite)
+  - [MySQL](https://github.com/kaka-lin/Notes/tree/master/DB/MySQL)
 
-### 1. Install database
 
-#### Ubuntu
+## Install requirement packages
 
-```bash
-$ sudo apt-get update && sudo apt-get upgrade
-
-# install SQlite
-$ sudo apt install sqlite3
-
-# install MySQL
-$ sudo apt install mysql-server
-$ sudo apt install mysql-client
-$ sudo apt install libmysqlclient-dev
-```
-
-#### Mac
-
-```bash
-# install SQLite
-$ brew install sqlite
-
-# install MySQL
-$ brew install openssl
-$ brew install mysql
-$ brew install mysql-connector-c
-```
-
-### 2. Install requirement packages
+- [jupyter](https://jupyter.org/)
+- [SQLAlchemy](https://www.sqlalchemy.org/)
+- [ipython-sql](https://github.com/catherinedevlin/ipython-sql)
 
 ```bash
 $ pip3 install -r requirements.txt
 ```
-
-## Relational database (關聯式資料庫)
-
-- [SQLite](https://github.com/kaka-lin/Notes/tree/master/DB/SQLite)
-- [MySQL](https://github.com/kaka-lin/Notes/tree/master/DB/MySQL)
