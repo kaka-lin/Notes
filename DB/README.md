@@ -2,6 +2,8 @@
 
 - [Database Basics](https://github.com/kaka-lin/Notes/tree/master/DB/db_basics.md)
 
+- [SQL Style Guide](https://www.sqlstyle.guide/zh-tw/)
+
 - Relational database (關聯式資料庫)
   - [SQLite](https://github.com/kaka-lin/Notes/tree/master/DB/SQLite)
   - [MySQL](https://github.com/kaka-lin/Notes/tree/master/DB/MySQL)
