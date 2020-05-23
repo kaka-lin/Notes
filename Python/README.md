@@ -1,6 +1,6 @@
 # Python Tutorial
 
-- [Installing Python]()
+- [Installing Python](https://github.com/kaka-lin/Notes/tree/master/Python/python-enviroment-setup/README.md)
 
 ## Table of Contents
 
