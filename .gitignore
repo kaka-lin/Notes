@@ -17,3 +17,6 @@ __pycache__
 
 # jupyter notebook
 .ipynb_checkpoints
+
+# auth.json
+*_auth.json
