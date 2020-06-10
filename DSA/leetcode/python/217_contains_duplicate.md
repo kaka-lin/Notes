@@ -1,11 +1,8 @@
 ---
 title: "217 Contains Duplicate"
 date: 2020-06-10
----
-
----
-title: "217 Contains Duplicate"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 217. Contains Duplicate

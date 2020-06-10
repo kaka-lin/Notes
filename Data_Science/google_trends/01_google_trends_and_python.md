@@ -1,6 +1,8 @@
 ---
 title: "01 Google Trends And Python"
 date: 2020-06-10
+tags: [Data Science, Google Trends]
+categories: [Data Science, Google Trends]
 ---
 
 # Get and Analysis the result of Google Trends with Python

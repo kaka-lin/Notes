@@ -1,11 +1,8 @@
 ---
 title: "242 Valid Anagram"
 date: 2020-06-10
----
-
----
-title: "242 Valid Anagram"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 242. Valid Anagram

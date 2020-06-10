@@ -1,6 +1,8 @@
 ---
 title: "05 Function"
 date: 2020-06-10
+tags: [Python]
+categories: [Python]
 ---
 
 # Function 函式

@@ -1,11 +1,8 @@
 ---
 title: "053 Maximum Subarray"
 date: 2020-06-10
----
-
----
-title: "053 Maximum Subarray"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 53. Maximum Subarray

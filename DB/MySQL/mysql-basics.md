@@ -1,6 +1,8 @@
 ---
 title: "Mysql Basics"
 date: 2020-06-10
+tags: [Database, MySQL]
+categories: [Database]
 ---
 
 # MySQL - Basics

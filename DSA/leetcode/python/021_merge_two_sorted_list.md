@@ -1,11 +1,8 @@
 ---
 title: "021 Merge Two Sorted List"
 date: 2020-06-10
----
-
----
-title: "021 Merge Two Sorted List"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 21. Merge Two Sorted Lists

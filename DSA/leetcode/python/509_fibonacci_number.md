@@ -1,11 +1,8 @@
 ---
 title: "509 Fibonacci Number"
 date: 2020-06-10
----
-
----
-title: "509 Fibonacci Number"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 509. Fibonacci Number

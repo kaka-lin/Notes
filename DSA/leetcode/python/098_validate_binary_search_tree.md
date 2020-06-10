@@ -1,11 +1,8 @@
 ---
 title: "098 Validate Binary Search Tree"
 date: 2020-06-10
----
-
----
-title: "098 Validate Binary Search Tree"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 98. Validate Binary Search Tree

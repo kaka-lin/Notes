@@ -1,11 +1,8 @@
 ---
 title: "118 Pascals Triangle"
 date: 2020-06-10
----
-
----
-title: "118 Pascals Triangle"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 118. Pascal's Triangle

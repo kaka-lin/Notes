@@ -1,6 +1,8 @@
 ---
 title: "03 List"
 date: 2020-06-10
+tags: [Python]
+categories: [Python]
 ---
 
 # List 串列

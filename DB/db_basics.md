@@ -1,11 +1,8 @@
 ---
 title: "Db Basics"
 date: 2020-06-10
----
-
----
-title: "Db Basics"
-date: 2020-06-10
+tags: [Database]
+categories: [Database]
 ---
 
 # Database Basics
@@ -14,14 +11,14 @@ date: 2020-06-10
   - [What is a Database](#what-is-a-database)
     - [The basic functions for manipulating a database: CRUD](#the-basic-functions-for-manipulating-a-database-crud)
   - [Database Management System (DBMS)](#database-management-system-dbms)
-  - [資料庫的類型](#%e8%b3%87%e6%96%99%e5%ba%ab%e7%9a%84%e9%a1%9e%e5%9e%8b)
-    - [關聯式資料庫](#%e9%97%9c%e8%81%af%e5%bc%8f%e8%b3%87%e6%96%99%e5%ba%ab)
-    - [非關聯式資料庫(NoSQL)](#%e9%9d%9e%e9%97%9c%e8%81%af%e5%bc%8f%e8%b3%87%e6%96%99%e5%ba%abnosql)
-      - [SQL與NoSQL差異](#sql%e8%88%87nosql%e5%b7%ae%e7%95%b0)
+  - [資料庫的類型](#資料庫的類型)
+    - [關聯式資料庫](#關聯式資料庫)
+    - [非關聯式資料庫(NoSQL)](#非關聯式資料庫nosql)
+      - [SQL與NoSQL差異](#sql與nosql差異)
   - [Database Transaction](#database-transaction)
   - [SQL](#sql)
-    - [SQL語法](#sql%e8%aa%9e%e6%b3%95)
-      - [SQL - 四種語言](#sql---%e5%9b%9b%e7%a8%ae%e8%aa%9e%e8%a8%80)
+    - [SQL語法](#sql語法)
+      - [SQL - 四種語言](#sql---四種語言)
     - [SQL Datatype](#sql-datatype)
   - [Object Relational Mapping (ORM)](#object-relational-mapping-orm)
 

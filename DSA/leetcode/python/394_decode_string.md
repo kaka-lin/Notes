@@ -1,11 +1,8 @@
 ---
 title: "394 Decode String"
 date: 2020-06-10
----
-
----
-title: "394 Decode String"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 394. Decode String

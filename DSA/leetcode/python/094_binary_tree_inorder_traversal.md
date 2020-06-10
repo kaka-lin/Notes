@@ -1,11 +1,8 @@
 ---
 title: "094 Binary Tree Inorder Traversal"
 date: 2020-06-10
----
-
----
-title: "094 Binary Tree Inorder Traversal"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 94. Binary Tree Inorder Traversal

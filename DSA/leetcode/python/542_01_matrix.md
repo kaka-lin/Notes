@@ -1,11 +1,8 @@
 ---
 title: "542 01 Matrix"
 date: 2020-06-10
----
-
----
-title: "542 01 Matrix"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 542. 01 Matrix

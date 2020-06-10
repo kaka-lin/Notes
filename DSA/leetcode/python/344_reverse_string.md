@@ -1,11 +1,8 @@
 ---
 title: "344 Reverse String"
 date: 2020-06-10
----
-
----
-title: "344 Reverse String"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 344. Reverse String

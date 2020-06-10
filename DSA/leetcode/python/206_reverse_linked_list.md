@@ -1,11 +1,8 @@
 ---
 title: "206 Reverse Linked List"
 date: 2020-06-10
----
-
----
-title: "206 Reverse Linked List"
-date: 2020-06-10
+ttags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 206. Reverse Linked List

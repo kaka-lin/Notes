@@ -1,11 +1,8 @@
 ---
 title: "557 Reverse Words In A String Iii"
 date: 2020-06-10
----
-
----
-title: "557 Reverse Words In A String Iii"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 557. Reverse Words in a String III

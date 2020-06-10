@@ -1,6 +1,8 @@
 ---
 title: "02 Google Trends To Google Data Studio"
 date: 2020-06-10
+tags: [Data Science, Google Trends]
+categories: [Data Science, Google Trends]
 ---
 
 # Google Trends to Google Data Studio

@@ -1,11 +1,8 @@
 ---
 title: "240 Search A 2d Matrix Ii"
 date: 2020-06-10
----
-
----
-title: "240 Search A 2d Matrix Ii"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 240. Search a 2D Matrix II

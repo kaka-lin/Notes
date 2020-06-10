@@ -1,6 +1,8 @@
 ---
 title: "02 Flow Control"
 date: 2020-06-10
+tags: [Python]
+categories: [Python]
 ---
 
 # Flow Control

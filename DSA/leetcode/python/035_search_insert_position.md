@@ -1,11 +1,8 @@
 ---
 title: "035 Search Insert Position"
 date: 2020-06-10
----
-
----
-title: "035 Search Insert Position"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 35. Search Insert Position

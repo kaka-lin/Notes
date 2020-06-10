@@ -1,11 +1,8 @@
 ---
 title: "202 Happy Number"
 date: 2020-06-10
----
-
----
-title: "202 Happy Number"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 202. Happy Number

@@ -1,11 +1,8 @@
 ---
 title: "027 Remove Element"
 date: 2020-06-10
----
-
----
-title: "027 Remove Element"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 27. Remove Element 

@@ -1,11 +1,8 @@
 ---
 title: "001 Two Sum"
 date: 2020-06-10
----
-
----
-title: "001 Two Sum"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 1. Two Sum 

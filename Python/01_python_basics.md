@@ -1,6 +1,8 @@
 ---
 title: "01 Python Basics"
 date: 2020-06-10
+tags: [Python]
+categories: [Python]
 ---
 
 # Python Basics

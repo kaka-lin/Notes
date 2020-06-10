@@ -1,11 +1,8 @@
 ---
 title: "167 Two Sum II Input Array Is Sorted"
 date: 2020-06-10
----
-
----
-title: "167 Two Sum II Input Array Is Sorted"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 167. Two Sum II - Input array is sorted

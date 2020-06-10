@@ -1,11 +1,8 @@
 ---
 title: "007 Reverse Integer"
 date: 2020-06-10
----
-
----
-title: "007 Reverse Integer"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 7. Reverse Integer

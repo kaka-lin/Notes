@@ -1,11 +1,8 @@
 ---
 title: "938 Range Sum Of Bs"
 date: 2020-06-10
----
-
----
-title: "938 Range Sum Of Bs"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 938. Range Sum of BST 

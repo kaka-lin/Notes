@@ -1,6 +1,8 @@
 ---
 title: "Matplotlib Chinese Mac"
 date: 2020-06-10
+tags: [Data Science, matplotlib]
+categories: [Data Science, matplotlib]
 ---
 
 # Matplotlib 中文

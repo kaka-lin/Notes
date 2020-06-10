@@ -1,11 +1,8 @@
 ---
 title: "733 Flood Fill"
 date: 2020-06-10
----
-
----
-title: "733 Flood Fill"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 733. Flood Fill

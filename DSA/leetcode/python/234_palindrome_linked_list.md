@@ -1,11 +1,8 @@
 ---
 title: "234 Palindrome Linked List"
 date: 2020-06-10
----
-
----
-title: "234 Palindrome Linked List"
-date: 2020-06-10
+tags: [LeetCode, Python]
+categories: [LeetCode]
 ---
 
 # 234. Palindrome Linked List 

@@ -1,6 +1,8 @@
 ---
 title: "Sqlalchemy Basics"
 date: 2020-06-10
+tags: [Database, SQLAlchemy]
+categories: [Database]
 ---
 
 # SQLAlchemy - basics

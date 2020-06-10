@@ -1,6 +1,8 @@
 ---
 title: "Matplotlib Chinese Windows"
 date: 2020-06-10
+tags: [Data Science, matplotlib]
+categories: [Data Science, matplotlib]
 ---
 
 # Matplotlib 中文
