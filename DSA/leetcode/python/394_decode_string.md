@@ -1,3 +1,13 @@
+---
+title: "394 Decode String"
+date: 2020-06-10
+---
+
+---
+title: "394 Decode String"
+date: 2020-06-10
+---
+
 # 394. Decode String
 
 #### Discription

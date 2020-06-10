@@ -1,3 +1,13 @@
+---
+title: "169 Majority Element"
+date: 2020-06-10
+---
+
+---
+title: "169 Majority Element"
+date: 2020-06-10
+---
+
 # 169. Majority Element
 
 #### Discription

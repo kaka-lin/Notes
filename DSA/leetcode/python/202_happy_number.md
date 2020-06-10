@@ -1,3 +1,13 @@
+---
+title: "202 Happy Number"
+date: 2020-06-10
+---
+
+---
+title: "202 Happy Number"
+date: 2020-06-10
+---
+
 # 202. Happy Number
 
 #### Discription

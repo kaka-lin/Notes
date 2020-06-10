@@ -1,3 +1,13 @@
+---
+title: "912 Sort An Array"
+date: 2020-06-10
+---
+
+---
+title: "912 Sort An Array"
+date: 2020-06-10
+---
+
 # 912. Sort an Array
 
 - [Merge Sort](https://github.com/kaka-lin/Notes/tree/master/knowledge/recursion/02_divide_and_Conquer/merge_sort)

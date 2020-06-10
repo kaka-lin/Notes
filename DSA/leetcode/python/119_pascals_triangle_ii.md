@@ -1,3 +1,13 @@
+---
+title: "119 Pascals Triangle Ii"
+date: 2020-06-10
+---
+
+---
+title: "119 Pascals Triangle Ii"
+date: 2020-06-10
+---
+
 # 119. Pascal's Triangle II
 
 #### Discription

@@ -1,3 +1,13 @@
+---
+title: "234 Palindrome Linked List"
+date: 2020-06-10
+---
+
+---
+title: "234 Palindrome Linked List"
+date: 2020-06-10
+---
+
 # 234. Palindrome Linked List 
 
 #### Discription

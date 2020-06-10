@@ -1,3 +1,13 @@
+---
+title: "876 Middle Of The Linked List"
+date: 2020-06-10
+---
+
+---
+title: "876 Middle Of The Linked List"
+date: 2020-06-10
+---
+
 # 876. Middle of the Linked List
 
 #### Discription

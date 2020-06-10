@@ -1,3 +1,13 @@
+---
+title: "Db Basics"
+date: 2020-06-10
+---
+
+---
+title: "Db Basics"
+date: 2020-06-10
+---
+
 # Database Basics
 
 - [Database Basics](#database-basics)

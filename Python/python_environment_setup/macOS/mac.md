@@ -1,3 +1,13 @@
+---
+title: "Mac"
+date: 2020-06-10
+---
+
+---
+title: "Mac"
+date: 2020-06-10
+---
+
 # Python Environment Setup on `macOS`
 
 ## 1. Install Package Manager

@@ -1,3 +1,13 @@
+---
+title: "007 Reverse Integer"
+date: 2020-06-10
+---
+
+---
+title: "007 Reverse Integer"
+date: 2020-06-10
+---
+
 # 7. Reverse Integer
 
 #### Discription

@@ -1,3 +1,13 @@
+---
+title: "217 Contains Duplicate"
+date: 2020-06-10
+---
+
+---
+title: "217 Contains Duplicate"
+date: 2020-06-10
+---
+
 # 217. Contains Duplicate
 
 #### Discription

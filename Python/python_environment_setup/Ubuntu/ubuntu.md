@@ -1,3 +1,13 @@
+---
+title: "Ubuntu"
+date: 2020-06-10
+---
+
+---
+title: "Ubuntu"
+date: 2020-06-10
+---
+
 # Python Environment Setup on `Ubuntu`
 
 ## 1. Install request package

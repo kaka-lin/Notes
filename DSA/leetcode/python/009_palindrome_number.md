@@ -1,3 +1,13 @@
+---
+title: "009 Palindrome Number"
+date: 2020-06-10
+---
+
+---
+title: "009 Palindrome Number"
+date: 2020-06-10
+---
+
 # 9. Palindrome Number 
 
 #### Discription

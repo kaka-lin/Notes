@@ -1,3 +1,13 @@
+---
+title: "Gitlab Ci Cd"
+date: 2020-06-10
+---
+
+---
+title: "Gitlab Ci Cd"
+date: 2020-06-10
+---
+
 # GitLab CI/CD
 
 - [GitLab CI/CD](#gitlab-cicd)

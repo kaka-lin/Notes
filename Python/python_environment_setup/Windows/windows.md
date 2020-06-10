@@ -1,3 +1,13 @@
+---
+title: "Windows"
+date: 2020-06-10
+---
+
+---
+title: "Windows"
+date: 2020-06-10
+---
+
 # Python Environment Setup on `Windows`
 
 ## 1. Install Package Manager

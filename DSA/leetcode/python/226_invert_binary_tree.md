@@ -1,3 +1,13 @@
+---
+title: "226 Invert Binary Tree"
+date: 2020-06-10
+---
+
+---
+title: "226 Invert Binary Tree"
+date: 2020-06-10
+---
+
 # 226. Invert Binary Tree
 
 #### Discription

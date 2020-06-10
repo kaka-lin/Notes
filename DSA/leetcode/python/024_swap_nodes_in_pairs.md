@@ -1,3 +1,13 @@
+---
+title: "024 Swap Nodes In Pairs"
+date: 2020-06-10
+---
+
+---
+title: "024 Swap Nodes In Pairs"
+date: 2020-06-10
+---
+
 # 24. Swap Nodes in Pairs 
 
 #### Discription

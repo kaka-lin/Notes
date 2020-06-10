@@ -1,3 +1,13 @@
+---
+title: "083 Remove Duplicates From Sorted List"
+date: 2020-06-10
+---
+
+---
+title: "083 Remove Duplicates From Sorted List"
+date: 2020-06-10
+---
+
 # 83. Remove Duplicates from Sorted List
 
 #### Discription
