@@ -1,7 +1,7 @@
 ---
-title: "009 Palindrome Number"
+title: "[LeetCode] 009 Palindrome Number"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

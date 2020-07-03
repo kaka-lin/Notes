@@ -1,7 +1,7 @@
 ---
-title: "191 Number Of 1 Bits"
+title: "[LeetCode] 191 Number Of 1 Bits"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

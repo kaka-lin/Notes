@@ -1,7 +1,7 @@
 ---
-title: "083 Remove Duplicates From Sorted List"
+title: "[LeetCode] 083 Remove Duplicates From Sorted List"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

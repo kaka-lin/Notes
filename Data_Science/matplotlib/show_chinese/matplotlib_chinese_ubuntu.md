@@ -1,11 +1,11 @@
 ---
-title: "Matplotlib Chinese Ubuntu"
+title: "[DS] Matplotlib show Chinese: Ubuntu"
 date: 2020-06-10
-tags: [Data Science, matplotlib]
+tags: [Data Science, matplotlib, python]
 categories: [Data Science, matplotlib]
 ---
 
-# Matplotlib 中文
+# Matplotlib 顯示中文
 
 Ref: [Text with non-latin glyphs](https://matplotlib.org/3.1.0/tutorials/text/text_props.html#text-with-non-latin-glyphs)
 
@@ -23,39 +23,6 @@ Ref: [Text with non-latin glyphs](https://matplotlib.org/3.1.0/tutorials/text/te
 !fc-list :lang=zh family
 ```
 
-    Noto Sans Mono CJK TC,Noto Sans Mono CJK TC Bold
-    Noto Sans CJK TC,Noto Sans CJK TC Medium
-    Noto Sans CJK TC,Noto Sans CJK TC Black
-    Noto Sans Mono CJK TC,Noto Sans Mono CJK TC Regular
-    Noto Serif CJK JP
-    Noto Serif CJK KR
-    AR PL UKai TW MBE
-    Noto Serif CJK SC
-    Noto Serif CJK TC
-    Noto Sans CJK TC,Noto Sans CJK TC Regular
-    Noto Sans Mono CJK SC
-    Noto Sans Mono CJK TC
-    Noto Sans Mono CJK JP
-    Noto Sans Mono CJK HK
-    Noto Sans Mono CJK KR
-    AR PL UKai TW
-    AR PL UKai HK
-    AR PL UKai CN
-    AR PL UMing TW MBE
-    AR PL UMing HK
-    AR PL UMing CN
-    Droid Sans Fallback
-    AR PL UMing TW
-    Noto Sans CJK TC,Noto Sans CJK TC Light
-    Noto Sans CJK HK
-    Noto Sans CJK KR
-    Noto Sans CJK JP
-    Noto Sans CJK SC
-    Noto Sans CJK TC
-    Noto Sans CJK TC,Noto Sans CJK TC Thin
-
-
-
 ```python
 import matplotlib 
 import matplotlib.pyplot as plt
@@ -67,6 +34,7 @@ plt.rcParams['axes.unicode_minus'] = False
 %matplotlib inline
 ```
 
+# Plot the result 
 
 ```python
 plt.figure()
@@ -77,6 +45,6 @@ plt.xlabel("品牌名稱")
 plt.show()
 ```
 
-
-![png](matplotlib_chinese_ubuntu_files/matplotlib_chinese_ubuntu_3_0.png)
+![](images/matplotlib_chinese_ubuntu.png)
+![](/images/data_science/matplotlib/matplotlib_chinese_ubuntu.png)
 

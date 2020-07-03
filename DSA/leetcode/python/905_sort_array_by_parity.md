@@ -1,7 +1,7 @@
 ---
-title: "905 Sort Array By Parity"
+title: "[LeetCode] 905 Sort Array By Parity"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

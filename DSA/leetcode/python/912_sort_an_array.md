@@ -1,7 +1,7 @@
 ---
-title: "912 Sort An Array"
+title: "[LeetCode] 912 Sort An Array"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "236 Lowest Common Ancestor Of A Binary Tree"
+title: "[LeetCode] 236 Lowest Common Ancestor Of A Binary Tree"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

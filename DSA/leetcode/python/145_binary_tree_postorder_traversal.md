@@ -1,7 +1,7 @@
 ---
-title: "145 Binary Tree Postorder Traversal"
+title: "[LeetCode] 145 Binary Tree Postorder Traversal"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

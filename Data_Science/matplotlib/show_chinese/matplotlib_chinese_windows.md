@@ -1,11 +1,11 @@
 ---
-title: "Matplotlib Chinese Windows"
+title: "[DS] Matplotlib show Chinese: Windows"
 date: 2020-06-10
-tags: [Data Science, matplotlib]
+tags: [Data Science, matplotlib, python]
 categories: [Data Science, matplotlib]
 ---
 
-# Matplotlib 中文
+# Matplotlib 顯示中文
 
 Ref: [Text with non-latin glyphs](https://matplotlib.org/3.1.0/tutorials/text/text_props.html#text-with-non-latin-glyphs)
 
@@ -14,23 +14,34 @@ Ref: [Text with non-latin glyphs](https://matplotlib.org/3.1.0/tutorials/text/te
 1. [思源黑體](https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKtc-hinted.zip)
 2. [思源宋體](https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifCJKtc-hinted.zip)
 
-
 ```python
 # 查看matplotlib套件安裝位置
 import matplotlib
 print(matplotlib.__file__)
 ```
+Output:
 
-    C:\Users\USER\Miniconda3\envs\tensorflow\lib\site-packages\matplotlib\__init__.py
+```
+C:\Users\USER\Miniconda3\envs\tensorflow\lib\site-packages\matplotlib\__init__.py
+```
 
+可以得知，`matplotlib`的安裝位置在`C:\Users\USER\Miniconda3\envs\tensorflow\lib\site-packages\matplotlib`。
 
-可以得知，`matplotlib`的安裝位置在<font color=03c03c>C:\Users\USER\Miniconda3\envs\tensorflow\lib\site-packages\matplotlib\</font>，每個人的安裝位置會因電腦配置而有所不同。
+* Note:
+
+    ```
+    每個人的安裝位置會因電腦配置而有所不同。
+    ```
+
+## 安裝步驟
+
 1. 解開剛剛下載的壓縮檔
-2. 任選一個`.otf`檔案，複製到<font color=03c03c>C:\Users\USER\Miniconda3\envs\tensorflow\lib\site-packages\matplotlib\mpl-data\fonts\ttf\</font>資料夾內
-3. 刪除這個資料夾內的所有檔案：<font color=03c03c>C:\Users\USER\\.matplotlib\</font>
+2. 任選一個`.otf`檔案，複製到`C:\Users\USER\Miniconda3\envs\tensorflow\lib\site-packages\matplotlib\mpl-data\fonts\ttf\`資料夾內
+3. 刪除這個資料夾內的所有檔案：`C:\Users\USER\\.matplotlib\`
 4. 如果使用的是`思源黑體`，請將底下的`fontType =' '`變更為`fontType ='Noto Sans CJK TC'`
 5. 如果使用的是`思源宋體`，請將底下的`fontType =' '`變更為`fontType ='Noto Serif CJK TC'`
 
+## Configuration
 
 ```python
 import matplotlib.pyplot as plt
@@ -43,6 +54,7 @@ plt.rcParams['axes.unicode_minus'] = False
 %matplotlib inline
 ```
 
+## Plot the result
 
 ```python
 plt.figure()
@@ -53,8 +65,5 @@ plt.xlabel("品牌名稱")
 plt.show()
 ```
 
-
-![png](matplotlib_chinese_windows_files/matplotlib_chinese_windows_4_0.png)
-
-
-## 如果有顯示中文，表示成功!
+![](images/matplotlib_chinese_windows.png)
+![](/images/data_science/matplotlib/matplotlib_chinese_windows.png)

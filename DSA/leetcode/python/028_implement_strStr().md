@@ -1,7 +1,7 @@
 ---
-title: "028 Implement StrStr()"
+title: "[LeetCode] 028 Implement StrStr()"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

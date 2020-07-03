@@ -1,7 +1,7 @@
 ---
-title: "070 Climbing Stairs"
+title: "[LeetCode] 070 Climbing Stairs"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

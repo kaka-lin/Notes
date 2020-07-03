@@ -1,7 +1,7 @@
 ---
-title: "169 Majority Element"
+title: "[LeetCode] 169 Majority Element"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

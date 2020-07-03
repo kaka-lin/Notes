@@ -1,7 +1,7 @@
 ---
-title: "700 Search In A Binary Search Tree"
+title: "[LeetCode] 700 Search In A Binary Search Tree"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "02 Flow Control"
+title: "[Python] 02 Flow Control"
 date: 2020-06-10
 tags: [Python]
 categories: [Python]
@@ -22,7 +22,6 @@ else:
     # statements for each condition False
 ```
 
-
 ```python
 score = int(input("請輸入成績"))
 if score >= 60:
@@ -33,8 +32,6 @@ else:
 
     請輸入成績45
     不及格，被當了!
-
-
 
 ```python
 # Click below for a solution
@@ -55,7 +52,6 @@ else:
     score: 90
     Grade is: A
 
-
 ## Python `for ` loops
 
 Python's `for` loop reuses the `in` keyword, and has the following syntax:
@@ -64,7 +60,6 @@ Python's `for` loop reuses the `in` keyword, and has the following syntax:
 for variable in iterable:
     # suite
 ```
-
 
 ```python
 sequences = [0, 1, 2, 3, 4]
@@ -78,8 +73,6 @@ for i in sequences:
     3
     4
 
-
-
 ```python
 countries = ['Denmark', 'Finland', 'Norway', 'Sweden', 'Taiwan']
 for country in countries:
@@ -92,8 +85,6 @@ for country in countries:
     Sweden
     Taiwan
 
-
-
 ```python
 for i in range(10):
     print(i, end=' ')
@@ -102,7 +93,6 @@ for i in range(10):
     0 1 2 3 4 5 6 7 8 9 
 
 ### `Nested for loops`
-
 
 ```python
 # 99乘法表
@@ -124,7 +114,6 @@ for i in range(1, 10):
     	 8 	 16 	 24 	 32 	 40 	 48 	 56 	 64 	 72
     	 9 	 18 	 27 	 36 	 45 	 54 	 63 	 72 	 81
 
-
 ## Python `while` loops
 
 The `while` statement is used to execute a suite zero or more times, 
@@ -136,7 +125,6 @@ while boolean_expression:
     # Body of while
 ```
 
-
 ```python
 i = 1
 while i <= 10:
@@ -147,7 +135,6 @@ while i <= 10:
     1 2 3 4 5 6 7 8 9 10 
 
 ## `break` and `continue`
-
 
 ```python
 # break
@@ -163,7 +150,6 @@ while True:
 
     1 2 3 4 5 6 7 8 9 
 
-
 ```python
 # continue
 
@@ -178,7 +164,6 @@ while i < 10:
     1 2 3 5 6 7 8 9 10 
 
 ## Exercise: Guessing Game
-
 
 ```python
 import random

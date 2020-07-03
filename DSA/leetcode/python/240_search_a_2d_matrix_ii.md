@@ -1,7 +1,7 @@
 ---
-title: "240 Search A 2d Matrix Ii"
+title: "[LeetCode] 240 Search A 2d Matrix Ii"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

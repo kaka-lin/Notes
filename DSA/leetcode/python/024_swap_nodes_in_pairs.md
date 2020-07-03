@@ -1,7 +1,7 @@
 ---
-title: "024 Swap Nodes In Pairs"
+title: "[LeetCode] 024 Swap Nodes In Pairs"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

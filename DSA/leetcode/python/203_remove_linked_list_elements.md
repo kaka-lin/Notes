@@ -1,7 +1,7 @@
 ---
-title: "203 Remove Linked List Elements"
+title: "[LeetCode] 203 Remove Linked List Elements"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "002 Add Two Numbers"
+title: "[LeetCode] 002 Add Two Numbers"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

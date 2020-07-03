@@ -1,5 +1,5 @@
 ---
-title: "Mysql Basics"
+title: "[DB] Mysql Basics"
 date: 2020-06-10
 tags: [Database, MySQL]
 categories: [Database]
@@ -16,9 +16,8 @@ categories: [Database]
 
 `ipython-sql`:
 
-    - 是jupyter notebook的extension，用來擴充jupyter對SQL的支援
-    - 其底層是使用SQLAlchemy
-
+- 是jupyter notebook的extension，用來擴充jupyter對SQL的支援
+- 其底層是使用SQLAlchemy
 
 ```python
 %load_ext sql
@@ -34,16 +33,13 @@ we use the SQLAlchemy's DBAPI to connect the MySQL database via the mysqlclient
 
 [SQLAlchemy - MySQL DBAPI](https://docs.sqlalchemy.org/en/13/dialects/mysql.html#module-sqlalchemy.dialects.mysql.pymysql)
 
-
 ```bash
 mysql+mysqldb://<user>:<password>@<host>[:<port>]/<dbname>
 ```
 
-
 ```python
-%sql mysql+mysqldb://root:abc123456@35.201.196.222/kaka_test
+%sql mysql+mysqldb://root:<passwd>@35.201.196.222/kaka_test
 ```
-
 
 ```python
 %%sql
@@ -51,92 +47,33 @@ mysql+mysqldb://<user>:<password>@<host>[:<port>]/<dbname>
 SELECT * FROM entries;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    2 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+2 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>guestName</th>
-        <th>content</th>
-        <th>entryID</th>
-    </tr>
-    <tr>
-        <td>first guest</td>
-        <td>I got here!</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>second guest</td>
-        <td>Me too!</td>
-        <td>2</td>
-    </tr>
-</table>
-
-
+| guestName | content | entryID |
+| -- | -- | -- |
+| first guest | I got here | 1 |
+| second guest | Me too! | 2 |
 
 ## MySQL Version
-
 
 ```python
 %sql SHOW VARIABLES LIKE '%version%';
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    8 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+8 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>Variable_name</th>
-        <th>Value</th>
-    </tr>
-    <tr>
-        <td>innodb_version</td>
-        <td>5.7.25</td>
-    </tr>
-    <tr>
-        <td>protocol_version</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td>slave_type_conversions</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>tls_version</td>
-        <td>TLSv1,TLSv1.1,TLSv1.2</td>
-    </tr>
-    <tr>
-        <td>version</td>
-        <td>5.7.25-google-log</td>
-    </tr>
-    <tr>
-        <td>version_comment</td>
-        <td>(Google)</td>
-    </tr>
-    <tr>
-        <td>version_compile_machine</td>
-        <td>x86_64</td>
-    </tr>
-    <tr>
-        <td>version_compile_os</td>
-        <td>Linux</td>
-    </tr>
-</table>
-
-
+![](../images/mysql_version.png)
+![](/images/db/mysql_version.png)
 
 ## Create Table
 
 - [MySQL - Data Type](https://www.tutorialspoint.com/mysql/mysql-data-types.htm)
-
 
 ```python
 %%sql
@@ -152,16 +89,11 @@ CREATE TABLE persons(
 );
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    0 rows affected.
-
-
-
-
-
-    []
-
-
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+0 rows affected.
+[]
+```
 
 ## CRUD for Data
 
@@ -174,7 +106,6 @@ CREATE TABLE persons(
 
 ### Create Data: SQL INSERT INTO
 
-
 ```python
 %%sql
 INSERT INTO persons
@@ -184,20 +115,14 @@ INSERT INTO persons (firstname, lastname, age, height, weight, city)
 VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    1 rows affected.
-    1 rows affected.
-
-
-
-
-
-    []
-
-
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+1 rows affected.
+1 rows affected.
+[]
+```
 
 ### Read Data: SQL SELECT
-
 
 ```python
 %%sql
@@ -205,47 +130,17 @@ VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 SELECT * FROM persons; 
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    2 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+2 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 70.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 ### Update Data: SQL UPDATE
-
 
 ```python
 %%sql
@@ -255,17 +150,11 @@ SET    weight = 68
 WHERE  firstname = 'kaka';
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    1 rows affected.
-
-
-
-
-
-    []
-
-
-
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+1 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -273,50 +162,21 @@ WHERE  firstname = 'kaka';
 SELECT * FROM persons;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    2 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+2 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 
 ### Delete Data: SQL DELETE
 
 Before we delete data,
 we first add the data that we want to delete.
-
 
 ```python
 %%sql
@@ -325,17 +185,11 @@ INSERT INTO persons
 VALUES (3, 'albert','Lin', 28, 180, 70, 'Taipei');
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    1 rows affected.
-
-
-
-
-
-    []
-
-
-
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+1 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -343,68 +197,29 @@ VALUES (3, 'albert','Lin', 28, 180, 70, 'Taipei');
 SELECT * FROM persons;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    3 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+3 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 3 | albert | Lin | 28 | 180.0 | 70.0 | Taipei |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 ```python
 %%sql
 
 DELETE FROM persons
-WHERE persion_id = 3;
+WHERE person_id = 3;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    (MySQLdb._exceptions.OperationalError) (1054, "Unknown column 'persion_id' in 'where clause'")
-    [SQL: DELETE FROM persons WHERE persion_id = 3;]
-    (Background on this error at: http://sqlalche.me/e/e3q8)
-
-
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+1 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -412,56 +227,17 @@ WHERE persion_id = 3;
 SELECT * FROM persons;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    3 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+2 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 ## SQL WHERE
-
 
 ```python
 %%sql
@@ -476,17 +252,11 @@ VALUES ('Albert', 'Lin', 28, 160, 70, 'Taipei'),
        ('kaka-ideal', 'Lin', 28, 178, 70, 'Janpan');
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    7 rows affected.
-
-
-
-
-
-    []
-
-
-
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+7 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -494,117 +264,22 @@ VALUES ('Albert', 'Lin', 28, 160, 70, 'Taipei'),
 SELECT * FROM persons
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    10 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+9 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ```python
 %%sql
@@ -614,67 +289,20 @@ FROM   persons
 WHERE  age = 28;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    4 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+3 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 173.0 | 70.0 | Janpan |
 
 ## SQL AND, OR and NOT
 
 ### AND
-
 
 ```python
 %%sql
@@ -685,56 +313,17 @@ WHERE  age = 28
 AND    height > 170;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    3 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+2 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ### OR
-
 
 ```python
 %%sql
@@ -745,121 +334,27 @@ WHERE  age = 28
 OR     height > 170;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    10 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+9 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 
 #### SQL IN Operator
 
 The IN operator allows you to specify multiple values in a WHERE clause.
-
 
 ```python
 %%sql
@@ -869,81 +364,18 @@ FROM   persons
 WHERE  age = 28 OR age = 26;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    6 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+5 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ```python
 %%sql
@@ -953,80 +385,18 @@ FROM   persons
 WHERE  age IN (26, 28);
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    6 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+5 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ### Not
 
@@ -1039,79 +409,19 @@ FROM   persons
 WHERE  age != 28;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    6 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+6 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
 
 
 ## SQL ORDER BY
@@ -1124,7 +434,6 @@ SELECT column1, column2, ...
 
 - Default: ASC
 
-
 ```python
 %%sql
 
@@ -1133,115 +442,22 @@ FROM   persons
 ORDER BY age;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    10 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+9 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-</table>
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
 
 
 ## SQL LIKE Operator
@@ -1253,7 +469,6 @@ There are two wildcards often used in conjunction with the LIKE operator:
 - % : The percent sign represents zero, one, or multiple characters
 - _ : The underscore represents a single character
 
-
 ```python
 %%sql
 
@@ -1262,89 +477,19 @@ FROM   persons
 WHERE  city LIKE '%pei%';
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    7 rows affected.
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+6 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
 
 ## MySQL -  Functions
 
@@ -1358,7 +503,6 @@ WHERE  city LIKE '%pei%';
     ALTER TABLE table_name ADD column_name datatype; 
     ```
 
-
 ```python
 %%sql
 
@@ -1371,132 +515,26 @@ SET    height_meters = round(height / 100, 2);
 SELECT * FROM persons;
 ```
 
+```
      * mysql+mysqldb://root:***@35.201.196.222/kaka_test
     0 rows affected.
-    10 rows affected.
-    10 rows affected.
+    9 rows affected.
+    9 rows affected.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-        <th>height_meters</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-        <td>1.8</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-        <td>1.75</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-        <td>1.73</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-        <td>1.6</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-        <td>1.75</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-        <td>1.74</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-        <td>1.78</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-        <td>1.75</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-        <td>1.72</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-        <td>1.78</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city | height_meters |
+| -- | -- | -- | -- | -- | -- | -- | -- | 
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei | 1.75 |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei | 1.73 |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei | 1.6 |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei | 1.75 |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco | 1.74 |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei | 1.78 |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington | 1.75 |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei | 1.72 |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan | 1.78 |
 
 ## Drop Table
-
 
 ```python
 %%sql
@@ -1504,13 +542,8 @@ SELECT * FROM persons;
 DROP TABLE persons;
 ```
 
-     * mysql+mysqldb://root:***@35.201.196.222/kaka_test
-    0 rows affected.
-
-
-
-
-
-    []
-
-
+```
+ * mysql+mysqldb://root:***@35.201.196.222/kaka_test
+0 rows affected.
+[]
+```

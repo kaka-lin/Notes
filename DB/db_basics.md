@@ -1,5 +1,5 @@
 ---
-title: "Db Basics"
+title: "[DB] Database Basics"
 date: 2020-06-10
 tags: [Database]
 categories: [Database]
@@ -37,7 +37,8 @@ categories: [Database]
 - U: Update
 - D: Delete
 
-![](./images/crud.png)
+![](images/crud.png)
+![](/images/db/crud.png)
 
 ## Database Management System (DBMS)
 
@@ -72,8 +73,10 @@ Database System = Database + DBMS
    * 優點：可以從一個資料表中的欄位透過資料表的關聯，而找到另一個資料表中的資料
 
     ![](./images/rdb-0.png)
+    ![](/images/db/rdb-0.png)
 
     ![](./images/rdb-1.png)
+    ![](/images/db/rdb-1.png)
 
     * Image reference: [陳建成老師 - 資料庫系統](http://cc.cust.edu.tw/~ccchen/4_2.html)
 

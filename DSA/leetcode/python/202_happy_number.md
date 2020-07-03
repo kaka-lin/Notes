@@ -1,7 +1,7 @@
 ---
-title: "202 Happy Number"
+title: "[LeetCode] 202 Happy Number"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 
