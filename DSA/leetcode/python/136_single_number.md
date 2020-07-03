@@ -1,7 +1,7 @@
 ---
-title: "136 Single Number"
+title: "[LeetCode] 136 Single Number"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

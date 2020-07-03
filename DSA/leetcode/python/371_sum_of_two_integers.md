@@ -1,7 +1,7 @@
 ---
-title: "371 Sum Of Two Integers"
+title: "[LeetCode] 371 Sum Of Two Integers"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

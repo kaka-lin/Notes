@@ -1,7 +1,7 @@
 ---
-title: "119 Pascals Triangle Ii"
+title: "[LeetCode] 119 Pascals Triangle Ii"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

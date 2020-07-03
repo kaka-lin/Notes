@@ -1,8 +1,8 @@
 ---
-title: "02 Google Trends To Google Data Studio"
+title: "[DS] Google Trends 02: Convert to Google Data Studio"
 date: 2020-06-10
-tags: [Data Science, Google Trends]
-categories: [Data Science, Google Trends]
+tags: [Data Science, Google Trends, Python]
+categories: [Data Science]
 ---
 
 # Google Trends to Google Data Studio
@@ -29,70 +29,7 @@ covid_19_interest_over_time_df = pytrend.interest_over_time()
 covid_19_interest_over_time_df.tail()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Coronavirus</th>
-      <th>isPartial</th>
-    </tr>
-    <tr>
-      <th>date</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2020-05-29</th>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-05-30</th>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-05-31</th>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-06-01</th>
-      <td>13</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-06-02</th>
-      <td>13</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 ## Plot the result
-
 
 ```python
 import matplotlib
@@ -120,9 +57,8 @@ axes.set_ylabel('Trends Index')
 axes.tick_params(axis='both', which='major', labelsize=13)
 ```
 
-
-![png](02_google_trends_to_google_data_studio_files/02_google_trends_to_google_data_studio_5_0.png)
-
+![](images/google_trends_result_4.png)
+![](/images/data_science/google_trends/google_trends_result_4.png)
 
 ## Using `gspread` transform the data of `Google Trends` to `Google Sheets`
 
@@ -147,48 +83,58 @@ Reference: [Access spreadsheets via Google Sheets API.](https://gspread.readthed
 
     新增專案 -> 專案名稱:`google-sheets` -> 建立
 
-    ![](./images/google_apis_create_an_project_1.png)
+    ![](images/google_apis_create_an_project_1.png)
+    ![](/images/data_science/google_trends/google_apis_create_an_project_1.png)
 
-    ![](./images/google_apis_create_an_project_2.png)
-
+    ![](images/google_apis_create_an_project_2.png)
+    ![](/images/data_science/google_trends/google_apis_create_an_project_2.png)
 
 2. 啟動該`Project`的 API
 
     啟用API和服務 -> 在搜尋API和服務打上`Drive API` -> 啟用 -> 在搜尋API和服務打上`Sheets API(Google Sheets)` -> 啟用
          
     ![](./images/google_apis_active_api_1.png)
+    ![](/images/data_science/google_trends/google_apis_active_api_1.png)
     
     ![](./images/google_apis_active_api_2.png)
+    ![](/images/data_science/google_trends/google_apis_active_api_2.png)
         
     ![](./images/google_apis_active_api_3.png)
+    ![](/images/data_science/google_trends/google_apis_active_api_3.png)
     
     ![](./images/google_apis_active_api_4.png)
+    ![](/images/data_science/google_trends/google_apis_active_api_4.png)
     
     ![](./images/google_apis_active_api_5.png)
+    ![](/images/data_science/google_trends/google_apis_active_api_5.png)
     
     ![](./images/google_apis_active_api_6.png)
-
+    ![](/images/data_science/google_trends/google_apis_active_api_6.png)
 
 3. 建立憑證(Credentials)
    
    回到首頁點選憑證 -> 建立憑證 -> 選服務帳號 -> 服務帳號詳細資料：`Google Trends to Google Sheets` -> 建立 -> 繼續 -> 建立金鑰 -> 選擇 `JSON` -> 建立 -> 完成
    
    ![](./images/google_apis_create_credentials_1.png)
+   ![](/images/data_science/google_trends/google_apis_create_credentials_1.png)
    
    ![](./images/google_apis_create_credentials_2.png)
+   ![](/images/data_science/google_trends/google_apis_create_credentials_2.png)
    
    ![](./images/google_apis_create_credentials_3.png)
+   ![](/images/data_science/google_trends/google_apis_create_credentials_3.png)
    
    ![](./images/google_apis_create_credentials_4.png)
-   
+   ![](/images/data_science/google_trends/google_apis_create_credentials_4.png)
+
    ![](./images/google_apis_create_credentials_5.png)
+   ![](/images/data_science/google_trends/google_apis_create_credentials_5.png)
    
    ![](./images/google_apis_create_credentials_6.png)
-
+   ![](/images/data_science/google_trends/google_apis_create_credentials_6.png)
 
 4. 將下載好的`JSON`檔案取名為`auth.json`
    
-
 ### 建立試算表
 
 透過`gspread`建立並使用試算表有兩種方式
@@ -202,31 +148,26 @@ Reference: [Access spreadsheets via Google Sheets API.](https://gspread.readthed
     ```
 ##### Note: 
     
-    ```
     If you’re using a service account, 
     this new spreadsheet will be visible only to your script's account. 
     To be able to access newly created spreadsheet 
     from Google Sheets with your own Google account you must share it with your email. 
     See how to share a spreadsheet in the section below.
-    ```
      
-    - Sharing a Spreadsheet:
+- Sharing a Spreadsheet:
         
-        ```python
-        sh.share('your_email', perm_type='user', role='writer')
-        ```
-
+    ```python
+    sh.share('your_email', perm_type='user', role='writer')
+    ```
 
 以下使用第二種方法！
 
 #### Connect to `Google Sheets`
 
-
 ```python
 import gspread
 from google.oauth2.service_account import Credentials
 ```
-
 
 ```python
 def google_oauth2_service(auth_path, scopes):
@@ -237,7 +178,6 @@ def google_oauth2_service(auth_path, scopes):
     
     return gspread.authorize(credentials)
 ```
-
 
 ```python
 scopes = [
@@ -251,7 +191,6 @@ gc = google_oauth2_service(auth_path, scopes)
 ```
 
 #### Connetc and share a spreadsheet
-
 
 ```python
 # Create a spreadsheet
@@ -287,7 +226,6 @@ To get a list of all worksheets:
 worksheet_list = sh.worksheets()
 ```
 
-
 ```python
 worksheet = gc.open("COVID-19 Search Trends").sheet1
 ```
@@ -302,111 +240,13 @@ worksheet = gc.open("COVID-19 Search Trends").sheet1
     Object of type 'Timestamp' is not JSON serializable
     ```
 
-
 ```python
 covid_19_interest_over_time_df
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Coronavirus</th>
-      <th>isPartial</th>
-    </tr>
-    <tr>
-      <th>date</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2020-01-01</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-02</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-03</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-04</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-05</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>2020-05-29</th>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-05-30</th>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-05-31</th>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-06-01</th>
-      <td>13</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-06-02</th>
-      <td>13</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-<p>154 rows × 2 columns</p>
-</div>
-
-
-
-
 ```python
 covid_19_interest_over_time_df.index
 ```
-
-
-
 
     DatetimeIndex(['2020-01-01', '2020-01-02', '2020-01-03', '2020-01-04',
                    '2020-01-05', '2020-01-06', '2020-01-07', '2020-01-08',
@@ -417,195 +257,26 @@ covid_19_interest_over_time_df.index
                    '2020-06-01', '2020-06-02'],
                   dtype='datetime64[ns]', name='date', length=154, freq=None)
 
-
-
 1. Reset index
-
 
 ```python
 covid_19_interest_over_time_df.reset_index(inplace=True)
 covid_19_interest_over_time_df
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>Coronavirus</th>
-      <th>isPartial</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2020-01-01</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020-01-02</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020-01-03</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020-01-04</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020-01-05</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>2020-05-29</td>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>150</th>
-      <td>2020-05-30</td>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>151</th>
-      <td>2020-05-31</td>
-      <td>14</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>152</th>
-      <td>2020-06-01</td>
-      <td>13</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>153</th>
-      <td>2020-06-02</td>
-      <td>13</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-<p>154 rows × 3 columns</p>
-</div>
-
-
-
 2. Convert datatime to string
-
 
 ```python
 def convert_datetime_to_string(df):
     df['date'] = df['date'].dt.strftime('%Y-%m-%d %H:%M:%S')
 ```
 
-
 ```python
 convert_datetime_to_string(covid_19_interest_over_time_df)
 covid_19_interest_over_time_df.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>date</th>
-      <th>Coronavirus</th>
-      <th>isPartial</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2020-01-01 00:00:00</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020-01-02 00:00:00</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020-01-03 00:00:00</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020-01-04 00:00:00</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020-01-05 00:00:00</td>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 #### Send `DataFram` into `Sheet`
-
 
 ```python
 def iter_pd(df):
@@ -642,20 +313,19 @@ pandas_to_sheets(covid_19_interest_over_time_df, worksheet)
 1. `DataFrame`
 
 ![](./images/dataframe_to_sheets_1.png)
+![](/images/data_science/google_trends/dataframe_to_sheets_1.png)
 
 2. `Google Sheets`
 
 ![](./images/dataframe_to_sheets_2.png)
+![](/images/data_science/google_trends/dataframe_to_sheets_2.png)
 
 3. `DataFrame.plot.line()`
 
 ![](./images/dataframe_to_sheets_3.png)
+![](/images/data_science/google_trends/dataframe_to_sheets_3.png)
 
 4. `Google Data Studio`: 時間序列圖表
 
 ![](./images/dataframe_to_sheets_4.png)
-
-
-```python
-
-```
+![](/images/data_science/google_trends/dataframe_to_sheets_4.png)

@@ -1,7 +1,7 @@
 ---
-title: "160 Intersection Of Two Linked List"
+title: "[LeetCode] 160 Intersection Of Two Linked List"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

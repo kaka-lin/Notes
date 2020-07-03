@@ -1,7 +1,7 @@
 ---
-title: "144 Binary Tree Preorder Traversal"
+title: "[LeetCode] 144 Binary Tree Preorder Traversal"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

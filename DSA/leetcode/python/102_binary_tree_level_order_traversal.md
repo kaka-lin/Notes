@@ -1,7 +1,7 @@
 ---
-title: "102 Binary Tree Level Order Traversal"
+title: "[LeetCode] 102 Binary Tree Level Order Traversal"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

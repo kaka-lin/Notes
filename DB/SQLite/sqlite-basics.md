@@ -1,5 +1,5 @@
 ---
-title: "Sqlite Basics"
+title: "[DB] Sqlite Basics"
 date: 2020-06-10
 tags: [Database, SQLite]
 categories: [Database]
@@ -15,9 +15,8 @@ categories: [Database]
 
 `ipython-sql`:
 
-    - 是jupyter notebook的extension，用來擴充jupyter對SQL的支援
-    - 其底層是使用SQLAlchemy
-
+- 是jupyter notebook的extension，用來擴充jupyter對SQL的支援
+- 其底層是使用SQLAlchemy
 
 ```python
 %load_ext sql
@@ -35,11 +34,9 @@ For example: `sqlite3 test.db`
 
 Because `ipython-sql` is based on `SQLAlchemy`, we can create and connect DB as follow:
 
-
 ```python
 %sql sqlite:///test.db
 ```
-
 
 ```python
 !ls -al
@@ -53,37 +50,26 @@ Because `ipython-sql` is based on `SQLAlchemy`, we can create and connect DB as 
     -rw-r--r-- 1 kaka kaka 15267  5月 14 10:16 sqlite-basics.ipynb
     -rw-r--r-- 1 kaka kaka     0  5月 14 10:16 test.db
 
-
 ## SQLite Version
-
 
 ```python
 %sql SELECT sqlite_version() AS 'SQLite Version';
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+* sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>SQLite Version</th>
-    </tr>
-    <tr>
-        <td>3.31.1</td>
-    </tr>
-</table>
-
-
+```
+| SQLite Version |
+| 3.31.1 |
+```
 
 ## Create Table
 
 - [SQLite - Data Type](https://www.sqlite.org/lang.html)
 - [SQLite - AUTOINCREMENT](https://www.tutorialspoint.com/sqlite/sqlite_using_autoincrement.htm)
-
 
 ```python
 %%sql
@@ -99,16 +85,11 @@ CREATE TABLE persons(
 );
 ```
 
-     * sqlite:///test.db
-    Done.
-
-
-
-
-
-    []
-
-
+```
+ * sqlite:///test.db
+Done.
+[]
+```
 
 ## CRUD for Data
 
@@ -121,7 +102,6 @@ CREATE TABLE persons(
 
 ### Create Data: SQL INSERT INTO
 
-
 ```python
 %%sql
 INSERT INTO persons
@@ -131,20 +111,14 @@ INSERT INTO persons (firstname, lastname, age, height, weight, city)
 VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 ```
 
-     * sqlite:///test.db
-    1 rows affected.
-    1 rows affected.
-
-
-
-
-
-    []
-
-
+```
+ * sqlite:///test.db
+1 rows affected.
+1 rows affected.
+[]
+```
 
 ### Read Data: SQL SELECT
-
 
 ```python
 %%sql
@@ -152,47 +126,17 @@ VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 SELECT * FROM persons; 
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 70.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 ### Update Data: SQL UPDATE
-
 
 ```python
 %%sql
@@ -203,18 +147,12 @@ WHERE  firstname = 'kaka';
 -- or WHERE person_id = 1;
 ```
 
-     * sqlite:///test.db
-    1 rows affected.
-    0 rows affected.
-
-
-
-
-
-    []
-
-
-
+```
+ * sqlite:///test.db
+1 rows affected.
+0 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -222,50 +160,21 @@ WHERE  firstname = 'kaka';
 SELECT * FROM persons;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 
 ### Delete Data: SQL DELETE
 
 Before we delete data,
 we first add the data that we want to delete.
-
 
 ```python
 %%sql
@@ -274,17 +183,11 @@ INSERT INTO persons
 VALUES (3, 'albert','Lin', 28, 180, 70, 'Taipei');
 ```
 
-     * sqlite:///test.db
-    1 rows affected.
-
-
-
-
-
-    []
-
-
-
+```
+ * sqlite:///test.db
+1 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -292,54 +195,16 @@ VALUES (3, 'albert','Lin', 28, 180, 70, 'Taipei');
 SELECT * FROM persons;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>180.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 3 | albert | Lin | 28 | 180.0 | 70.0 | Taipei |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 ```python
 %%sql
@@ -348,17 +213,11 @@ DELETE FROM persons
 WHERE person_id = 3;
 ```
 
-     * sqlite:///test.db
-    1 rows affected.
-
-
-
-
-
-    []
-
-
-
+```
+ * sqlite:///test.db
+1 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -366,47 +225,18 @@ WHERE person_id = 3;
 SELECT * FROM persons;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
 
 
 ## SQL WHERE
-
 
 ```python
 %%sql
@@ -421,17 +251,11 @@ VALUES ('Albert', 'Lin', 28, 160, 70, 'Taipei'),
        ('kaka-ideal', 'Lin', 28, 178, 70, 'Janpan');
 ```
 
-     * sqlite:///test.db
-    7 rows affected.
-
-
-
-
-
-    []
-
-
-
+```
+ * sqlite:///test.db
+7 rows affected.
+[]
+```
 
 ```python
 %%sql
@@ -439,108 +263,22 @@ VALUES ('Albert', 'Lin', 28, 160, 70, 'Taipei'),
 SELECT * FROM persons
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ```python
 %%sql
@@ -550,58 +288,20 @@ FROM   persons
 WHERE  age = 28;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 173.0 | 70.0 | Janpan |
 
 ## SQL AND, OR and NOT
 
 ### AND
-
 
 ```python
 %%sql
@@ -612,47 +312,17 @@ WHERE  age = 28
 AND    height > 170;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ### OR
-
 
 ```python
 %%sql
@@ -663,112 +333,26 @@ WHERE  age = 28
 OR     height > 170;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 #### SQL IN Operator
 
 The IN operator allows you to specify multiple values in a WHERE clause.
-
 
 ```python
 %%sql
@@ -778,72 +362,18 @@ FROM   persons
 WHERE  age = 28 OR age = 26;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ```python
 %%sql
@@ -853,74 +383,20 @@ FROM   persons
 WHERE age IN (26, 28);
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
 
 ### NOT
-
 
 ```python
 %%sql
@@ -931,80 +407,19 @@ FROM   persons
 WHERE age != 28;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
 
 ## SQL ORDER BY
 
@@ -1016,7 +431,6 @@ SELECT column1, column2, ...
 
 - Default: ASC
 
-
 ```python
 %%sql
 
@@ -1025,107 +439,22 @@ FROM   persons
 ORDER BY age;
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco |
 
 ## SQL LIKE Operator
 
@@ -1136,7 +465,6 @@ There are two wildcards often used in conjunction with the LIKE operator:
 - % : The percent sign represents zero, one, or multiple characters
 - _ : The underscore represents a single character
 
-
 ```python
 %%sql
 
@@ -1145,80 +473,19 @@ FROM   persons
 WHERE city LIKE '%pei%';
 ```
 
-     * sqlite:///test.db
-    Done.
+```
+ * sqlite:///test.db
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city |
+| -- | -- | -- | -- | -- | -- | -- |
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei |
 
 ## SQLite -  Functions
 
@@ -1232,7 +499,6 @@ WHERE city LIKE '%pei%';
     ALTER TABLE table_name ADD column_name datatype; 
     ```
 
-
 ```python
 %%sql
 
@@ -1245,122 +511,26 @@ SET height_meters = round(height / 100, 2);
 SELECT * FROM persons;
 ```
 
-     * sqlite:///test.db
-    Done.
-    9 rows affected.
-    Done.
+```
+ * sqlite:///test.db
+Done.
+9 rows affected.
+Done.
+```
 
-
-
-
-
-<table>
-    <tr>
-        <th>person_id</th>
-        <th>firstname</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>height</th>
-        <th>weight</th>
-        <th>city</th>
-        <th>height_meters</th>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>kaka</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>175.0</td>
-        <td>68.0</td>
-        <td>Taipei</td>
-        <td>1.75</td>
-    </tr>
-    <tr>
-        <td>11</td>
-        <td>kiwi</td>
-        <td>Li</td>
-        <td>30</td>
-        <td>173.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-        <td>1.73</td>
-    </tr>
-    <tr>
-        <td>12</td>
-        <td>Albert</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>160.0</td>
-        <td>70.0</td>
-        <td>Taipei</td>
-        <td>1.6</td>
-    </tr>
-    <tr>
-        <td>13</td>
-        <td>Andy</td>
-        <td>Wei</td>
-        <td>24</td>
-        <td>175.0</td>
-        <td>72.0</td>
-        <td>Teipei</td>
-        <td>1.75</td>
-    </tr>
-    <tr>
-        <td>14</td>
-        <td>kevin</td>
-        <td>Wang</td>
-        <td>30</td>
-        <td>174.0</td>
-        <td>63.0</td>
-        <td>San Francisco</td>
-        <td>1.74</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>kevin</td>
-        <td>Wei</td>
-        <td>27</td>
-        <td>178.0</td>
-        <td>65.0</td>
-        <td>Taipei</td>
-        <td>1.78</td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td>David</td>
-        <td>Kang</td>
-        <td>26</td>
-        <td>175.0</td>
-        <td>65.0</td>
-        <td>Washington</td>
-        <td>1.75</td>
-    </tr>
-    <tr>
-        <td>17</td>
-        <td>Matt</td>
-        <td>Wang</td>
-        <td>26</td>
-        <td>172.0</td>
-        <td>72.0</td>
-        <td>Taipei</td>
-        <td>1.72</td>
-    </tr>
-    <tr>
-        <td>18</td>
-        <td>kaka-ideal</td>
-        <td>Lin</td>
-        <td>28</td>
-        <td>178.0</td>
-        <td>70.0</td>
-        <td>Janpan</td>
-        <td>1.78</td>
-    </tr>
-</table>
-
-
+| person_id | firstname | lastname | age | height | weight | city | height_meters |
+| -- | -- | -- | -- | -- | -- | -- | -- | 
+| 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei | 1.75 |
+| 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei | 1.73 |
+| 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei | 1.6 |
+| 13 | Andy | Wei | 24 | 175.0 | 72.0 | Taipei | 1.75 |
+| 14 | kevin | Wang | 30 | 174.0 | 63.0 | San Francisco | 1.74 |
+| 15 | kevin | Wei | 27 | 178.0 | 65.0 | Taipei | 1.78 |
+| 16 | David | Kang | 26 | 175.0 | 65.0 | Washington | 1.75 |
+| 17 | Matt | Wang | 26 | 172.0 | 72.0 | Taipei | 1.72 |
+| 18 | kaka-ideal | Lin | 28 | 178.0 | 70.0 | Janpan | 1.78 |
 
 ## Drop Table
-
 
 ```python
 %%sql
@@ -1368,16 +538,11 @@ SELECT * FROM persons;
 DROP TABLE persons;
 ```
 
-     * sqlite:///test.db
-    Done.
-
-
-
-
-
-    []
-
-
+```
+ * sqlite:///test.db
+Done.
+[]
+```
 
 ## Drop Database
 
@@ -1395,4 +560,3 @@ If we want to drop DB in SQLite, just delete the file.
     drwxr-xr-x 2 kaka kaka  4096  5月 14 09:52 .ipynb_checkpoints
     -rw-r--r-- 1 kaka kaka   422  5月 14 09:25 README.md
     -rw-r--r-- 1 kaka kaka 15267  5月 14 10:16 sqlite-basics.ipynb
-

@@ -1,7 +1,7 @@
 ---
-title: "013 Roman To Integer"
+title: "[LeetCode] 013 Roman To Integer"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

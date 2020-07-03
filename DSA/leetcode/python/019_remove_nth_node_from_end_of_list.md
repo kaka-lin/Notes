@@ -1,7 +1,7 @@
 ---
-title: "019 Remove Nth Node From End Of List"
+title: "[LeetCode] 019 Remove Nth Node From End Of List"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "841 Keys And Rooms"
+title: "[LeetCode] 841 Keys And Rooms"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

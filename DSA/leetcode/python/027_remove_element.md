@@ -1,7 +1,7 @@
 ---
-title: "027 Remove Element"
+title: "[LeetCode] 027 Remove Element"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

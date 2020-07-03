@@ -1,5 +1,5 @@
 ---
-title: "Gitlab CI/CD"
+title: "[DevOps] Gitlab CI/CD"
 date: 2020-06-10
 tags: [DevOps, CI/CD Tools]
 categories: [DevOps]
@@ -38,7 +38,8 @@ The `.gitlab-ci.yml` file tells the `GitLab Runner` what to do. For example:
 - test stage
 - deploy stage
 
-![GitLab CI/CD workflow](./images/gitlab_cicd/workflow.png)
+![](./images/gitlab_cicd/workflow.png)
+![](/images/devops/gitlab_cicd/workflow.png)
 
 ## Getting started with GitLab CI/CD
 
@@ -81,6 +82,7 @@ If you use [GitLab.com](https://about.gitlab.com/) you can use the `Shared Runne
 To enable the `Shared Runners` you have to go to your projects; `Setting -> CI/CD` and click `Enable shared Runners`, as below:
 
 ![](images/gitlab_cicd/shared_runners.png)
+![](/images/devops/gitlab_cicd/shared_runners.png)
 
 ```
 Shared Runners are enable by default as of GitLab 8.2, but can be disabled with the Disable shared Runners button which is present under each project's Setting -> CI/CD page.
@@ -132,10 +134,13 @@ If you want to set a `specific Runners`, you need to follow two steps:
    * You need to your repo's URL and token, like:
 
         ![](./images/gitlab_cicd/url_token.png)
+        ![](/images/devops/gitlab_cicd/url_token.png)
+        
 
     If registering runner succeeded, you will see the status like:
 
     ![](./images/gitlab_cicd/specific_runners.png)
+    ![](/images/devops/gitlab_cicd/specific_runners.png)
 
     * Note 1:
 
@@ -143,12 +148,14 @@ If you want to set a `specific Runners`, you need to follow two steps:
         "Job is stuck in the pending state even a runner has been enabled for the project"`.
 
         ![](./images/gitlab_cicd/run_untaged_jobs.png)
+        ![](/images/devops/gitlab_cicd/run_untaged_jobs.png)
     
     * Note 2:
 
         Disable shared Runners
 
         ![](./images/gitlab_cicd/disable_shared_runners.png)
+        ![](/images/devops/gitlab_cicd/disable_shared_runners.png)
 
 ---
 
@@ -208,18 +215,20 @@ run-test:
 - `Pipelines`
 
     ![](./images/gitlab_cicd/pipelines.png)
+    ![](/images/devops/gitlab_cicd/pipelines.png)
 
 - `Pipelines -> Jobs`
 
     ![](./images/gitlab_cicd/jobs.png)
+    ![](/images/devops/gitlab_cicd/jobs.png)
 
 - `Log of that job`
   - 1. Shared Runners
 
         ![](./images/gitlab_cicd/log_of_job_shared_runners.png)
+        ![](/images/devops/gitlab_cicd/log_of_job_shared_runners.png)
 
   - 2. Specific Runners
 
         ![](./images/gitlab_cicd/log_of_job_specific_runners.png)
-
-
+        ![](/images/devops/gitlab_cicd/log_of_job_specific_runners.png)

@@ -1,7 +1,7 @@
 ---
-title: "509 Fibonacci Number"
+title: "[LeetCode] 509 Fibonacci Number"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

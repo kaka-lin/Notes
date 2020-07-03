@@ -1,7 +1,7 @@
 ---
-title: "938 Range Sum Of Bs"
+title: "[LeetCode] 938 Range Sum Of Bs"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

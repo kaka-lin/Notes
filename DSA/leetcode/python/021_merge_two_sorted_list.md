@@ -1,7 +1,7 @@
 ---
-title: "021 Merge Two Sorted List"
+title: "[LeetCode] 021 Merge Two Sorted List"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

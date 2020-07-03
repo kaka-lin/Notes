@@ -1,8 +1,8 @@
 ---
-title: "01 Google Trends And Python"
+title: "[DS] Google Trends 01: Operate with Python"
 date: 2020-06-10
-tags: [Data Science, Google Trends]
-categories: [Data Science, Google Trends]
+tags: [Data Science, Google Trends, Python]
+categories: [Data Science]
 ---
 
 # Get and Analysis the result of Google Trends with Python
@@ -23,34 +23,17 @@ categories: [Data Science, Google Trends]
     
     這是一個非官方支援的API，允許從`Google Trends`下載資料（爬蟲）
    
-
 ## Install `pytrends` package
-
 
 ```python
 !pip3 install pytrends
 ```
-
-    Requirement already satisfied: pytrends in /usr/local/lib/python3.7/site-packages (4.7.3)
-    Requirement already satisfied: lxml in /usr/local/lib/python3.7/site-packages (from pytrends) (4.5.1)
-    Requirement already satisfied: pandas>=0.25 in /usr/local/lib/python3.7/site-packages (from pytrends) (0.25.3)
-    Requirement already satisfied: requests in /usr/local/lib/python3.7/site-packages (from pytrends) (2.22.0)
-    Requirement already satisfied: pytz>=2017.2 in /usr/local/lib/python3.7/site-packages (from pandas>=0.25->pytrends) (2019.3)
-    Requirement already satisfied: numpy>=1.13.3 in /usr/local/lib/python3.7/site-packages (from pandas>=0.25->pytrends) (1.17.4)
-    Requirement already satisfied: python-dateutil>=2.6.1 in /usr/local/lib/python3.7/site-packages (from pandas>=0.25->pytrends) (2.8.1)
-    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.7/site-packages (from requests->pytrends) (2019.9.11)
-    Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.7/site-packages (from requests->pytrends) (1.25.7)
-    Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /usr/local/lib/python3.7/site-packages (from requests->pytrends) (3.0.4)
-    Requirement already satisfied: idna<2.9,>=2.5 in /usr/local/lib/python3.7/site-packages (from requests->pytrends) (2.8)
-    Requirement already satisfied: six>=1.5 in /usr/local/Cellar/protobuf/3.11.4/libexec/lib/python3.7/site-packages (from python-dateutil>=2.6.1->pandas>=0.25->pytrends) (1.14.0)
-
 
 ## Connect to Google
 
 - [Pandas](https://pandas.pydata.org/):
     
     Python Data Analysis Library
-
 
 ```python
 import pandas as pd
@@ -59,7 +42,7 @@ from pytrends.request import TrendReq
 pytrend = TrendReq()
 ```
 
-## Build Payload 
+## Build Payload
 
 設定我們想要搜尋的關鍵字、類別、時間區段、地區以及類型
 
@@ -113,114 +96,25 @@ TrendReq.interest_over_time(self)
 
 - Returns: pandas.Dataframe
 
-
 ```python
 interest_over_time_df = pytrend.interest_over_time()
 interest_over_time_df.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>tea</th>
-      <th>coffe</th>
-      <th>coke</th>
-      <th>milk</th>
-      <th>water</th>
-      <th>isPartial</th>
-    </tr>
-    <tr>
-      <th>date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2019-06-09</th>
-      <td>53</td>
-      <td>3</td>
-      <td>2</td>
-      <td>28</td>
-      <td>71</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2019-06-16</th>
-      <td>57</td>
-      <td>1</td>
-      <td>3</td>
-      <td>24</td>
-      <td>64</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2019-06-23</th>
-      <td>50</td>
-      <td>1</td>
-      <td>3</td>
-      <td>23</td>
-      <td>69</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2019-06-30</th>
-      <td>48</td>
-      <td>1</td>
-      <td>3</td>
-      <td>26</td>
-      <td>62</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2019-07-07</th>
-      <td>50</td>
-      <td>2</td>
-      <td>3</td>
-      <td>27</td>
-      <td>64</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
 
 #### Plot the result
 
 - [Matplotlib](https://matplotlib.org/)
 - [seaborn](https://seaborn.pydata.org/)
 
-Matplotlib 顯示中文請參考：[Matplotlib 顯示中文](https://github.com/kaka-lin/Notes/tree/master/Data_Science/matplotlib/show_chinese)
+Matplotlib 顯示中文請參考：
 
+1. [Windows](https://kaka-lin.github.io/2020/06/matplotlib_chinese_windows/)
+2. [Mac](https://kaka-lin.github.io/2020/06/matplotlib_chinese_mac/)
+3. [Ubuntu](https://kaka-lin.github.io/2020/06/matplotlib_chinese_ubuntu/)
 
 ```python
 #!pip3 install matplotlib seaborn
 ```
-
 
 ```python
 import matplotlib
@@ -245,9 +139,6 @@ plt.rcParams['axes.unicode_minus'] = False
     DataFrame.plot.line(self, x=None, y=None, **kwargs)
     ```
 
-    
-
-
 ```python
 axes = interest_over_time_df.plot.line(
     figsize=(15,7),
@@ -257,9 +148,8 @@ axes.set_ylabel('Trends Index')
 axes.tick_params(axis='both', which='major', labelsize=13)
 ```
 
-
-![png](01_google_trends_and_python_files/01_google_trends_and_python_14_0.png)
-
+![](images/google_trends_result_1.png)
+![](/images/data_science/google_trends/google_trends_result_1.png)
 
 ### Google Keyword Suggestions
 
@@ -274,69 +164,11 @@ TrendReq.suggestions(self, keyword)
     - `keyword`:
         - keyword to get suggestions for
 
-
 ```python
 keywords = pytrend.suggestions(keyword='beer')
 keywords_df = pd.DataFrame(keywords)
 keywords_df.drop(columns='mid') # This column makes no sense
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>title</th>
-      <th>type</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Beer</td>
-      <td>Alcoholic drink</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Brewery</td>
-      <td>Topic</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Drink coaster</td>
-      <td>Topic</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Bears</td>
-      <td>Animal</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Brewer's yeast</td>
-      <td>Fungus</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
 
 ### Related Queries
 
@@ -360,15 +192,11 @@ TrendReq.related_queries(self)
 pytrend.build_payload(kw_list=['Coronavirus'])
 ```
 
-
 ```python
 # Related Queries, return a dictionary of dataframe
 related_queries = pytrend.related_queries()
 related_queries
 ```
-
-
-
 
     {'Coronavirus': {'top':                             query  value
       0              taiwan coronavirus    100
@@ -424,250 +252,25 @@ related_queries
       24                 coronavirus uk   87600}}
 
 
-
-
 ```python
 COVID_19 = related_queries['Coronavirus']['top']
 COVID_19
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>query</th>
-      <th>value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>taiwan coronavirus</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>taiwan</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>coronavirus update</td>
-      <td>64</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>coronavirus cases</td>
-      <td>52</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>coronavirus 中文</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>thank you coronavirus helpers</td>
-      <td>33</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>coronavirus news</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>corona</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>coronavirus us</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>coronavirus map</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>武漢 肺炎</td>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>china coronavirus</td>
-      <td>24</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>coronavirus tips</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>world coronavirus</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>coronavirus live</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>coronavirus usa</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>疫情</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>new coronavirus</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>coronavirus in taiwan</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>wuhan coronavirus</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>coronavirus worldometer</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>taiwan coronavirus cases</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>italy coronavirus</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>coronavirus symptoms</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>corona virus</td>
-      <td>13</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
 ```python
 axes = COVID_19.plot.barh(x='query', y='value', figsize=(10,15))
 ```
 
-
-![png](01_google_trends_and_python_files/01_google_trends_and_python_21_0.png)
-
+![](images/google_trends_result_2.png)
+![](/images/data_science/google_trends/google_trends_result_2.png)
 
 ## The Search Trends of COVID-19 in 2020
-
 
 ```python
 pytrend.build_payload(kw_list=['Coronavirus'], timeframe='2020-01-01 2020-06-04')
 covid_19_interest_over_time_df = pytrend.interest_over_time()
 covid_19_interest_over_time_df.head()
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Coronavirus</th>
-      <th>isPartial</th>
-    </tr>
-    <tr>
-      <th>date</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2020-01-01</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-02</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-03</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-04</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2020-01-05</th>
-      <td>0</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 
 ```python
 axes = covid_19_interest_over_time_df.plot.line(
@@ -679,6 +282,5 @@ axes.set_ylabel('Trends Index')
 axes.tick_params(axis='both', which='major', labelsize=13)
 ```
 
-
-![png](01_google_trends_and_python_files/01_google_trends_and_python_24_0.png)
-
+![](images/google_trends_result_3.png)
+![](/images/data_science/google_trends/google_trends_result_3.png)

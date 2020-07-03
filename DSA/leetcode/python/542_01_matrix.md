@@ -1,7 +1,7 @@
 ---
-title: "542 01 Matrix"
+title: "[LeetCode] 542 01 Matrix"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

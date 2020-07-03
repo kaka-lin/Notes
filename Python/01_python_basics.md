@@ -1,5 +1,5 @@
 ---
-title: "01 Python Basics"
+title: "[Python] 01 Python Basics"
 date: 2020-06-10
 tags: [Python]
 categories: [Python]
@@ -45,11 +45,13 @@ $ python
 
 2. Then you will see the figure below
 
-![](./images/python_shell.png)
+![](images/python_shell.png)
+![](/images/python/python_shell.png)
 
 3. Now, you can type a single statement and get the result
 
-![](./images/python_shell_2.png)
+![](images/python_shell_2.png)
+![](/images/python/python_shell_2.png)
 
 ## Python Comments
 
@@ -74,71 +76,33 @@ print('Hello world')
 ## Python Expressions: Math Operators
 
 ![](images/common_operators.png)
+![](/images/python/common_operators.png)
 
 
 ```python
 # Addition: Integer
-2 + 3
+2 + 3 # 5
 ```
-
-
-
-
-    5
-
-
-
 
 ```python
 # Addition: Floating point & Floating point -> Floating point
-2.0 + 3.0
+2.0 + 3.0 # 5.0
 ```
-
-
-
-
-    5.0
-
-
-
 
 ```python
 # Addition: Floating point & Integet -> Floating point
-2.0 + 3
+2.0 + 3 # 5.0
 ```
-
-
-
-
-    5.0
-
-
-
 
 ```python
 # Multiplication
-3 * 2
+3 * 2 # 6
 ```
-
-
-
-
-    6
-
-
-
 
 ```python
 # Exponent
-2 ** 5
+2 ** 5 # 32
 ```
-
-
-
-
-    32
-
-
 
 ### Exercise
 
@@ -150,7 +114,6 @@ and after two years it's 100 x 1.1 x 1.1 = 121.
 
 Add code to calculate how much money you end up with after 7 years, and print the result.
 
-
 ```python
 # Click below for a solution
 
@@ -158,17 +121,11 @@ return_money = 100 * (1.1 ** 7)
 return_money
 ```
 
-
-
-
-    194.87171000000012
-
-
+    [Out]: 194.87171000000012
 
 ## Display the Output
 
 Builtin-in function `print()` serves as an output statement in Python.
-
 
 ```python
 # type 1.
@@ -191,13 +148,11 @@ print("Hello {}".format(text))
     Hello world!
     Hello world!
 
-
 ## Getting the User's Input
 
 The `input()` function is part of the core library of standard Python distribution.
 
 It reads the key strokes as a string object which can be referred to by a variable having a suitable name.
-
 
 ```python
 _input = input()
@@ -208,8 +163,6 @@ print("input: {}, type: {}".format(_input, type(_input)))
     123
     input: 123, type: <class 'str'>
 
-
-
 ```python
 name = input("Enter your name: ")
 print("Welcome, {}".format(name))
@@ -217,7 +170,6 @@ print("Welcome, {}".format(name))
 
     Enter your name: kaka
     Welcome, kaka
-
 
 ## Variables
 
@@ -249,7 +201,8 @@ A `data type` is a category for values, and every value belongs to exactly one d
 
 Python has the following standard or built-in data types:
 
-![](./images/data_type.png)
+![](images/data_type.png)
+![](/images/python/data_type.png)
 
 ### Numeric
 
@@ -260,8 +213,6 @@ Python has the following standard or built-in data types:
 ### Boolean
 
 Data with one of two built-in values `True` or `False`.
-
-
 
 ### Sequence
 
@@ -315,20 +266,12 @@ a = {"name": "kaka", "age": 28}
 
 例如：`x = 7` 就是把`7這個物件指定給x這個變數`，換句話說也就是把`x這個變數指向(綁定)7這個物件`，如下圖所示：
 
-
-
 ```python
 x = 7
 x
 ```
 
-
-
-
-    7
-
-
-
+    [Out]: 7
 
 ```python
 x = 7
@@ -336,24 +279,16 @@ y = x
 y
 ```
 
-
-
-
-    7
-
-
-
+    [Out]: 7
 
 ```python
 x = 8
 print("x =", x, "y =", y)
 ```
 
-    x = 8 y = 7
-
+    [Out]: x = 8 y = 7
 
 ### Pyhton Assignmes: Bindding
-
 
 ```python
 # Fist, we see an example as below:
@@ -367,12 +302,12 @@ print("y: ", y)
     x:  [1, 100, 3]
     y:  [1, 100, 3]
 
-
 #### Explain
 
 Python的`=`實際上是 `binds an object reference to an object`
 
-![Object reference](images/object_references.png)
+![](images/object_references.png)
+![](/images/python/object_references.png)
 
 ```python
 x = [1, 2, 3]
@@ -409,7 +344,6 @@ y ------
 
 - Referece: [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 
-
 ```python
 # This program says hello and asks for my name and age.
 print('Hello World!')
@@ -434,4 +368,3 @@ print('You will be ' + str(int(age) + 1) + ' in a year')
     28
     ------------------
     You will be 29 in a year
-

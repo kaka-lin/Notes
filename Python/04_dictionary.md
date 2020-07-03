@@ -1,5 +1,5 @@
 ---
-title: "04 Dictionary"
+title: "[Python] 04 Dictionary"
 date: 2020-06-10
 tags: [Python]
 categories: [Python]
@@ -13,7 +13,6 @@ categories: [Python]
 dict = {key1 : value1, key2 : value2 }
 ```
 
-
 ```python
 kaka = {'firstname':'lin', 'age': 28, 'height': 175}
 print(kaka)
@@ -21,16 +20,13 @@ print(kaka)
 
     {'firstname': 'lin', 'age': 28, 'height': 175}
 
-
 ## 取得 Dictionary 裡有幾個元素: len()
-
 
 ```python
 print(len(kaka))
 ```
 
-    3
-
+    [Out]: 3
 
 ## 取得 Dictionay 裡的資料
 
@@ -40,17 +36,11 @@ print(len(kaka))
 dict[key] -> return value
 ```
 
-
 ```python
 kaka['age']
 ```
 
-
-
-
-    28
-
-
+    [Out]: 28
 
 ### 取得 Dictionary 裡的所有 key
 
@@ -58,17 +48,11 @@ kaka['age']
 dict.keys()
 ```
 
-
 ```python
 kaka.keys()
 ```
 
-
-
-
     dict_keys(['firstname', 'age', 'height'])
-
-
 
 ### 取得 Dictionary 裡的所有 value
 
@@ -76,17 +60,11 @@ kaka.keys()
 dict.values()
 ```
 
-
 ```python
 kaka.values()
 ```
 
-
-
-
     dict_values(['lin', 28, 175])
-
-
 
 ### 取得 Dictionary 裡的所有資料
 
@@ -94,17 +72,11 @@ kaka.values()
 dict.items()
 ```
 
-
 ```python
 kaka.items()
 ```
 
-
-
-
     dict_items([('firstname', 'lin'), ('age', 28), ('height', 175)])
-
-
 
 ## 增加 Dictionary 裡的資料
 
@@ -112,18 +84,12 @@ kaka.items()
 dict[new_key] = value
 ```
 
-
 ```python
 kaka['weight'] = 68
 kaka
 ```
 
-
-
-
     {'firstname': 'lin', 'age': 28, 'height': 175, 'weight': 68}
-
-
 
 ## 更新 Dictionary 裡的資料
 
@@ -131,18 +97,12 @@ kaka
 dict[key] = new_value
 ```
 
-
 ```python
 kaka['weight'] = 70
 kaka
 ```
 
-
-
-
     {'firstname': 'lin', 'age': 28, 'height': 175, 'weight': 70}
-
-
 
 ## 移除 Dictionary 裡的資料
 
@@ -152,18 +112,12 @@ kaka
 del dict[key]
 ```
 
-
 ```python
 del kaka['weight']
 kaka
 ```
 
-
-
-
     {'firstname': 'lin', 'age': 28, 'height': 175}
-
-
 
 ### pop method
 
@@ -171,30 +125,18 @@ kaka
 dict.pop(key)
 ```
 
-
 ```python
 kaka['weight'] = 70
 kaka
 ```
 
-
-
-
     {'firstname': 'lin', 'age': 28, 'height': 175, 'weight': 70}
-
-
-
 
 ```python
 kaka.pop('weight')
 kaka
 ```
-
-
-
-
     {'firstname': 'lin', 'age': 28, 'height': 175}
-
 
 
 ## 檢查指定的key是否存在於Dictionary中
@@ -203,32 +145,19 @@ kaka
 key in dict -> return True 或是 False
 ```
 
-
 ```python
 'firstname' in kaka
 ```
 
-
-
-
-    True
-
-
-
+    [Out]: True
 
 ```python
 'weight' in kaka
 ```
 
-
-
-
-    False
-
-
+    [Out]: False
 
 ## Dictionary 與 for-loop
-
 
 ```python
 for k, v in kaka.items():
@@ -239,9 +168,7 @@ for k, v in kaka.items():
     age: 28
     height: 175
 
-
 ### 用 for-loop 來建立 Dictionary
-
 
 ```python
 temp = {}
@@ -250,24 +177,13 @@ for i in range(10):
 temp
 ```
 
-
-
-
     {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
 
-
-
 ### pyhonic
-
 
 ```python
 a = {x: x ** 2 for x in range(10)}
 a
 ```
 
-
-
-
     {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
-
-

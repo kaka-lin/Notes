@@ -1,7 +1,7 @@
 ---
-title: "617 Merge Two Binary Trees"
+title: "[LeetCode] 617 Merge Two Binary Trees"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

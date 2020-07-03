@@ -1,5 +1,5 @@
 ---
-title: "05 Function"
+title: "[Python] 05 Function"
 date: 2020-06-10
 tags: [Python]
 categories: [Python]
@@ -12,19 +12,16 @@ def 函式名稱(參數):
     程式碼
 ```
 
-
 ```python
 def printf(text):
     print("[Out]: {}".format(text))
 ```
-
 
 ```python
 printf('Hello world!')
 ```
 
     [Out]: Hello world!
-
 
 ## 閏年
 
@@ -33,7 +30,6 @@ printf('Hello world!')
 2. 公元年份除以4可整除但除以100不可整除，為閏年。
 3. 公元年份除以100可整除但除以400不可整除，為平年。
 4. 公元年份除以400可以整除為閏年
-
 
 ```python
 def check_leap_year(year):
@@ -46,7 +42,6 @@ def check_leap_year(year):
     return 0
 ```
 
-
 ```python
 year = int(input())
 print(check_leap_year(1377))
@@ -55,4 +50,3 @@ print(check_leap_year(1377))
     1344
     平年
     0
-

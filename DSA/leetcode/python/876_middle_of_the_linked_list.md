@@ -1,7 +1,7 @@
 ---
-title: "876 Middle Of The Linked List"
+title: "[LeetCode] 876 Middle Of The Linked List"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 

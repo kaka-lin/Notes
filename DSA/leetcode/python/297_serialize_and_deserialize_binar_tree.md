@@ -1,7 +1,7 @@
 ---
-title: "297 Serialize And Deserialize Binar Tree"
+title: "[LeetCode] 297 Serialize And Deserialize Binar Tree"
 date: 2020-06-10
-tags: [LeetCode, Python]
+tags: [LeetCode, DSA]
 categories: [LeetCode]
 ---
 
