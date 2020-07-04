@@ -1,3 +1,10 @@
+---
+title: "[DSA] NTU CSIE DSA, 01: Array"
+date: 2020-07-04
+tags: [Data Structure, DSA]
+categories: [Data Structure]
+---
+
 # Array
 
 - [Array](#array)
@@ -37,24 +44,28 @@
     address就是index
 
 ![](images/array_01.png)
+![](/images/dsa/array_01.png)
 
 ### Array as Memory Block in C/C++
 
 `反過來說Array也是記憶體`
 
 ![](images/array_02.png)
+![](/images/dsa/array_02.png)
 
 * Note: 一個 Data Structure 看的是如何`取用`與`維護`
 
 ## Array as Abstract Data Structure
 
 ![](images/array_03.png)
+![](/images/dsa/array_03.png)
 
 ## C++ STL Vector: a Growing Array
 
 完整的array implementation
 
 ![](images/array_04.png)
+![](/images/dsa/array_04.png)
 
 ## Two Dimensional Array
 
@@ -65,14 +76,17 @@
 把2D展開成1D
 
 ![](images/array_05.png)
+![](/images/dsa/array_05.png)
 
 ### Array of Array Implementation of 2D Array
 
 ![](images/array_06.png)
+![](/images/dsa/array_06.png)
 
 ex: 第一個raw與第二個raw分開放(每個raw有5個element)
 
 ![](images/array_07.png)
+![](/images/dsa/array_07.png)
 
 ### Comparison of Two Implementations
 
@@ -91,6 +105,7 @@ ex: 第一個raw與第二個raw分開放(每個raw有5個element)
 以下兩種方式，哪種比較快？
 
 ![](images/array_08.png)
+![](/images/dsa/array_08.png)
 
 - Ans: `rowsum()`
 
@@ -126,6 +141,7 @@ arr[0] <= arr[1] <= arr[2] <= ... <= arr[end-1]
     以前在維護`Array`時只需要他的`開頭(Head)`的位置(因為其他位置都可以從開頭算出來)，現在如果要維護`Consecutive Array`時需要知道array的`尾巴(Tail)`，這樣才能知道下次要放新東西時該往哪邊繼續放下去(資料的地方到哪)
 
 ![](images/array_09.png)
+![](/images/dsa/array_09.png)
 
 田神: 希望同學有機會想想，修正上面的程式碼～
 
@@ -149,6 +165,7 @@ Example: 1, 3, 7, 4, 6, 5, 2
 ### `update` and `remove` of Ordered Array
 
 ![](images/array_10.png)
+![](/images/dsa/array_10.png)
 
 ## Binary Search with Ordered Array
 
@@ -189,6 +206,7 @@ eturn NOTFIND
 #### Method 3: `Binary Search Algorithm` (Ordered Array)
 
 ![](images/array_11.png)
+![](/images/dsa/array_11.png)
 
 ```c
 begin = 0
