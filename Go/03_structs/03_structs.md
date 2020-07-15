@@ -6,8 +6,8 @@
     - [Accessing Struct Fields (Members)](#accessing-struct-fields-members)
   - [Pointers to Structs](#pointers-to-structs)
     - [Pointer](#pointer)
-  - [Pointers to Structs](#pointers-to-structs-1)
-    - [Accessing the field of Struct Pointer](#accessing-the-field-of-struct-pointer)
+    - [Pointers to Structs](#pointers-to-structs-1)
+      - [Accessing the field of Struct Pointer](#accessing-the-field-of-struct-pointer)
 
 ## Structs (Structures)
 
@@ -74,7 +74,7 @@ This is known as `"dereferencing"` or `"indirecting"`.
 
 - Unlike C, Go has `no pointer arithmetic (沒有指針運算)`.
 
-## Pointers to Structs
+### Pointers to Structs
 
 Struct fields can be accessed through a struct pointer.
 
@@ -97,7 +97,7 @@ p := &v
 q := &Vertex{3, 4}
 ```
 
-### Accessing the field of Struct Pointer
+#### Accessing the field of Struct Pointer
 
 To access the field `X` of a struct when we have the `struct pointer p`, we need to use `dereferencing syntax (*p)` to get the actual value of struct it is pointing to and use `(*p).X` to access `X` of that struct value.
 
