@@ -5,3 +5,4 @@
 - [03 Structs](03_structs/03_structs.md)
 - [04 Array & Slices](04_array_slice/04_array_slice.md)
 - [05 Maps](05_maps/05_maps.md)
+- [06 Advanced Function](06_advanced_function/06_advanced_function.md)

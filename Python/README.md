@@ -16,6 +16,7 @@
 - [04. Dictionary](01_python_basics/04_dictionary.ipynb)
 - [05. Function](01_python_basics/05_function.ipynb)
 
-### 02. Process Management
+### 02. [Process Management](https://github.com/kaka-lin/Notes/tree/master/Python/02_process_management)
 
 - [01. Multithread (多執行緒)](02_process_management/01_multithread.ipynb)
+- [02. Multiprocessing (多程序)](02_process_management/02_multiprocessing.ipynb)
