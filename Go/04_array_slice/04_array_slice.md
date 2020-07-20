@@ -1,27 +1,13 @@
-# Go Data Structure: `Array` & `Slice`
-
-- [Go Data Structure: `Array` & `Slice`](#go-data-structure-array--slice)
-  - [Array](#array)
-    - [Creating an Array](#creating-an-array)
-    - [Array initialize](#array-initialize)
-  - [Slices](#slices)
-    - [Creating a Slice](#creating-a-slice)
-      - [Method 1: like array but no size](#method-1-like-array-but-no-size)
-      - [Method 2: use `make()`](#method-2-use-make)
-      - [Method 3: `[low:high]`](#method-3-lowhigh)
-    - [Slices are like references to arrays](#slices-are-like-references-to-arrays)
-    - [Slice `length` and `capacity`](#slice-length-and-capacity)
-    - [Slices of slices](#slices-of-slices)
-      - [Example: 2D Array](#example-2d-array)
-    - [`append` function](#append-function)
-    - [`copy` function](#copy-function)
-    - [`range` function](#range-function)
-      - [Skip the index or value](#skip-the-index-or-value)
-  - [Exercise: Slices](#exercise-slices)
+---
+title: "[Go] Ch1: Go Basics - 04 Go Data Structure: `Array` & `Slice`"
+date: 2020-07-11
+tags: [Go]
+categories: [Go]
+---
 
 ## Array
 
-### Creating an Array
+### 1. Creating an Array
 
 The type `[n]T` is an array of `n` values of type `T`.
 
@@ -33,7 +19,7 @@ var a [10]int
 
 - An array's length is part of its type, so `arrays cannot be resized`. But Go provides a convenient way of working with array.
 
-### Array initialize
+### 2. Array initialize
 
 ```go
 a := [6]int{2, 3, 5, 7, 11, 13}
@@ -52,7 +38,7 @@ A slice is a `dynamically-size, flexible` view into the elements of an array.
 - The default value of uninitialized slice is `nil`
 - Slices `does not store the data`. It just provides `reference to an array`
 
-### Creating a Slice
+### 1. Creating a Slice
 
 #### Method 1: like array but no size
 
@@ -84,7 +70,7 @@ var s []type = a[low:high]
 s := a[low:high]
 ```
 
-Example:
+#### Example:
 
 ```go
 // Elements 1 through 3
@@ -94,7 +80,7 @@ Example:
 s := a[1:4] // [2, 3, 4]
 ```
 
-More
+- More
 
 ```go
 // slice initialize
@@ -109,7 +95,7 @@ a3 = a[1:] // [3 5 7 11]
 a4 = a[:] // [2 3 5 7 11]
 ```
 
-### Slices are like references to arrays
+### 2. Slices are like references to arrays
 
 `A slice does not store any data`, it just describes a section of an underlying array.
 
@@ -125,7 +111,7 @@ fmt.Println(b) // [2 10 4]
 fmt.Println(a) // [1 2 10 4 5 6]
 ```
 
-### Slice `length` and `capacity`
+### 3. Slice `length` and `capacity`
 
 A slice has both a `length` and a `capacity`.
 
@@ -153,7 +139,7 @@ len(s)
 cap(s)
 ```
 
-### Slices of slices
+### 4. Slices of slices
 
 Slices can contain any type, including other slices
 
@@ -179,7 +165,7 @@ board := [][]string{
 }
 ```
 
-### `append` function
+### 5. `append` function
 
 Appending new values to the slice using built-in `append` function.
 
@@ -198,7 +184,7 @@ var s []int
 s = append(s, 0)
 ```
 
-### `copy` function
+### 6. `copy` function
 
 Copying one slice into another using built-in `copy` function.
 
@@ -219,7 +205,7 @@ s2 := make([]int, 2)
 copy(s1, s2)
 ```
 
-### `range` function
+### 7. `range` function
 
 The `range` form of the `for` loop iterates over a `slice` or `map`.
 

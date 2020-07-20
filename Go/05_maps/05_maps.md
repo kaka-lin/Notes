@@ -1,21 +1,17 @@
-# Go Data Structure: `Maps`
+---
+title: "[Go] Ch1: Go Basics - 05 Go Data Structure: `Maps`"
+date: 2020-07-11
+tags: [Go]
+categories: [Go]
+---
 
-- [Go Data Structure: `Maps`](#go-data-structure-maps)
-  - [Creating a `Maps`](#creating-a-maps)
-    - [Method 1: like array](#method-1-like-array)
-    - [Method 2: use `make()`](#method-2-use-make)
-  - [Maps initialize](#maps-initialize)
-  - [Mutating Maps](#mutating-maps)
-    - [`Insert` or `Update`](#insert-or-update)
-    - [`Detele`](#detele)
-    - [Check if the key is exist](#check-if-the-key-is-exist)
-  - [Exercise: Maps](#exercise-maps)
+# Maps
 
 A map maps key to value.
 
 Golang provides map data structure which implements `hashtable`.
 
-## Creating a `Maps`
+## 1. Creating a Maps
 
 The zero value of a map is `nil`. A `nil` map has no keys, `nor can keys be added`.
 
@@ -45,7 +41,7 @@ var m map[keyTpye]valueType
 m = make(map[keyTpye]valueType)
 ```
 
-## Maps initialize
+## 2. Maps initialize
 
 Map literals are like struct literals, but the keys are required.
 
@@ -56,9 +52,9 @@ var m = map[keyType]valueType {
 }
 ```
 
-## Mutating Maps
+## 3. Mutating Maps
 
-### `Insert` or `Update` 
+### Insert or Update 
 
 Insert or update an element in map m
 
@@ -66,7 +62,7 @@ Insert or update an element in map m
 m[key] = value
 ```
 
-### `Detele`
+### Detele
 
 Delete an element
 

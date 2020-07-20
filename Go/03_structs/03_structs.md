@@ -1,19 +1,15 @@
-# Go Data Structure: `Structs`
-
-- [Go Data Structure: `Structs`](#go-data-structure-structs)
-  - [Structs (Structures)](#structs-structures)
-    - [Defining a struct](#defining-a-struct)
-    - [Accessing Struct Fields (Members)](#accessing-struct-fields-members)
-  - [Pointers to Structs](#pointers-to-structs)
-    - [Pointer](#pointer)
-    - [Pointers to Structs](#pointers-to-structs-1)
-      - [Accessing the field of Struct Pointer](#accessing-the-field-of-struct-pointer)
+---
+title: "[Go] Ch1: Go Basics - 03 Go Data Structure: `Structs`"
+date: 2020-07-11
+tags: [Go]
+categories: [Go]
+---
 
 ## Structs (Structures)
 
 A `struct or structure` is a collection of fields.
 
-### Defining a struct
+### 1. Defining a struct
 
 Using `struct` keyword to create a new structure type.
 
@@ -34,7 +30,7 @@ type Vertex struct {
 }
 ```
 
-### Accessing Struct Fields (Members)
+### 2. Accessing Struct Fields (Members)
 
 Struct fields are accessed using a `dot`.
 
@@ -46,7 +42,7 @@ fmt.Println(v.X) // 4
 
 ## Pointers to Structs
 
-### Pointer
+### 1. Pointer
 
 A `pointer` holds the memory address of a value.
 
@@ -74,7 +70,7 @@ This is known as `"dereferencing"` or `"indirecting"`.
 
 - Unlike C, Go has `no pointer arithmetic (沒有指針運算)`.
 
-### Pointers to Structs
+### 2. Pointers to Structs
 
 Struct fields can be accessed through a struct pointer.
 
@@ -97,7 +93,7 @@ p := &v
 q := &Vertex{3, 4}
 ```
 
-#### Accessing the field of Struct Pointer
+### 3. Accessing the field of Struct Pointer
 
 To access the field `X` of a struct when we have the `struct pointer p`, we need to use `dereferencing syntax (*p)` to get the actual value of struct it is pointing to and use `(*p).X` to access `X` of that struct value.
 

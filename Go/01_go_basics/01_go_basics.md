@@ -1,21 +1,9 @@
-# GO Basics
-
-- [GO Basics](#go-basics)
-  - [Packages (套件)](#packages-套件)
-  - [Import](#import)
-  - [Exported names](#exported-names)
-  - [Variables](#variables)
-  - [Short variable declarations](#short-variable-declarations)
-  - [Functions](#functions)
-    - [Functions continued](#functions-continued)
-    - [Multiple results](#multiple-results)
-    - [Named return values](#named-return-values)
-  - [Basic types](#basic-types)
-    - [Zero values](#zero-values)
-    - [Type coversions (型別轉換)](#type-coversions-型別轉換)
-    - [Type inference](#type-inference)
-    - [Constants](#constants)
-    - [Numeric Constants](#numeric-constants)
+---
+title: "[Go] Ch1: Go Basics - 01 Go Basics"
+date: 2020-07-11
+tags: [Go]
+categories: [Go]
+---
 
 ## Packages (套件)
 

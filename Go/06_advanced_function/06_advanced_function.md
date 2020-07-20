@@ -1,10 +1,9 @@
-# Advanced Function
-
-- [Advanced Function](#advanced-function)
-  - [Function as Arguments](#function-as-arguments)
-  - [Function Closures](#function-closures)
-    - [Anonymous Function](#anonymous-function)
-    - [Closure](#closure)
+---
+title: "[Go] Ch1: Go Basics - 06 Advanced Function"
+date: 2020-07-18
+tags: [Go]
+categories: [Go]
+---
 
 ## Function as Arguments
 
@@ -16,7 +15,7 @@ In Go, `function is also a type`. So we can pass function as another function's 
 func(int, int) int
 ```
 
-Example 1
+### Example 1
 
 ```go
 func print(fn func(int, int) int, a, b int) {
@@ -37,7 +36,7 @@ func main() {
 }
 ```
 
-Example 2
+### Example 2
 
 ```go
 func compute(fn func(float64, float64) float64) float64 {
@@ -66,7 +65,7 @@ Golang supports [anonymous functions(匿名函式)](https://en.wikipedia.org/wik
 - 匿名函式可以作為返回值
 - 匿名函式也可以作為變數
 
-Example
+#### Example
 
 ```go
 // anonymous function
@@ -104,7 +103,7 @@ A closure is a function value that references variables from outside its body
 閉包就是能夠讀取其他函式內部變量的函式。好處是可以把變數隱藏在內部，讓外部存取不到，只能看到我們想要提供的值
 ```
 
-Example 1
+#### Example 1
 
 ```go
 func intSeq() func() int {
@@ -125,7 +124,7 @@ func main() {
 
 上例將變數`i`隱藏在內部匿名函式中，我們無法對變數`i`進行操作，只能拿到他的值。
 
-Example 2
+#### Example 2
 
 ```go
 func adder() func(int) int {

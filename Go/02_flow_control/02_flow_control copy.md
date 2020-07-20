@@ -1,19 +1,11 @@
-# Flow control
+---
+title: "[Go] Ch1: Go Basics - 02 Flow Control"
+date: 2020-07-11
+tags: [Go]
+categories: [Go]
+---
 
-- [Flow control](#flow-control)
-  - [`For`](#for)
-    - [Note](#note)
-  - [`While `](#while)
-    - [Infinite loop](#infinite-loop)
-  - [If](#if)
-    - [`If` with a short statement](#if-with-a-short-statement)
-    - [If and else](#if-and-else)
-  - [Exercise: Loop and Functions](#exercise-loop-and-functions)
-  - [Switch](#switch)
-  - [Defer](#defer)
-    - [Sracking defers](#sracking-defers)
-
-## `For`
+## For
 
 Go has `only one looping construct`, the `foor` loop
 
@@ -30,7 +22,7 @@ for i := 0; i < 10; i++ {
 
 - Go的for看起來跟C或Java中的依樣，但是沒有 `()`，但`{}`是必要的，如上所示。
 
-### Note
+#### Note
 
 `For的 init 和 post statements可以為空。`
 
@@ -41,7 +33,7 @@ for ; sum < 1000; {
 } // 1024
 ```
 
-## `While `
+## While
 
 `Go沒有While`, 因為可以省略分號(`;`)，C的while在Go中就是for
 
@@ -52,7 +44,7 @@ for sum < 1000 {
 }
 ```
 
-### Infinite loop
+#### Infinite loop
 
 ```go
 for {
@@ -70,7 +62,7 @@ if <condition> {
 }
 ```
 
-### `If` with a short statement
+### If with a short statement
 
 跟`for`一樣，`if`可以在條件之前執行一個簡單的語句，這個語句的作用範圍僅在`if`的範圍內
 
@@ -98,7 +90,7 @@ func pow(x, n, lim float64) float64 {
 
 ## Exercise: Loop and Functions
 
-用牛頓法實現開根號函式
+#### 用牛頓法實現開根號函式
 
 - 牛頓法:
     

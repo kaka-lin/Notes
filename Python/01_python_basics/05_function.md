@@ -1,5 +1,5 @@
 ---
-title: "[Python] 05 Function"
+title: "[Python] Ch1: Python Basics - 05 Function"
 date: 2020-06-10
 tags: [Python]
 categories: [Python]

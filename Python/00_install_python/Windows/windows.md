@@ -1,14 +1,9 @@
 ---
-title: "Windows"
-date: 2020-06-10
+title: "[Python] Ch0: Install Python: Windows"
+date: 2020-05-23
+tags: [Python]
+categories: [Python]
 ---
-
----
-title: "Windows"
-date: 2020-06-10
----
-
-# Python Environment Setup on `Windows`
 
 ## 1. Install Package Manager
 
@@ -17,6 +12,7 @@ date: 2020-06-10
     It is the ```package manager``` for windows. Following the install step on the website to install it. 
 
     ![](img/choco.png)
+    ![](/images/python/00_install_python/windows/choco.png)
 
 ## 2. Install More Handy Terminal
 
@@ -30,7 +26,7 @@ date: 2020-06-10
 
     <img src="img/conemu.png" height="70%" width="70%">
 
-<div class="page"/>
+    ![](/images/python/00_install_python/windows/conemu.png)
   
 ## 3. Install Git Bash
 
@@ -46,7 +42,7 @@ Opening ```ConEmu``` and choose ```git bash```, then you can use ```Unix-command
     
     <img src="img/gitbash.png">
 
-<div class="page"/>
+    ![](/images/python/00_install_python/windows/gitbash.png)
 
 ## 5. Install Python3
 
@@ -57,6 +53,8 @@ Opening ```ConEmu``` and choose ```git bash```, then you can use ```Unix-command
     ```
 
     <img src="img/miniconda.png">
+
+    ![](/images/python/00_install_python/windows/miniconda.png)
 
     then you can use ```conda``` and ```python```
 
@@ -74,15 +72,19 @@ Opening ```ConEmu``` and choose ```git bash```, then you can use ```Unix-command
 
     <img src="img/py36-1.png" width="60%">
 
+    ![](/images/python/00_install_python/windows/py36-1.png)
+
     <img src="img/py36-2.png" width="60%">
 
-<div class="page"/>
+    ![](/images/python/00_install_python/windows/py36-2.png)
 
 3. Activate the environment of py36
 
     ![](img/py36-3.png)
-
+    ![](/images/python/00_install_python/windows/py36-3.png)
+    
     ![](img/py36-4.png)
+    ![](/images/python/00_install_python/windows/py36-4.png)
 
 ---
 
@@ -95,3 +97,4 @@ $ python -i
 ```
 
 ![](img/python.png)
+![](/images/python/00_install_python/windows/python.png)

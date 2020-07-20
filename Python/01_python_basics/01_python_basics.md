@@ -1,5 +1,5 @@
 ---
-title: "[Python] 01 Python Basics"
+title: "[Python] Ch1: Python Basics - 01 Python Basics"
 date: 2020-06-10
 tags: [Python]
 categories: [Python]
