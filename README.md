@@ -8,6 +8,8 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Data Structure and Algorithms (DSA)](https://github.com/kaka-lin/Notes/tree/master/DSA)
 
+- [Operate System (OS)](https://github.com/kaka-lin/Notes/tree/master/OS)
+
 - [Database](https://github.com/kaka-lin/Notes/tree/master/DB)
 
 - [DevOps](https://github.com/kaka-lin/Notes/tree/master/DevOps)
