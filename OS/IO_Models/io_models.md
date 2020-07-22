@@ -1,4 +1,9 @@
-# I/O Models: 同步、非同步、阻塞、非阻塞
+---
+title: "[OS] I/O Models: 同步、非同步、阻塞、非阻塞y"
+date: 2020-07-22
+tags: [OS, I/O Models]
+categories: [OS]
+---
 
 在開發I/O相關程式時常常會遇到以下這四種名詞:
 
@@ -73,6 +78,7 @@
 下圖是 I/O Models的四個象限，我們用Linux上的相關API來介紹。
 
 ![](images/io_models.png)
+![](/images/os/io_models/io_models.png)
 圖出處: [Study Notes - I/O Models](https://rickhw.github.io/2019/02/27/ComputerScience/IO-Models/)
 
 從上圖我們可以得出四種 I/O model:
@@ -102,6 +108,7 @@
 如下圖所示，`Blocking I/O`在呼叫`read()`後，首先使用者執行緒自己被hang住，直到Kernel返回值之後才能繼續下一個動作。
 
 ![](images/blocking_io.png)
+![](/images/os/io_models/blocking_io.png)
 圖出處: [IBM: Async I/O](https://www.ibm.com/developerworks/cn/linux/l-async/index.html)
 
 #### Blocking I/O 特性:
@@ -123,6 +130,7 @@
 `NIO`其實`效率很差，很浪費CPU Time`，但還算是蠻常見的。
 
 ![](images/non_blocking_io.png)
+![](/images/os/io_models/non_blocking_io.png)
 圖出處: [IBM: Async I/O](https://www.ibm.com/developerworks/cn/linux/l-async/index.html)
 
 #### Non-Blocking I/O 特性:
@@ -140,6 +148,7 @@
 如下圖所示，以select為例，當程式呼叫了select時，整個process就會被block，同時kernel會去"監視"所有由select負責的[檔案描述符](https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6)(ex: socket)，一但有任一`檔案描述符`準備好了，select就會立刻return。此時在呼叫read將資料copy至application buffer中。
 
 ![](images/io_multiplexing.png)
+![](/images/os/io_models/io_multiplexing.png)
 圖出處: [I/O Multiplexing](http://www.cs.toronto.edu/~krueger/csc209h/lectures/Week11-Select-4.pdf)
 
 #### I/O Multiplexing vs Blocking I/O
@@ -171,6 +180,7 @@
 2. Kernel完成整個操作(包含取得資料、複製到Buffer)之後，會向user process發送一個訊號，通知說這個讀取操作已完成，且這個訊號是由`aio_read`指定的(deliver signal specified in aio_read)。
 
 ![](images/asynchronous_io.png)
+![](/images/os/io_models/asynchronous_io.png)
 圖出處: [IBM: Async I/O](https://www.ibm.com/developerworks/cn/linux/l-async/index.html)
 
 ## 生活中的I/O Model
