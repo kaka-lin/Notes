@@ -1,7 +1,7 @@
 ---
 title: "[OS] I/O Models: 同步、非同步、阻塞、非阻塞"
 date: 2020-07-22
-tags: [OS, I/O Models]
+tags: [OS, I/O Models, Asynchronous Programming]
 categories: [OS]
 ---
 
