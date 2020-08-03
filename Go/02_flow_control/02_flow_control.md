@@ -3,7 +3,7 @@
 - [Flow control](#flow-control)
   - [`For`](#for)
     - [Note](#note)
-  - [`While `](#while)
+  - [`While`](#while)
     - [Infinite loop](#infinite-loop)
   - [If](#if)
     - [`If` with a short statement](#if-with-a-short-statement)
@@ -41,7 +41,7 @@ for ; sum < 1000; {
 } // 1024
 ```
 
-## `While `
+## `While`
 
 `Go沒有While`, 因為可以省略分號(`;`)，C的while在Go中就是for
 
