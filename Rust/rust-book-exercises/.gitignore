@@ -1,0 +1,7 @@
+# vscode
+.vscode/
+
+# rust
+target/
+
+100-documentation/

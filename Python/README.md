@@ -1,4 +1,4 @@
-# Python Tutorial
+# Python Learning Notes
 
 ## Table of Contents
 

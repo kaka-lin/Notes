@@ -1,0 +1,7 @@
+[package]
+name = "and_then_for_option"
+version = "0.1.0"
+authors = ["kaka <vn504024@gmail.com>"]
+edition = "2018"
+
+[dependencies]
