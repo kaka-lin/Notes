@@ -12,5 +12,9 @@
 ## Google Trends
 
 - [Get and Analysis the result of Google Trends with Python](google_trends/01_google_trends_and_python.ipynb)
-  
+
 - [Google Trends to Google Data Studio](google_trends/02_google_trends_to_google_data_studio.ipynb)
+
+## Juputer Notebook
+
+- [JupyterHub](https://github.com/kaka-lin/Notes/tree/master/Data_Science/jupyterhub)
