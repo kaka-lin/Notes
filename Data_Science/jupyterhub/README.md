@@ -1,4 +1,4 @@
-# JupyterHub 
+# JupyterHub
 
 Use Docker to build a JupyterHub for multiple users
 
