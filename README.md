@@ -2,6 +2,8 @@
 
 My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
+[Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
+
 - [Python](https://github.com/kaka-lin/Notes/tree/master/Python)
 
 - [Go](https://github.com/kaka-lin/Notes/tree/master/Go)
