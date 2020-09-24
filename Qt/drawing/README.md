@@ -1,0 +1,2 @@
+# Painting in PyQt5
+

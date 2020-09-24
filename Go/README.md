@@ -1,4 +1,4 @@
-# Go Tutorial
+# Go Learning Notes
 
 - [01 Go Basics](01_go_basics/01_go_basics.md)
 - [02 Flow Control](02_flow_control/02_flow_control%20copy.md)

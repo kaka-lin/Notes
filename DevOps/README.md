@@ -1,4 +1,4 @@
-# DevOps
+# DevOps Learning Notes
 
 `DevOps = Development + Operations`
 
