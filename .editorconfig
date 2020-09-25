@@ -15,6 +15,9 @@ trim_trailing_whitespace = true
 [*.yml]
 indent_size = 2
 
+[*.js]
+indent_size = 2
+
 # Tab indentation (no size specified)
 [Makefile]
 indent_style = tab

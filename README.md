@@ -10,6 +10,8 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Rust](https://github.com/kaka-lin/Notes/tree/master/Rust)
 
+- [React](https://github.com/kaka-lin/Notes/tree/master/React)
+
 - [Data Structure and Algorithms (DSA)](https://github.com/kaka-lin/Notes/tree/master/DSA)
 
 - [Operate System (OS)](https://github.com/kaka-lin/Notes/tree/master/OS)
