@@ -4,5 +4,5 @@
 
 ## Learn Notes
 
-[01. Hello React](01-hello-react/README.md)
-[02. Hello JSX](02-hello-jsx/README.md)
+- [01. Hello React](01-hello-react/README.md)
+- [02. Hello JSX](02-hello-jsx/README.md)
