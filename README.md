@@ -1,16 +1,20 @@
 # My Learning Notes
 
+This repo is my study notes
+
+My blog: [Kaka's blog](https://kaka-lin.github.io/)
+
 My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
-[Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
+## Categories
+
+- [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
 
 - [Python](https://github.com/kaka-lin/Notes/tree/master/Python)
 
 - [Go](https://github.com/kaka-lin/Notes/tree/master/Go)
 
 - [Rust](https://github.com/kaka-lin/Notes/tree/master/Rust)
-
-- [React](https://github.com/kaka-lin/Notes/tree/master/React)
 
 - [Data Structure and Algorithms (DSA)](https://github.com/kaka-lin/Notes/tree/master/DSA)
 
@@ -20,6 +24,10 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
   - [Corotuine(協程)](OS/coroutine/coroutine.md)
 
 - [Database](https://github.com/kaka-lin/Notes/tree/master/DB)
+
+- [React](https://github.com/kaka-lin/Notes/tree/master/React)
+
+- [Qt](https://github.com/kaka-lin/Notes/tree/master/Qt)
 
 - [DevOps](https://github.com/kaka-lin/Notes/tree/master/DevOps)
   - [CI/CD](https://github.com/kaka-lin/Notes/tree/master/DevOps/CICD)
