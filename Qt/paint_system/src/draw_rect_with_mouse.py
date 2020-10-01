@@ -44,14 +44,14 @@ class MainWindow(QMainWindow):
         self._setup_ui()
 
     def _setup_ui(self):
-        self.setWindowTitle("PyQt5 Drawing Image")
+        self.setWindowTitle("Drawing a rectangle on image with mouse")
         self.setMinimumSize(640, 480)
 
         self.label = MyLabel(self)
         self.label.setGeometry(QRect(0, 0, 300, 300))
 
         #QImage = QtGui.QImage("kaka.jpg")
-        img = cv2.imread('kaka.jpg')
+        img = cv2.imread('../images/kaka.jpg')
         img = cv2.resize(img, (300, 300))
         height, width, bytesPerComponent = img.shape
         bytesPerLine = 3 * width

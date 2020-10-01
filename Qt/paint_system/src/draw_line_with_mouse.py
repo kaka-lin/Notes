@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
 
-        self.image = QtGui.QImage("kaka.jpg")
+        self.image = QtGui.QImage("../images/kaka.jpg")
         self.begin_position = QPoint()
         self.end_position = QPoint()
         self.drawing = False
@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         self._setup_ui()
 
     def _setup_ui(self):
-        self.setWindowTitle("PyQt5 Drawing Image")
+        self.setWindowTitle("Drawing line on image with mouse")
         self.setMinimumSize(640, 480)
 
     def paintEvent(self, event):

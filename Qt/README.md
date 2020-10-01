@@ -1,3 +1,3 @@
 # Qt/Qml Learning Notes
 
-[Drawing with Qt](drawing/README.md)
+[Painting in Qt5](drawing/README.md)
