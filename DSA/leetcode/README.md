@@ -1,6 +1,5 @@
 # LeetCode
 
-https://github.com/kaka-lin/Notes/blob/master/DSA/leetcode/python/000_template.md
 
 |   #   |  Title  |  Solution  |  Topics  |  Difficulty  |
 | :---: | :-----: | :--------: | :------: | :----------: |

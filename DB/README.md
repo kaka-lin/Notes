@@ -9,6 +9,10 @@
   - [MySQL](https://github.com/kaka-lin/Notes/tree/master/DB/MySQL)
 
 
+- ORM (物件關聯對映)
+  - [SQLAlchemy](https://github.com/kaka-lin/Notes/tree/master/DB/SQLAlchemy)
+
+
 ## Install requirement packages
 
 - [jupyter](https://jupyter.org/)

@@ -1,0 +1,6 @@
+[package]
+name = "hello_cargo"
+version = "0.1.0"
+authors = ["kaka <vn503024@gmail.com>"]
+
+[dependencies]

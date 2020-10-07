@@ -145,3 +145,18 @@ def printMessage():
         print(string)
     return print_msg
 ```
+
+### Exercise: Fibonacci closure
+
+```go
+// fibonacci is a function that returns
+// a function that return an int.
+func fibonacci() func() int {
+	a, b := 0, 1
+	return func() int {
+		v := a
+		a, b = b, a+b
+		return v
+	}
+}
+```

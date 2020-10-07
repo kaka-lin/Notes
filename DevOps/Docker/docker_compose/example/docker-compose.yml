@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    build: .
+    image: docker-compose-example
+    container_name: docker-compose-example
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/root/docker_compose_example
+  redis:
+    image: redis:alpine

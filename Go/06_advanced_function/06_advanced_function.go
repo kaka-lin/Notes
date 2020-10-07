@@ -51,6 +51,17 @@ func adder() func(int) int {
 	}
 }
 
+// fibonacci is a function that returns
+// a function that return an int.
+func fibonacci() func() int {
+	a, b := 0, 1
+	return func() int {
+		v := a
+		a, b = b, a+b
+		return v
+	}
+}
+
 func main() {
 	// Function as Argument
 	print(area, 3, 4)           // 12
@@ -72,4 +83,11 @@ func main() {
 		fmt.Println(fn2(i))
 	}
 
+	// fibonacci
+	// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+	fib := fibonacci()
+	for i := 0; i < 12; i++ {
+		fmt.Printf("%d ", fib())
+	}
+	fmt.Printf("\n")
 }

@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  jupyterhub:
+    build: 
+      context: ./
+      dockerfile: ./jupyterhub/Dockerfile
+      args:
+        JUPYTERHUB_VERSION: ${JUPYTERHUB_VERSION}
+    image: jupyterhub
+    container_name: jupyterhub
+    volumes: 
+      # Bind Docker socket on the host
+      # so we can connect to the dameon 
+      # from within container
+      - /var/run/docker.sock:/var/run/docker.sock
+      - data:/srv/jupyterhub/data
+    ports:
+      - "443:443"
+    environment:
+      - DOCKER_NOTEBOOK_IMAGE=${LOCAL_NOTEBOOK_IMAGE}
+      - DOCKER_NETWORK_NAME=${DOCKER_NETWORK_NAME}
+      - HUB_IP=jupyterhub
+    env_file:
+      - ./secrets/oauth.env
+    # append log output to log file /var/log/jupyterhub.log
+    command: >
+      jupyterhub -f /srv/jupyterhub/jupyterhub_config.py &>> /var/log/jupyterhub.log
+    restart: always
+  
+volumes:
+  data:
+    external:
+      name: ${DATA_VOLUME_HOST}
+  
+networks:
+  default:
+    external:
+      name: ${DOCKER_NETWORK_NAME}
+
+
