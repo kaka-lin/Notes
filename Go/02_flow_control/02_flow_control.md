@@ -1,7 +1,6 @@
 ---
 title: "[Go] Ch1: Go Basics - 02 Flow Control"
 date: 2020-07-11
-tags: [Go]
 categories: [Go]
 ---
 

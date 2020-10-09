@@ -1,13 +1,3 @@
----
-title: "Common Packages"
-date: 2020-06-10
----
-
----
-title: "Common Packages"
-date: 2020-06-10
----
-
 # Install Common Packages
 
 After you installed python.

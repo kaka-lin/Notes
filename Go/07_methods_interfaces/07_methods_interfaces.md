@@ -1,21 +1,13 @@
+---
+title: "[Go] Ch1: Go Basics - 07 Methods and Interfaces"
+date: 2020-08-04
+categories: [Go]
+---
+
 # Methods and Interfaces
 
 Learn how to define `methods` on types, how to declare `interfaces`,
 and how to put everything together.
-
-- [Methods and Interfaces](#methods-and-interfaces)
-  - [Methods (方法)](#methods-方法)
-    - [Example](#example)
-    - [Method on Non-struct type](#method-on-non-struct-type)
-    - [Pointer receivers](#pointer-receivers)
-    - [Choosing a value or pointer receiver](#choosing-a-value-or-pointer-receiver)
-  - [Interfaces (介面)](#interfaces-介面)
-    - [Implement methods of an interface](#implement-methods-of-an-interface)
-    - [Interface values](#interface-values)
-    - [The empty interface](#the-empty-interface)
-      - [Type assertions](#type-assertions)
-      - [Type switches](#type-switches)
-        - [Example](#example-1)
 
 ## Methods (方法)
 
@@ -217,7 +209,7 @@ t, ok := i.(T)
     return `underlying value`, `true`
 
 - if `i` does not hold a `T`:
-    
+
     return `zero`, `false (no panic)`
 
 #### Type switches

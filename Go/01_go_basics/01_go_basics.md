@@ -1,7 +1,6 @@
 ---
 title: "[Go] Ch1: Go Basics - 01 Go Basics"
 date: 2020-07-11
-tags: [Go]
 categories: [Go]
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: "[OS] I/O Models: 同步、非同步、阻塞、非阻塞"
 date: 2020-07-22
-tags: [OS, I/O Models, Asynchronous Programming]
-categories: [OS]
+categories: [OS, I/O Models, Asynchronous Programming]
 ---
 
 在開發I/O相關程式時常常會遇到以下這四種名詞:
@@ -56,7 +55,7 @@ categories: [OS]
     ```
 
 - 非阻塞:
-  
+
     ```
     不管服務生有沒有跟你說，你自己先去做其他事情了，但你會可能半小時check一下結果。
     ```
@@ -195,7 +194,7 @@ categories: [OS]
 - `Non-Blocking I/O (NIO)`:
     - Non-Blocking: 你可以繼續做其他事情，如跟朋友聊天
     - Synchronous: 但服務生不會主動通知你，你要主動去問有沒有訂位成功
-  
+
 - `I/O Multiplexing`:
     - Blocking: 你不能做其他事情，只能等待
     - Asynchronous: 服務生查完會主動打電話通知你

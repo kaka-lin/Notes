@@ -1,4 +1,8 @@
-# Coroutine (協程)
+---
+title: "[OS] Coroutine (協程)"
+date: 2020-08-04
+categories: [OS, I/O Models, Asynchronous Programming]
+---
 
 先來看一下Wiki上關於Coroutine的解釋:
 
@@ -9,6 +13,7 @@ Coroutines are computer program components that generalize subroutines for non-p
 簡單來說，Coroutine就是一個可以`暫時中斷(suspend)`之後`再繼續執性(resumed)`的程序，並且可以多次的進行這樣的切換。如下圖所示
 
 ![](images/coroutine_1.png)
+![](/images/os/coroutine/coroutine_1.png)
 圖出處: [淺談coroutine與gevent](http://blog.ez2learn.com/2010/07/17/talk-about-coroutine-and-gevent/)
 
 ## Coroutine 與 Process/Thread
@@ -31,7 +36,7 @@ Coroutines are computer program components that generalize subroutines for non-p
 
 2. 上下文切換(Context switch)
 
-   - `Process/Thread`: 
+   - `Process/Thread`:
         是透過`OS/thread library來排程(Scheduling)`決定是否進行上下文切換
 
    -  `Coroutine`: 由應用程式來做排程
@@ -42,21 +47,21 @@ Coroutines are computer program components that generalize subroutines for non-p
     ```
 
 3. Coroutine is Micro-Thread/Light-weight Thread
-   
+
    Coroutine其實就是在單一Thread裡不同的Coroutine之間互相切換，本質上和Thread很像，所以也有些Coroutine叫做`微執行緒(Micro-Thread)`或是`輕量化的執行緒(Light-weight Thread)`。
 
 4. 切換成本
-   
-   Coroutine之間切換的成本比Thread低。因為Coroutine的切換是由現在正在執行的Coroutine`主動`讓出執行權的(藉此可以達到`並行(concurrency)`運做)。 
+
+   Coroutine之間切換的成本比Thread低。因為Coroutine的切換是由現在正在執行的Coroutine`主動`讓出執行權的(藉此可以達到`並行(concurrency)`運做)。
 
 5. Call Stack
-   
+
    跟Process/Thread一樣，每個`coroutine也有自己的call stack`，由應用程式決定何時suspend/resumed。
-   
+
 6. Race Conditions
-   
+
    跟Process/Thread一樣，Coroutine也會有`Race Conditions`的問題。
-   
+
 7. `Process/Thread`適合`CPU bound`的程式，`Coroutine`適合`I/O bound`的程式。
 
 ## Coroutine 常見用例
@@ -69,11 +74,11 @@ Coroutines are computer program components that generalize subroutines for non-p
 ## Coroutine 與 Concurrency
 
 - Concurrency (並行):
-    
+
     同一時間能完成很多事情
 
 - Coroutine (協程):
-    
+
     可以中斷及繼續執行的程序，會主動讓執行權。
 
 藉由Coroutine的suspend/resumed特性，我們可以達到邏輯上的並行(Concurrency)。

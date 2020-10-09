@@ -1,15 +1,14 @@
 ---
 title: "[Python] Ch0: Install Python: Windows"
 date: 2020-05-23
-tags: [Python]
 categories: [Python]
 ---
 
 ## 1. Install Package Manager
 
 - [Chocolate](https://chocolatey.org/)
-    
-    It is the ```package manager``` for windows. Following the install step on the website to install it. 
+
+    It is the ```package manager``` for windows. Following the install step on the website to install it.
 
     ![](img/choco.png)
     ![](/images/python/00_install_python/windows/choco.png)
@@ -27,7 +26,7 @@ categories: [Python]
     <img src="img/conemu.png" height="70%" width="70%">
 
     ![](/images/python/00_install_python/windows/conemu.png)
-  
+
 ## 3. Install Git Bash
 
 - [Git for Window](https://gitforwindows.org/)
@@ -39,7 +38,7 @@ categories: [Python]
 Opening ```ConEmu``` and choose ```git bash```, then you can use ```Unix-commands```.
 
 - [git bash]()
-    
+
     <img src="img/gitbash.png">
 
     ![](/images/python/00_install_python/windows/gitbash.png)
@@ -82,18 +81,18 @@ Opening ```ConEmu``` and choose ```git bash```, then you can use ```Unix-command
 
     ![](img/py36-3.png)
     ![](/images/python/00_install_python/windows/py36-3.png)
-    
+
     ![](img/py36-4.png)
     ![](/images/python/00_install_python/windows/py36-4.png)
 
 ---
 
-## Note: 
-    
+## Note:
+
 Because git bash use ```MinTTY``` that doesn't support interactive operation, If you want to use python interactive shell, you can follow the method as follows
 
 ```bash
-$ python -i 
+$ python -i
 ```
 
 ![](img/python.png)

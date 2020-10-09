@@ -1,4 +1,8 @@
-# Hello React
+---
+title: "[React] 01 - Hello React"
+date: 2020-09-26
+categories: [React]
+---
 
 最近因為專案需要用到，於是又打開了兩年前在Udemy上買的[React課程](https://www.udemy.com/course/react-redux/)複習，
 驚喜的發現講師有Update了2020版本上去，於是打算邊上課邊筆記記錄下來，
@@ -9,6 +13,7 @@
 第一章首先就是利用[CodeSandBox](https://codesandbox.io/index2)(前端線上編輯器)帶你跑一個用React寫出來的簡單翻譯器，如下所示:
 
 ![](public/example.png)
+![](/images/React/01-hello-react/example.png)
 
 以下附上[練習](https://codesandbox.io/s/react-yud4c)及[答案](https://codesandbox.io/s/react-jg4cq)給大家參考。
 
@@ -96,3 +101,4 @@ $ npm start
 結果如下所示：
 
 ![](public/result.png)
+![](/images/React/01-hello-react/result.png)

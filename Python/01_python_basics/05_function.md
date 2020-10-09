@@ -1,7 +1,6 @@
 ---
 title: "[Python] Ch1: Python Basics - 05 Function"
 date: 2020-06-10
-tags: [Python]
 categories: [Python]
 ---
 
@@ -38,7 +37,7 @@ def check_leap_year(year):
         return 1
     else:
         print("平年")
-    
+
     return 0
 ```
 

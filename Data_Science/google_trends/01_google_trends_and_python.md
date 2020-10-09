@@ -1,8 +1,7 @@
 ---
 title: "[DS] Google Trends 01: Operate with Python"
 date: 2020-06-10
-tags: [Data Science, Google Trends, Python]
-categories: [Data Science]
+categories: [Data Science, Google Trends]
 ---
 
 # Get and Analysis the result of Google Trends with Python
@@ -13,16 +12,16 @@ categories: [Data Science]
 那麼我們如何才能有夠有效的使用`Google Trends`呢？
 
 - [pytrends](https://github.com/GeneralMills/pytrends):
-    
+
     Unofficial API for Google Trends
-    
+
     ```
-    Allows simple interface for automating downloading of reports from Google Trends. 
+    Allows simple interface for automating downloading of reports from Google Trends.
     Only good until Google changes their backend again :-P. When that happens feel free to contribute!
     ```
-    
+
     這是一個非官方支援的API，允許從`Google Trends`下載資料（爬蟲）
-   
+
 ## Install `pytrends` package
 
 ```python
@@ -32,7 +31,7 @@ categories: [Data Science]
 ## Connect to Google
 
 - [Pandas](https://pandas.pydata.org/):
-    
+
     Python Data Analysis Library
 
 ```python
@@ -48,12 +47,12 @@ pytrend = TrendReq()
 
 ```python
 """Create the payload for related queries, interest over time anf interest by region"""
-TrendReq.build_payload(self, kw_list, cat=0, 
+TrendReq.build_payload(self, kw_list, cat=0,
                        timeframe='today 5-y', geo='', gprop='')
 ```
 
 - Parameters:
-    - kw_list: 
+    - kw_list:
         - keywords to get data for
         - Up to five terms in a list (最多五個)
     - timeframe: Date to start from
@@ -125,7 +124,7 @@ sns.set(color_codes=True)
 plt.style.use('fivethirtyeight')
 
 # 中文
-plt.rcParams['font.sans-serif'] = ['Noto Sans Mono CJK TC', 'sans-serif'] 
+plt.rcParams['font.sans-serif'] = ['Noto Sans Mono CJK TC', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
 %matplotlib inline
@@ -179,7 +178,7 @@ Return data for the related keywords to a provided keyword shown on Google Trend
 ```python
 """Request data from Google's Related Queries section and reutrn a dictionary of dataframe
 
-If not top and/or rising related queries are found, 
+If not top and/or rising related queries are found,
 the value for the key "top" and/or "rising" will be None
 """
 TrendReq.related_queries(self)

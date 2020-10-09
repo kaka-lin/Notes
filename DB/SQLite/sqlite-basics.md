@@ -1,8 +1,7 @@
 ---
 title: "[DB] Sqlite Basics"
 date: 2020-06-10
-tags: [Database, SQLite]
-categories: [Database]
+categories: [Database, SQLite]
 ---
 
 # SQLite - Basics
@@ -107,7 +106,7 @@ Done.
 INSERT INTO persons
 VALUES (10, 'kaka','Lin', 28, 175, 70, 'Taipei');
 
-INSERT INTO persons (firstname, lastname, age, height, weight, city) 
+INSERT INTO persons (firstname, lastname, age, height, weight, city)
 VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 ```
 
@@ -123,7 +122,7 @@ VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 ```python
 %%sql
 
-SELECT * FROM persons; 
+SELECT * FROM persons;
 ```
 
 ```
@@ -179,7 +178,7 @@ we first add the data that we want to delete.
 ```python
 %%sql
 
-INSERT INTO persons 
+INSERT INTO persons
 VALUES (3, 'albert','Lin', 28, 180, 70, 'Taipei');
 ```
 
@@ -241,7 +240,7 @@ Done.
 ```python
 %%sql
 
-INSERT INTO persons (firstname, lastname, age, height, weight, city) 
+INSERT INTO persons (firstname, lastname, age, height, weight, city)
 VALUES ('Albert', 'Lin', 28, 160, 70, 'Taipei'),
        ('Andy', 'Wei', 24, 175, 72, 'Teipei'),
        ('kevin', 'Wang', 30, 174, 63, 'San Francisco'),
@@ -329,7 +328,7 @@ Done.
 
 SELECT *
 FROM   persons
-WHERE  age = 28 
+WHERE  age = 28
 OR     height > 170;
 ```
 
@@ -494,9 +493,9 @@ Done.
 ### Modify Table: SQL ALTER TABLE
 
 - Add a new column in an existing table
-    
+
     ```
-    ALTER TABLE table_name ADD column_name datatype; 
+    ALTER TABLE table_name ADD column_name datatype;
     ```
 
 ```python
@@ -519,7 +518,7 @@ Done.
 ```
 
 | person_id | firstname | lastname | age | height | weight | city | height_meters |
-| -- | -- | -- | -- | -- | -- | -- | -- | 
+| -- | -- | -- | -- | -- | -- | -- | -- |
 | 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei | 1.75 |
 | 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei | 1.73 |
 | 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei | 1.6 |

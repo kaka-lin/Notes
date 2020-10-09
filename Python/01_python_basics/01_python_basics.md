@@ -1,7 +1,6 @@
 ---
 title: "[Python] Ch1: Python Basics - 01 Python Basics"
 date: 2020-06-10
-tags: [Python]
 categories: [Python]
 ---
 
@@ -20,9 +19,9 @@ categories: [Python]
     * Rust
 
 - Interpreted language (直譯語言)
-    
+
     Execute the code step-by-step.
-    
+
     * Python
     * JavaScript
     * Ruby
@@ -32,7 +31,7 @@ categories: [Python]
 
 Python is a Interpreted language. It means it excutes the code line by line.
 
-Python provides a `Python Shell (Python Interactive Shell)` 
+Python provides a `Python Shell (Python Interactive Shell)`
 which is used to execute a single Python command and get the result.
 
 
@@ -67,7 +66,7 @@ Examples:
 print('Hello world')
 
 """
-This is a comment 
+This is a comment
 written in more than just one line
 """
 print('Hello world')
@@ -108,7 +107,7 @@ print('Hello world')
 
 ```
 Suppose you have $100, which you can invets with a 10% return each year.
-After one year, it's 100 x 1.1 = 110 dollars, 
+After one year, it's 100 x 1.1 = 110 dollars,
 and after two years it's 100 x 1.1 x 1.1 = 121.
 ```
 
@@ -138,7 +137,7 @@ print("Hello" + " World1")
 text = "world!"
 print("Hello", text)
 
-# type 4. 
+# type 4.
 text = "world!"
 print("Hello {}".format(text))
 ```
@@ -216,12 +215,12 @@ Data with one of two built-in values `True` or `False`.
 
 ### Sequence
 
-- Strings (`str`): 
+- Strings (`str`):
 
     String literals in python are surrounded by either single quotation marks, or double quotation marks.
-    
+
     'Hello' is the same as "Hello".
-    
+
     Example:
     ```python
     a = 'Hello Wrold!'
@@ -231,7 +230,7 @@ Data with one of two built-in values `True` or `False`.
 
     List is a collention which is `ordered` and `changeable`.
     Allow duplicate members.
-    
+
     Example:
     ```python
     a = ['Hello', 'World', '!']
@@ -240,7 +239,7 @@ Data with one of two built-in values `True` or `False`.
 - `tuple`:
     Tuple is a collention which is `ordered` and `unchangeable`.
     Allow duplicate members.
-    
+
     Example:
 
     ```python
@@ -251,7 +250,7 @@ Data with one of two built-in values `True` or `False`.
 
 Dictionary is a collention which is `unordered`, `changeable` and `indexed`.
 No duplicate members.
-    
+
 Example:
 
 ```python
@@ -355,7 +354,7 @@ print('The length of your name is: ', len(name))
 print('What is your age?')
 age = input()
 print('------------------')
-print('You will be ' + str(int(age) + 1) + ' in a year') 
+print('You will be ' + str(int(age) + 1) + ' in a year')
 ```
 
     Hello World!

@@ -1,6 +1,16 @@
+---
+title: "[DS] Build JupyterHub with docker"
+date: 2020-08-14
+categories: [Data Science, JupyterHub]
+---
+
 # JupyterHub
 
-Use Docker to build a JupyterHub for multiple users
+Use Docker to build a `JupyterHub` for multiple users
+
+## Notices
+
+Before your start to build a `JupyterHub` with docker, please download the relative file at [example](https://github.com/kaka-lin/Notes/tree/master/Data_Science/jupyterhub).
 
 ## Enable HTTPS (SSL encryption)
 

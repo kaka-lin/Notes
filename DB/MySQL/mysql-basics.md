@@ -1,8 +1,7 @@
 ---
 title: "[DB] Mysql Basics"
 date: 2020-06-10
-tags: [Database, MySQL]
-categories: [Database]
+categories: [Database, MySQL]
 ---
 
 # MySQL - Basics
@@ -27,8 +26,8 @@ categories: [Database]
 
 ## Connect Database
 
-Because `ipython-sql` is based on `SQLAlchemy`, 
-we use the SQLAlchemy's DBAPI to connect the MySQL database via the mysqlclient 
+Because `ipython-sql` is based on `SQLAlchemy`,
+we use the SQLAlchemy's DBAPI to connect the MySQL database via the mysqlclient
 (maintained fork of MySQL-Python) driver.
 
 [SQLAlchemy - MySQL DBAPI](https://docs.sqlalchemy.org/en/13/dialects/mysql.html#module-sqlalchemy.dialects.mysql.pymysql)
@@ -111,7 +110,7 @@ CREATE TABLE persons(
 INSERT INTO persons
 VALUES (10, 'kaka','Lin', 28, 175, 70, 'Taipei');
 
-INSERT INTO persons (firstname, lastname, age, height, weight, city) 
+INSERT INTO persons (firstname, lastname, age, height, weight, city)
 VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 ```
 
@@ -127,7 +126,7 @@ VALUES ('kiwi','Li', 30, 173, 70, 'Taipei');
 ```python
 %%sql
 
-SELECT * FROM persons; 
+SELECT * FROM persons;
 ```
 
 ```
@@ -241,8 +240,8 @@ SELECT * FROM persons;
 
 ```python
 %%sql
-    
-INSERT INTO persons (firstname, lastname, age, height, weight, city) 
+
+INSERT INTO persons (firstname, lastname, age, height, weight, city)
 VALUES ('Albert', 'Lin', 28, 160, 70, 'Taipei'),
        ('Andy', 'Wei', 24, 175, 72, 'Teipei'),
        ('kevin', 'Wang', 30, 174, 63, 'San Francisco'),
@@ -498,9 +497,9 @@ WHERE  city LIKE '%pei%';
 ### Modify Table: SQL ALTER TABLE
 
 - Add a new column in an existing table
-    
+
     ```
-    ALTER TABLE table_name ADD column_name datatype; 
+    ALTER TABLE table_name ADD column_name datatype;
     ```
 
 ```python
@@ -523,7 +522,7 @@ SELECT * FROM persons;
 ```
 
 | person_id | firstname | lastname | age | height | weight | city | height_meters |
-| -- | -- | -- | -- | -- | -- | -- | -- | 
+| -- | -- | -- | -- | -- | -- | -- | -- |
 | 10 | kaka | Lin | 28 | 175.0 | 68.0 | Taipei | 1.75 |
 | 11 | kiwi | Li | 30 | 173.0 | 70.0 | Taipei | 1.73 |
 | 12 | Albert | Lin | 28 | 160.0 | 70.0 | Taipei | 1.6 |

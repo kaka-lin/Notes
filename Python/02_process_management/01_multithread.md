@@ -1,9 +1,8 @@
 ---
-title: "[Python] Ch2: Process Management 
+title: "[Python] Ch2: Process Management
 - 01 Python 多執行緒(Multi-Thread)"
 date: 2020-07-18
-tags: [Python, OS]
-categories: [Python]
+categories: [OS, Python]
 ---
 
 # 執行緒(Thread)
@@ -28,7 +27,7 @@ categories: [Python]
 
 ```python
 class threading.Thread(
-    group=None, target=None, name=None, 
+    group=None, target=None, name=None,
     args=(), kwargs={}, *, daemon=None)
 ```
 
@@ -37,7 +36,7 @@ class threading.Thread(
 - name: the thread name.
 - args: the argument tuple for the target invocation. Defaults to `()`.
 - kwargs: a dictionary of keyword arguments for the target invocation. Defaults to `{}`.
-    
+
 ### Step 2. 執行子執行緒
 
 ```python
@@ -84,11 +83,11 @@ print("All Done.")
 
 ```
 Child Thread: 0Main thread: 0
-    
+
 Child Thread: 1Main thread: 1
-    
+
 Child Thread: 2Main thread: 2
-    
+
 Child Thread: 3
 Child Thread: 4
 All Done.
@@ -117,9 +116,9 @@ for i in range(5):
 for i in range(3):
     print("Main thread: {}".format(i))
     time.sleep(1)
-    
+
 # 等待所有子執行緒執行結束
-for i in range(5):  
+for i in range(5):
     threads[i].join()
 
 print("All Done.")
@@ -159,10 +158,10 @@ import random
 class Counter(threading.Thread):
     def __init__(self, thread_name):
         super(Counter, self).__init__(name=thread_name)
-    
+
     def run(self):
         '''重寫父類run方法，在執行緒啟動後執行該方法內的程式'''
-        
+
         count = 0
         for i in range(1000):
             count = count + 1
@@ -173,14 +172,14 @@ threads = []
 for i in range(5):
     threads.append(Counter('thread_' + str(i)))
     threads[i].start()
-    
+
 # Main Thread繼續執行自己的工作
 for i in range(3):
     print("Main thread: {}".format(i))
     time.sleep(1)
 
 # 等待所有子執行緒執行結束
-for i in range(5):  
+for i in range(5):
     threads[i].join()
 
 print("All Done.")
@@ -192,7 +191,7 @@ print("All Done.")
     thread_1, count: 1000
     thread_2, count: 1000
     thread_3, count: 1000thread_4, count: 1000
-    
+
     Main thread: 0
     Main thread: 1
     Main thread: 2
@@ -241,31 +240,31 @@ count = 0
 class Counter(threading.Thread):
     def __init__(self, thread_name):
         super(Counter, self).__init__(name=thread_name)
-    
+
     def run(self):
         global count
-        
+
         for i in range(1000):
             count += 1
         print("{}, count: {}".format(self.name, count))
-        
+
 # 建立5個子行緒
 threads = []
 for i in range(5):
     threads.append(Counter('thread_' + str(i)))
     threads[i].start()
-    
+
 # Main Thread繼續執行自己的工作
 for i in range(3):
     print("Main thread: {}".format(i))
     time.sleep(1)
 
 # 等待所有子執行緒執行結束
-for i in range(5):  
+for i in range(5):
     threads[i].join()
 
 print("Final Count: {}".format(count))
-print("All Done.")        
+print("All Done.")
 ```
 
 [Output]
@@ -275,7 +274,7 @@ print("All Done.")
     thread_2, count: 3000
     thread_3, count: 4000thread_4, count: 5000
     Main thread: 0
-    
+
     Main thread: 1
     Main thread: 2
     Final Count: 5000
@@ -296,45 +295,45 @@ class Counter(threading.Thread):
     def __init__(self, lock, thread_name):
         super(Counter, self).__init__(name=thread_name)
         self.lock = lock
-    
+
     def run(self):
         global count
-        
+
         # 取得 lock
         self.lock.acquire()
         print("Lock acquire by {}".format(self.name))
-        
+
         for i in range(10000):
             count += 1
-        
+
         # 不能讓多個執行續同時進行的工作
         print("{}, count: {}".format(self.name, count))
         time.sleep(1)
-            
+
         # 釋放 lock
         print("Lock released by {}".format(self.name))
         self.lock.release()
 
 # 建立 lock
 lock = threading.Lock()
-        
+
 # 建立5個子行緒
 threads = []
 for i in range(5):
     threads.append(Counter(lock, 'thread_' + str(i)))
     threads[i].start()
-    
+
 # Main Thread繼續執行自己的工作
 for i in range(3):
     print("Main thread: {}".format(i))
     time.sleep(1)
 
 # 等待所有子執行緒執行結束
-for i in range(5):  
+for i in range(5):
     threads[i].join()
 
 print("Final Count: {}".format(count))
-print("All Done.")        
+print("All Done.")
 ```
 
 [Output]
@@ -344,7 +343,7 @@ print("All Done.")
     Main thread: 0
     Lock released by thread_0
     Lock acquire by thread_1Main thread: 1
-    
+
     thread_1, count: 20000
     Main thread: 2
     Lock released by thread_1
@@ -402,7 +401,7 @@ semphore = threading.Semaphore(2)
 
 def code_block(thd, i):
     global count, lock
-    
+
     lock.acquire()
     count += 1
     print("{} (+1), count: {}".format(thd.name, count))
@@ -426,11 +425,11 @@ class Guest(threading.Thread):
         # acquire一次，semaphore就會減1，直到數量為0時，就會阻塞這在
         self.semphore.acquire()
         print("Semphore acquired by {}".format(self.name))
-            
+
         # 僅允許有限個執行緒同時進的工作
         code_block(self, i)
         time.sleep(1)
-            
+
         # 釋放旗標
         # release一次，semaphore就會加1
         print("Semphore released by {}".format(self.name))
@@ -441,19 +440,19 @@ threads = []
 for i in range(3):
     threads.append( Guest(semphore, 'thread_' + str(i)))
     threads[i].start()
-    
+
 # 等待所有子執行緒執行結束
-for i in range(3):  
+for i in range(3):
     threads[i].join()
 
 print("Final Count: {}".format(count)) # should be 0
-print("All Done.")  
+print("All Done.")
 ```
 
 [Output]
 
     Semphore acquired by thread_0Semphore acquired by thread_1
-    
+
     thread_0 (+1), count: 1
     thread_1 (+1), count: 2
     thread_1 (-1), count: 1
@@ -504,16 +503,16 @@ class TestThread(threading.Thread):
 
 def run():
     event = threading.Event()
-    
+
     threads = []
     for i in range(1, 5):
         threads.append(TestThread(str(i), event))
-    
+
     print("Main thread start!")
 
     for thread in threads:
         thread.start()
-    
+
     print("\n--------------------")
     print("Sleep 3 seconds!")
     time.sleep(3)
@@ -531,7 +530,7 @@ run()
     	Thread: 2 wait!
     	Thread: 3 wait!
     	Thread: 4 wait!
-    
+
     --------------------
     Sleep 3 seconds!
     Now awake other threads !
@@ -554,7 +553,7 @@ class VehicleThread(threading.Thread):
         super(VehicleThread, self).__init__(name=thread_name)
 
         self.event = event
-    
+
     def run(self):
         ''' Vehicle waits unless/until light is green '''
 
@@ -563,7 +562,7 @@ class VehicleThread(threading.Thread):
 
         # prints arrival time of car at intersection
         print("{} arrived {}".format(
-            self.getName(), 
+            self.getName(),
             time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
 
         # wait for green light
@@ -571,40 +570,40 @@ class VehicleThread(threading.Thread):
 
         # displays time that car departs intersection
         print("{} passes through the intersection at {}".format(
-            self.getName(), 
+            self.getName(),
             time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
 
 def run():
     green_light = threading.Event()
-    
+
     # creates and starts ten vehicle threads
     vehicle_threads = []
     for i in range(1, 11):
         vehicle_threads.append(VehicleThread('Vehicle ' + str(i), green_light))
-    
+
     print("----------------- Start: {}".format(
         time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
 
     for vehicle in vehicle_threads:
         vehicle.start()
-    
+
     # Run in jupyter notebook, default thread is: 5
     while threading.active_count() > 5:
         # sets the Event's flag to false -- block all incoming vehicles
         green_light.clear()
         print("RED LIGHT! at: {}".format(
             time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
-        
+
         time.sleep(3)
         print("----------------- 3 second -----------------")
 
         # sets the Event's flag to true -- awake all waiting vehicles
         green_light.set()
         time.sleep(1)
-    
+
     print("----------------- End: {}".format(
         time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
-        
+
 run()
 ```
 
@@ -615,25 +614,25 @@ run()
     Vehicle 1 arrived 2020-07-15 17:51:41
     Vehicle 4 arrived 2020-07-15 17:51:41
     Vehicle 2 arrived 2020-07-15 17:51:42Vehicle 5 arrived 2020-07-15 17:51:42Vehicle 7 arrived 2020-07-15 17:51:42
-    
-    
+
+
     ----------------- 3 second -----------------
     Vehicle 4 passes through the intersection at 2020-07-15 17:51:43Vehicle 5 passes through the intersection at 2020-07-15 17:51:43Vehicle 7 passes through the intersection at 2020-07-15 17:51:43Vehicle 2 passes through the intersection at 2020-07-15 17:51:43Vehicle 1 passes through the intersection at 2020-07-15 17:51:43
-    
-    
-    
-    
+
+
+
+
     RED LIGHT! at: 2020-07-15 17:51:44
     Vehicle 3 arrived 2020-07-15 17:51:46
     Vehicle 10 arrived 2020-07-15 17:51:46
     Vehicle 8 arrived 2020-07-15 17:51:47
     ----------------- 3 second -----------------
     Vehicle 10 passes through the intersection at 2020-07-15 17:51:47Vehicle 8 passes through the intersection at 2020-07-15 17:51:47Vehicle 3 passes through the intersection at 2020-07-15 17:51:47
-    
-    
+
+
     Vehicle 6 arrived 2020-07-15 17:51:48Vehicle 9 arrived 2020-07-15 17:51:48
     Vehicle 9 passes through the intersection at 2020-07-15 17:51:48
-    
+
     Vehicle 6 passes through the intersection at 2020-07-15 17:51:48
     ----------------- End: 2020-07-15 17:51:48
 
@@ -671,7 +670,7 @@ class Hider(threading.Thread):
 
         self.cond = cond
         self.name = name
-    
+
     def run(self):
         time.sleep(1)  # 確保先運行Seeker中的方法
 
@@ -696,17 +695,17 @@ class Seeker(threading.Thread):
 
         self.cond = cond
         self.name = name
-    
+
     def run(self):
-        self.cond.acquire()  
+        self.cond.acquire()
         print('\t[Info] {} wait()...'.format(self.name))
-        self.cond.wait()  
+        self.cond.wait()
 
         print('To {}: 我已經藏好了，你快來找我吧！！！'.format(self.name))
         print('\t[Info] {} notify()...'.format(self.name))
         self.cond.notify()
         print('\t[Info] {} wait()...'.format(self.name))
-        self.cond.wait() 
+        self.cond.wait()
 
         print('\t[Info] {} release()...'.format(self.name))
         self.cond.release()

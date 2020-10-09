@@ -1,8 +1,7 @@
 ---
 title: "[OS] Concurrency(並行) 與 Parallelism(平行)"
 date: 2020-07-24
-tags: [OS, Asynchronous Programming]
-categories: [OS]
+categories: [OS, Asynchronous Programming]
 ---
 
 ## 前言

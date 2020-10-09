@@ -1,8 +1,7 @@
 ---
 title: "[DS] Google Trends 02: Convert to Google Data Studio"
 date: 2020-06-10
-tags: [Data Science, Google Trends, Python]
-categories: [Data Science]
+categories: [Data Science, Google Trends]
 ---
 
 # Google Trends to Google Data Studio
@@ -40,7 +39,7 @@ sns.set(color_codes=True)
 plt.style.use('fivethirtyeight')
 
 # 中文
-plt.rcParams['font.sans-serif'] = ['Noto Sans Mono CJK TC', 'sans-serif'] 
+plt.rcParams['font.sans-serif'] = ['Noto Sans Mono CJK TC', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
 %matplotlib inline
@@ -92,49 +91,49 @@ Reference: [Access spreadsheets via Google Sheets API.](https://gspread.readthed
 2. 啟動該`Project`的 API
 
     啟用API和服務 -> 在搜尋API和服務打上`Drive API` -> 啟用 -> 在搜尋API和服務打上`Sheets API(Google Sheets)` -> 啟用
-         
+
     ![](./images/google_apis_active_api_1.png)
     ![](/images/data_science/google_trends/google_apis_active_api_1.png)
-    
+
     ![](./images/google_apis_active_api_2.png)
     ![](/images/data_science/google_trends/google_apis_active_api_2.png)
-        
+
     ![](./images/google_apis_active_api_3.png)
     ![](/images/data_science/google_trends/google_apis_active_api_3.png)
-    
+
     ![](./images/google_apis_active_api_4.png)
     ![](/images/data_science/google_trends/google_apis_active_api_4.png)
-    
+
     ![](./images/google_apis_active_api_5.png)
     ![](/images/data_science/google_trends/google_apis_active_api_5.png)
-    
+
     ![](./images/google_apis_active_api_6.png)
     ![](/images/data_science/google_trends/google_apis_active_api_6.png)
 
 3. 建立憑證(Credentials)
-   
+
    回到首頁點選憑證 -> 建立憑證 -> 選服務帳號 -> 服務帳號詳細資料：`Google Trends to Google Sheets` -> 建立 -> 繼續 -> 建立金鑰 -> 選擇 `JSON` -> 建立 -> 完成
-   
+
    ![](./images/google_apis_create_credentials_1.png)
    ![](/images/data_science/google_trends/google_apis_create_credentials_1.png)
-   
+
    ![](./images/google_apis_create_credentials_2.png)
    ![](/images/data_science/google_trends/google_apis_create_credentials_2.png)
-   
+
    ![](./images/google_apis_create_credentials_3.png)
    ![](/images/data_science/google_trends/google_apis_create_credentials_3.png)
-   
+
    ![](./images/google_apis_create_credentials_4.png)
    ![](/images/data_science/google_trends/google_apis_create_credentials_4.png)
 
    ![](./images/google_apis_create_credentials_5.png)
    ![](/images/data_science/google_trends/google_apis_create_credentials_5.png)
-   
+
    ![](./images/google_apis_create_credentials_6.png)
    ![](/images/data_science/google_trends/google_apis_create_credentials_6.png)
 
 4. 將下載好的`JSON`檔案取名為`auth.json`
-   
+
 ### 建立試算表
 
 透過`gspread`建立並使用試算表有兩種方式
@@ -146,16 +145,16 @@ Reference: [Access spreadsheets via Google Sheets API.](https://gspread.readthed
     ```python
     sh = gc.create('A new spreadsheet')
     ```
-##### Note: 
-    
-    If you’re using a service account, 
-    this new spreadsheet will be visible only to your script's account. 
-    To be able to access newly created spreadsheet 
-    from Google Sheets with your own Google account you must share it with your email. 
+##### Note:
+
+    If you’re using a service account,
+    this new spreadsheet will be visible only to your script's account.
+    To be able to access newly created spreadsheet
+    from Google Sheets with your own Google account you must share it with your email.
     See how to share a spreadsheet in the section below.
-     
+
 - Sharing a Spreadsheet:
-        
+
     ```python
     sh.share('your_email', perm_type='user', role='writer')
     ```
@@ -175,7 +174,7 @@ def google_oauth2_service(auth_path, scopes):
         auth_path,
         scopes=scopes
     )
-    
+
     return gspread.authorize(credentials)
 ```
 
@@ -235,7 +234,7 @@ worksheet = gc.open("COVID-19 Search Trends").sheet1
 #### Prepocess DataFrame
 
 1. `reset_index()`: 因為我們需要date這個欄位
-2. conver datatime to string: 
+2. conver datatime to string:
     ```
     Object of type 'Timestamp' is not JSON serializable
     ```
@@ -282,25 +281,25 @@ covid_19_interest_over_time_df.head()
 def iter_pd(df):
     for val in df.columns:
         yield val
-        
+
     for row in df.to_numpy():
         for val in row:
             if pd.isna(val):
                 yield ""
             else:
                 yield val
-                
+
 def pandas_to_sheets(pandas_df, sheet, clear=True):
     """Update all values in a worksheet to match a pandas dataframe"""
     if clear:
         sheet.clear()
-    
+
     (row, col) = pandas_df.shape
     cells = sheet.range("A1:{}".format(gspread.utils.rowcol_to_a1(row+1, col)))
     for cell, val in zip(cells, iter_pd(pandas_df)):
         cell.value = val
 
-    sheet.update_cells(cells) 
+    sheet.update_cells(cells)
 ```
 
 

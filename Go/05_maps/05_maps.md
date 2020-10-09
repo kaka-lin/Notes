@@ -1,7 +1,6 @@
 ---
 title: "[Go] Ch1: Go Basics - 05 Go Data Structure: `Maps`"
 date: 2020-07-11
-tags: [Go]
 categories: [Go]
 ---
 
@@ -22,8 +21,8 @@ The zero value of a map is `nil`. A `nil` map has no keys, `nor can keys be adde
 var m map[keyTpye]valueType
 ```
 
-- Note: 
-  
+- Note:
+
   如果使用此方法來create `map`，還需要使用`make()`來初始化此`map`，否則無法存放`key-value`.
 
 ### Method 2: use `make()`
@@ -54,7 +53,7 @@ var m = map[keyType]valueType {
 
 ## 3. Mutating Maps
 
-### Insert or Update 
+### Insert or Update
 
 Insert or update an element in map m
 
@@ -90,7 +89,7 @@ func WordCount(s string) map[string]int {
     m := make(map[string]int)
     //a := strings.Split(s, " ")
     a := string.Fields(s)
-	
+
 	for _, c := range a {
 		m[c]++
 	}

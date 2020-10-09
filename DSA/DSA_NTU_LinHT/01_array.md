@@ -1,35 +1,8 @@
 ---
 title: "[DSA] NTU CSIE DSA, 01: Array"
 date: 2020-07-04
-tags: [Data Structure, DSA]
-categories: [Data Structure]
+categories: [Data Structure and Algorithm]
 ---
-
-# Array
-
-- [Array](#array)
-  - [What is Array?](#what-is-array)
-    - [Memory is (Generally Viewed as) Array](#memory-is-generally-viewed-as-array)
-    - [Array as Memory Block in C/C++](#array-as-memory-block-in-cc)
-  - [Array as Abstract Data Structure](#array-as-abstract-data-structure)
-  - [C++ STL Vector: a Growing Array](#c-stl-vector-a-growing-array)
-  - [Two Dimensional Array](#two-dimensional-array)
-    - [One Block Implementation of 2D Array](#one-block-implementation-of-2d-array)
-    - [Array of Array Implementation of 2D Array](#array-of-array-implementation-of-2d-array)
-    - [Comparison of Two Implementations](#comparison-of-two-implementations)
-    - [A Table between Two Programs](#a-table-between-two-programs)
-  - [Ordered Array](#ordered-array)
-    - [Definition of Ordered Array](#definition-of-ordered-array)
-    - [`insert` of Ordered Array](#insert-of-ordered-array)
-    - [`construct` of Ordered Array](#construct-of-ordered-array)
-      - [Method 1: `Selection sort`](#method-1-selection-sort)
-      - [Method 2: `Insertion sort`](#method-2-insertion-sort)
-    - [`update` and `remove` of Ordered Array](#update-and-remove-of-ordered-array)
-  - [Binary Search with Ordered Array](#binary-search-with-ordered-array)
-    - [Application: Book Search within (Digital) Library](#application-book-search-within-digital-library)
-      - [Method 1: `Sequential Search Algorithm`](#method-1-sequential-search-algorithm)
-      - [Method 2: `Sequential Search Algorithm with Cut` (Ordered Array)](#method-2-sequential-search-algorithm-with-cut-ordered-array)
-      - [Method 3: `Binary Search Algorithm` (Ordered Array)](#method-3-binary-search-algorithm-ordered-array)
 
 ## What is Array?
 
@@ -94,7 +67,7 @@ ex: 第一個raw與第二個raw分開放(每個raw有5個element)
 | -- | -- | -- |
 | space | elements | elments & nRow pointers |
 | construct | fixed | prop. nRow |
-| get | one deref | two deref | 
+| get | one deref | two deref |
 
 * tradeoff:
   - one block: faster & succinct
@@ -122,7 +95,7 @@ arr[0] <= arr[1] <= arr[2] <= ... <= arr[end-1]
 ```
 
 ### `insert` of Ordered Array
-    
+
 不能亂插，`需考慮值得大小`
 
 - example:
@@ -197,7 +170,7 @@ toFind.ID = 5566
 for i from 0 to tail
     if (arr[i].ID == toFind.ID)
         return FIND
-    if (arr[i].ID > toFind.ID) 
+    if (arr[i].ID > toFind.ID)
         return NOTFIND
 end for
 eturn NOTFIND

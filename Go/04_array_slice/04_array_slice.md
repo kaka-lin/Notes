@@ -1,7 +1,6 @@
 ---
 title: "[Go] Ch1: Go Basics - 04 Go Data Structure: `Array` & `Slice`"
 date: 2020-07-11
-tags: [Go]
 categories: [Go]
 ---
 
@@ -29,7 +28,7 @@ a := []int{2, 3, 5, 7, 11, 13}
 ```
 
 ## Slices
- 
+
 A slice is a `dynamically-size, flexible` view into the elements of an array.
 
     Slice的長度是可變的，與Array相比，提供一種更高階的觀點看待一片資料。
@@ -55,7 +54,7 @@ Create slice by using `make()` which is available in builtin package of golang
 ```go
 s := make([]int, 5) // lenght == capacity == 5
 
-// or 
+// or
 s := make([]int, 5, 10) // lenght: 5, capacity: 10
 ```
 
@@ -194,7 +193,7 @@ func copy(dst []T, src []T) int
 ```
 
 - `copy` will return the number of elements copied which is the minimum of `len(dst)` and `len(src)`.
-- 
+-
     ```
     複製時，目的slice的容量必須足夠，否則會發生 cap out of range的錯誤，copy函式若執行成功，會傳回複製的元素個數。
     ```
@@ -211,7 +210,7 @@ The `range` form of the `for` loop iterates over a `slice` or `map`.
 
 When ranging over a slice, two values are returned for each iteration.
 
-1. `index` 
+1. `index`
 2. copy of the `element` at that index.
 
 ```go
@@ -222,7 +221,7 @@ for i, v := range a {
 }
 ```
 
-#### Skip the index or value 
+#### Skip the index or value
 
 Can skip the `index` or `value` by assigning to `_`
 
@@ -239,7 +238,7 @@ for i := range array
 
 ## Exercise: Slices
 
-Implement `Pic`. It should return a slice of length `dy`, each element of which is a slice of `dx` 8-bit unsigned integers. When you run the program, it will display your picture, interpreting the integers as grayscale (well, bluescale) values. 
+Implement `Pic`. It should return a slice of length `dy`, each element of which is a slice of `dx` 8-bit unsigned integers. When you run the program, it will display your picture, interpreting the integers as grayscale (well, bluescale) values.
 
 The choice of image is up to you. Interesting functions include `(x+y)/2`, `x*y`, and `x^y`.
 

@@ -1,3 +1,9 @@
+---
+title: "[Qt] Qt's Paint System"
+date: 2020-10-01
+categories: [Qt]
+---
+
 # Qt's Paint System
 
 初探Qt的繪圖系統
@@ -30,6 +36,7 @@ Qt的繪圖系統允許我們使用相同的API在螢幕或印表機(print devic
     `QPaintEngine`被`QPainter`和`QPaintDevice`內部使用，通常」通常對開發人員隱藏，除非你需要自定義一個設備，否則你不需要關心這個類。
 
 ![](images/paint-system.png)
+![](/images/Qt/paint-system.png)
 
 ### 小結
 

@@ -1,7 +1,6 @@
 ---
 title: "[Python] Ch1: Python Basics - 03 List"
 date: 2020-06-10
-tags: [Python]
 categories: [Python]
 ---
 
@@ -161,7 +160,7 @@ for country in countries:
     print(country, end=', ')
 ```
 
-    Taiwan, Janpan, America, Korea, Malaysia, 
+    Taiwan, Janpan, America, Korea, Malaysia,
 
 ### 用 for-loop 來建立 List
 

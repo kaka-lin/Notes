@@ -1,13 +1,12 @@
 ---
 title: "[Python] Ch1: Python Basics - 02 Flow Control"
 date: 2020-06-10
-tags: [Python]
 categories: [Python]
 ---
 
 # Flow Control
 
-## Python `if ... else` 
+## Python `if ... else`
 
 The general syntax for Python's if statement is this:
 
@@ -90,7 +89,7 @@ for i in range(10):
     print(i, end=' ')
 ```
 
-    0 1 2 3 4 5 6 7 8 9 
+    0 1 2 3 4 5 6 7 8 9
 
 ### `Nested for loops`
 
@@ -116,7 +115,7 @@ for i in range(1, 10):
 
 ## Python `while` loops
 
-The `while` statement is used to execute a suite zero or more times, 
+The `while` statement is used to execute a suite zero or more times,
 the number of times depending on the state of the while loop's condition.
 Here's the syntax:
 
@@ -132,7 +131,7 @@ while i <= 10:
     i += 1
 ```
 
-    1 2 3 4 5 6 7 8 9 10 
+    1 2 3 4 5 6 7 8 9 10
 
 ## `break` and `continue`
 
@@ -145,10 +144,10 @@ while True:
     if i == 10:
         break
     print(i, end=' ')
-    
+
 ```
 
-    1 2 3 4 5 6 7 8 9 
+    1 2 3 4 5 6 7 8 9
 
 ```python
 # continue
@@ -161,7 +160,7 @@ while i < 10:
     print(i, end=' ')
 ```
 
-    1 2 3 5 6 7 8 9 10 
+    1 2 3 5 6 7 8 9 10
 
 ## Exercise: Guessing Game
 
@@ -181,5 +180,5 @@ while True:
     elif guess < number:
         print('Your guess is too low')
     else:
-        print('Your guess is too heigh')    
+        print('Your guess is too heigh')
 ```

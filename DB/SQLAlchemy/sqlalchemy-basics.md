@@ -1,8 +1,7 @@
 ---
 title: "[DB] Sqlalchemy Basics"
 date: 2020-06-10
-tags: [Database, SQLAlchemy]
-categories: [Database]
+categories: [Database, SQLAlchemy]
 ---
 
 # SQLAlchemy - basics
@@ -88,19 +87,19 @@ class User(Base):
 
     def __repr__(self):
         return "<User({}, name: {} {}, age: {}, H: {}, W: {}, city: {})>".format(
-            self.id, self.firstname, self.lastname, 
+            self.id, self.firstname, self.lastname,
             self.age, int(self.height), int(self.weight),
-            self.city) 
+            self.city)
 ```
 
 ### Create Table
 
 ```
-Each Table object is a member of a larger collection known as MetaData 
-and this object is available using the .metadata attribute of a declarative base class. 
+Each Table object is a member of a larger collection known as MetaData
+and this object is available using the .metadata attribute of a declarative base class.
 ```
 
-The `MetaData.create_all()` method is, passing in our Engine as a source of database connectivity. 
+The `MetaData.create_all()` method is, passing in our Engine as a source of database connectivity.
 
 For all tables that haven’t been created yet, it issues `CREATE TABLE` statements to the database.
 
@@ -125,19 +124,19 @@ Base.metadata.create_all(engine)
     2020-05-08 17:20:20,578 INFO sqlalchemy.engine.base.Engine DESCRIBE `user`
     2020-05-08 17:20:20,578 INFO sqlalchemy.engine.base.Engine ()
     2020-05-08 17:20:20,616 INFO sqlalchemy.engine.base.Engine ROLLBACK
-    2020-05-08 17:20:20,661 INFO sqlalchemy.engine.base.Engine 
+    2020-05-08 17:20:20,661 INFO sqlalchemy.engine.base.Engine
     CREATE TABLE user (
-    	id INTEGER NOT NULL AUTO_INCREMENT, 
-    	firstname VARCHAR(255), 
-    	lastname VARCHAR(255), 
-    	age INTEGER, 
-    	height NUMERIC, 
-    	weight NUMERIC, 
-    	city VARCHAR(255), 
+    	id INTEGER NOT NULL AUTO_INCREMENT,
+    	firstname VARCHAR(255),
+    	lastname VARCHAR(255),
+    	age INTEGER,
+    	height NUMERIC,
+    	weight NUMERIC,
+    	city VARCHAR(255),
     	PRIMARY KEY (id)
     )
-    
-    
+
+
     2020-05-08 17:20:20,662 INFO sqlalchemy.engine.base.Engine ()
     2020-05-08 17:20:20,724 INFO sqlalchemy.engine.base.Engine COMMIT
 
@@ -155,8 +154,8 @@ Base.metadata.create_all(engine)
 ## SQLAlchemy ORM - Creating Session
 
 ```
-In order to interact with the database, we need to obtain its handle. 
-A session object is a handle to the database. 
+In order to interact with the database, we need to obtain its handle.
+A session object is a handle to the database.
 ```
 
 - Session class is defined using `sessionmaker()`:
@@ -172,7 +171,7 @@ session = Session()
 
 ### SQLAlchemy ORM - Adding Objects: SQL INSERT INTO
 
-We have declared a Customer class that has been mapped to the customer's table. 
+We have declared a Customer class that has been mapped to the customer's table.
 
 We have to declare an object of this class and persistently add it to the table by `add()` method of the session object.
 
@@ -211,7 +210,7 @@ resutl
 ```
 
     2020-05-08 17:20:21,217 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
-    2020-05-08 17:20:21,220 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
+    2020-05-08 17:20:21,220 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
     FROM user
     2020-05-08 17:20:21,223 INFO sqlalchemy.engine.base.Engine ()
 
@@ -241,7 +240,7 @@ session.query(User).all()
 ```
 
     2020-05-08 17:20:21,487 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
-    2020-05-08 17:20:21,495 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
+    2020-05-08 17:20:21,495 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
     FROM user
     2020-05-08 17:20:21,497 INFO sqlalchemy.engine.base.Engine ()
 
@@ -265,7 +264,7 @@ session.query(User).all()
 ```
 
     2020-05-08 17:20:21,740 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
-    2020-05-08 17:20:21,743 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
+    2020-05-08 17:20:21,743 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
     FROM user
     2020-05-08 17:20:21,748 INFO sqlalchemy.engine.base.Engine ()
 
@@ -288,7 +287,7 @@ session.query(User).all()
 ```
 
     2020-05-08 17:20:21,962 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
-    2020-05-08 17:20:21,966 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
+    2020-05-08 17:20:21,966 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
     FROM user
     2020-05-08 17:20:21,970 INFO sqlalchemy.engine.base.Engine ()
 
@@ -327,7 +326,7 @@ session.query(User).all()
 ```
 
     2020-05-08 17:20:22,182 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
-    2020-05-08 17:20:22,187 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
+    2020-05-08 17:20:22,187 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
     FROM user
     2020-05-08 17:20:22,188 INFO sqlalchemy.engine.base.Engine ()
 
@@ -349,8 +348,8 @@ for row in results:
     print(row)
 ```
 
-    2020-05-08 17:20:22,299 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
-    FROM user 
+    2020-05-08 17:20:22,299 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
+    FROM user
     WHERE user.age = %s
     2020-05-08 17:20:22,316 INFO sqlalchemy.engine.base.Engine (28,)
     <User(1, name: kaka Lin, age: 28, H: 175, W: 68, city: Taipei)>
@@ -370,8 +369,8 @@ for row in results:
     print(row)
 ```
 
-    2020-05-08 17:20:22,411 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
-    FROM user 
+    2020-05-08 17:20:22,411 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
+    FROM user
     WHERE user.age = %s AND user.height > %s
     2020-05-08 17:20:22,414 INFO sqlalchemy.engine.base.Engine (28, 170)
     <User(1, name: kaka Lin, age: 28, H: 175, W: 68, city: Taipei)>
@@ -388,8 +387,8 @@ for row in results:
     print(row)
 ```
 
-    2020-05-08 17:20:22,485 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
-    FROM user 
+    2020-05-08 17:20:22,485 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
+    FROM user
     WHERE user.age = %s OR user.height > %s
     2020-05-08 17:20:22,497 INFO sqlalchemy.engine.base.Engine (28, 170)
     <User(1, name: kaka Lin, age: 28, H: 175, W: 68, city: Taipei)>
@@ -411,8 +410,8 @@ for row in results:
     print(row)
 ```
 
-    2020-05-08 17:20:22,578 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
-    FROM user 
+    2020-05-08 17:20:22,578 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
+    FROM user
     WHERE user.age IN (%s, %s)
     2020-05-08 17:20:22,579 INFO sqlalchemy.engine.base.Engine (28, 26)
     <User(1, name: kaka Lin, age: 28, H: 175, W: 68, city: Taipei)>
@@ -430,8 +429,8 @@ for row in results:
     print(row)
 ```
 
-    2020-05-08 17:20:22,641 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city 
-    FROM user 
+    2020-05-08 17:20:22,641 INFO sqlalchemy.engine.base.Engine SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.age AS user_age, user.height AS user_height, user.weight AS user_weight, user.city AS user_city
+    FROM user
     WHERE user.city LIKE %s
     2020-05-08 17:20:22,644 INFO sqlalchemy.engine.base.Engine ('%pei',)
     <User(1, name: kaka Lin, age: 28, H: 175, W: 68, city: Taipei)>
@@ -457,7 +456,7 @@ session.close()
 User.__table__.drop(engine)
 ```
 
-    2020-05-08 17:20:22,794 INFO sqlalchemy.engine.base.Engine 
+    2020-05-08 17:20:22,794 INFO sqlalchemy.engine.base.Engine
     DROP TABLE user
     2020-05-08 17:20:22,795 INFO sqlalchemy.engine.base.Engine ()
     2020-05-08 17:20:22,853 INFO sqlalchemy.engine.base.Engine COMMIT

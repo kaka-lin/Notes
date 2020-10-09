@@ -1,3 +1,9 @@
+---
+title: "[Go] Ch1: Go Basics - 08 Concurrency"
+date: 2020-08-26
+categories: [Go]
+---
+
 # Concurrency
 
 Go provides concurrency features as part of the core language.

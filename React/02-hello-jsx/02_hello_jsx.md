@@ -1,3 +1,9 @@
+---
+title: "[React] 02 - JSX 介紹"
+date: 2020-09-26
+categories: [React]
+---
+
 # JSX 介紹
 
 首先看看下面這個變數宣告
@@ -172,3 +178,4 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
 ![](public/result.png)
+![](/images/React/02-hello-jsx/result.png)
