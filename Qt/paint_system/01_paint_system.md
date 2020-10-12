@@ -1,12 +1,9 @@
 ---
 title: "[Qt] Qt's Paint System"
 date: 2020-10-01
+tags: [Paint System]
 categories: [Qt]
 ---
-
-# Qt's Paint System
-
-初探Qt的繪圖系統
 
 ## 前言
 

@@ -1,6 +1,7 @@
 ---
 title: "[React] 02 - JSX 介紹"
 date: 2020-09-26
+series: [React]
 categories: [React]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "[Go] Ch1: Go Basics - 04 Go Data Structure: `Array` & `Slice`"
 date: 2020-07-11
+series: [Go]
 categories: [Go]
 ---
 

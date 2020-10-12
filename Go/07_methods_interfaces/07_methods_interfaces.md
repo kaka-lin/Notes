@@ -1,6 +1,7 @@
 ---
 title: "[Go] Ch1: Go Basics - 07 Methods and Interfaces"
 date: 2020-08-04
+series: [Go]
 categories: [Go]
 ---
 

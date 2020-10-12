@@ -1,6 +1,7 @@
 ---
 title: "[Go] Ch1: Go Basics - 06 Advanced Function"
 date: 2020-07-18
+series: [Go]
 categories: [Go]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "[React] 01 - Hello React"
 date: 2020-09-26
+series: [React]
 categories: [React]
 ---
 

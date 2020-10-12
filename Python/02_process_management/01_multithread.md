@@ -2,7 +2,9 @@
 title: "[Python] Ch2: Process Management
 - 01 Python 多執行緒(Multi-Thread)"
 date: 2020-07-18
-categories: [OS, Python]
+series: [Python]
+tags: [Multi-Thread]
+categories: [Python, Asynchronous programming]
 ---
 
 # 執行緒(Thread)

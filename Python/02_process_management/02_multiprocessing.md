@@ -2,7 +2,9 @@
 title: "[Python] Ch2: Process Management
 - 02 Python 多行程/多處理程序(Multi-Processing)"
 date: 2020-07-19
-categories: [OS, Python]
+series: [Python]
+tags: [Multi-Processing]
+categories: [Python, Asynchronous programming]
 ---
 
 # 行程/處理程序(Process)

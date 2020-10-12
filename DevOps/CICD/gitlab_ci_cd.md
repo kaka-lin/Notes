@@ -1,7 +1,8 @@
 ---
 title: "[DevOps] Gitlab CI/CD"
 date: 2020-06-10
-categories: [DevOps, CI/CD Tools]
+tags: [CI/CD Tools]
+categories: [DevOps]
 ---
 
 # GitLab CI/CD

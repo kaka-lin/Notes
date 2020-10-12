@@ -1,7 +1,8 @@
 ---
 title: "[DS] Matplotlib show Chinese"
 date: 2020-06-10
-categories: [Data Science, Matplotlib]
+tags: [Matplotlib]
+categories: [Data Science]
 ---
 
 # Matplotlib 顯示中文

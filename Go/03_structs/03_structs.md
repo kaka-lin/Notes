@@ -1,6 +1,7 @@
 ---
 title: "[Go] Ch1: Go Basics - 03 Go Data Structure: `Structs`"
 date: 2020-07-11
+series: [Go]
 categories: [Go]
 ---
 

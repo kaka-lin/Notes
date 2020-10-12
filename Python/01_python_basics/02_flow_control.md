@@ -1,6 +1,7 @@
 ---
 title: "[Python] Ch1: Python Basics - 02 Flow Control"
 date: 2020-06-10
+series: [Python]
 categories: [Python]
 ---
 

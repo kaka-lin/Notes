@@ -1,6 +1,7 @@
 ---
 title: "[Go] Ch1: Go Basics - 05 Go Data Structure: `Maps`"
 date: 2020-07-11
+series: [Go]
 categories: [Go]
 ---
 

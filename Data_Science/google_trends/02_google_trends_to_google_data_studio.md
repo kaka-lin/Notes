@@ -1,7 +1,8 @@
 ---
 title: "[DS] Google Trends 02: Convert to Google Data Studio"
 date: 2020-06-10
-categories: [Data Science, Google Trends]
+tags: [Google Trends]
+categories: [Data Science]
 ---
 
 # Google Trends to Google Data Studio

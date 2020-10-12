@@ -1,6 +1,7 @@
 ---
 title: "[DSA] NTU CSIE DSA, 01: Array"
 date: 2020-07-04
+tags: [Array]
 categories: [Data Structure and Algorithm]
 ---
 

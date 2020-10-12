@@ -1,7 +1,8 @@
 ---
 title: "[DS] Google Trends 01: Operate with Python"
 date: 2020-06-10
-categories: [Data Science, Google Trends]
+tags: [Google Trends]
+categories: [Data Science]
 ---
 
 # Get and Analysis the result of Google Trends with Python

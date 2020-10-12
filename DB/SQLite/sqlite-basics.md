@@ -1,7 +1,8 @@
 ---
 title: "[DB] Sqlite Basics"
 date: 2020-06-10
-categories: [Database, SQLite]
+tags: [SQLite]
+categories: [Database]
 ---
 
 # SQLite - Basics

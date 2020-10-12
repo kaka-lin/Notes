@@ -1,6 +1,7 @@
 ---
 title: "[Python] Ch0: Install Python: Ubuntu"
 date: 2020-05-23
+series: [Python]
 categories: [Python]
 ---
 
