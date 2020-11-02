@@ -1,0 +1,32 @@
+# 設定 global 全域設定
+global:
+  scrape_interval: 5s # 設定多久抓取一次
+  external_labels: # 與外部系統溝通時標示在 time series 或 Alert 的 Labels
+    monitor: "demo-monitor"
+
+alerting:
+  alertmanagers:
+    - scheme: http
+      static_configs:
+      - targets:
+        - "alertmanager:9093"
+
+rule_files:
+  - "alert_rules.yml"
+
+# scrape_configs: 抓取來源
+#     這邊先設定 prometheus 本體 server 和 flask api_monitor
+#
+# docker-compose 會把 service 加入 default network
+# 所以可用 web:500 找到 flask app web service
+scrape_configs:
+  # The job name is added as a label `job=<job_name>`
+  # to any timeseries scraped from this config.
+  - job_name: "prometheus"
+    scrape_interval: 5s # 覆蓋 global 的預設時間
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "api_monitor"
+    scrape_interval: 5s
+    static_configs:
+    - targets: ["web:5000"]
