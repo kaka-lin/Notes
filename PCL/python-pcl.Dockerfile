@@ -7,18 +7,10 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     tzdata locales \
     wget curl ca-certificates \
-	git build-essential linux-libc-dev \
-	cmake ninja-build g++ \
-    libxt-dev \
-    libx11-dev libxext-dev libxtst-dev libxrender-dev libxmu-dev libxmuu-dev \
-    libgl1-mesa-dev libglu1-mesa-dev \
-    freeglut3-dev libboost-all-dev libeigen3-dev libflann-dev libglew-dev \
-    libpcap-dev libusb-1.0-0-dev libopenni-dev libopenni2-dev clang-format libqhull-dev
-
-# Install VTK
-RUN apt-get install -y --no-install-recommends \
-    libvtk6-dev \
-    libvtk6-qt-dev
+	git build-essential \
+    python-dev python3-dev \
+    python-pip python3-pip \
+    libpcl-dev
 
 RUN apt -y autoremove && \
     apt -y autoclean && \
@@ -35,24 +27,19 @@ RUN TZ=Asia/Taipei && \
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
-# PCL - build from source and install
-RUN git clone https://github.com/PointCloudLibrary/pcl.git && \
-    cd pcl && git checkout pcl-1.8.0 -b pcl-1.8.0 && \
-    mkdir build && cd build && \
-    cmake -DCMAKE_BUILD_TYPE=Release \
-          -DBUILD_GPU=TRUE \
-          -WITH_CUDA=FALSE \
-          -DWITH_OPENGL=TRUE \
-          -DWITH_QT=TRUE \
-          -DWITH_VTK=TRUE \
-          ..
+# Install Python Packages
+RUN pip3 install --upgrade pip
+RUN pip3 install setuptools numpy cython==0.25.2
 
-RUN cd pcl/build && \
-    make -j8 && \
-    make install -j8 && \
-    make clean
-
-RUN rm -rf pcl
+# Install python-pcl
+RUN wget https://github.com/strawlab/python-pcl/archive/v0.3.0rc1.tar.gz
+RUN tar zxvf v0.3.0rc1.tar.gz
+WORKDIR /python-pcl-0.3.0rc1
+COPY python-pcl/setup.py .
+RUN python3 setup.py build_ext -i
+RUN python3 setup.py install
+WORKDIR /
+RUN rm v0.3.0rc1.tar.gz && rm -r /python-pcl-0.3.0rc1
 
 # nvidia-container-runtime
 ## can run OpenGL in Container
