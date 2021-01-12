@@ -10,6 +10,8 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
 
+- [C++](https://github.com/kaka-lin/Notes/tree/master/C%2B%2B)
+
 - [Python](https://github.com/kaka-lin/Notes/tree/master/Python)
 
 - [Go](https://github.com/kaka-lin/Notes/tree/master/Go)
@@ -37,3 +39,7 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
   - [Matplotlib](https://github.com/kaka-lin/Notes/tree/master/Data_Science/matplotlib)
   - [Google Trends](https://github.com/kaka-lin/Notes/tree/master/Data_Science/google_trends)
   - [JupyterHub](https://github.com/kaka-lin/Notes/tree/master/Data_Science/jupyterhub)
+
+- [Machine Learning](https://github.com/kaka-lin/Notes/tree/master/ML)
+
+- [Point Cloud Library](https://github.com/kaka-lin/Notes/tree/master/PCL)
