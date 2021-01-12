@@ -1,8 +1,18 @@
+---
+title: "[C++] 多重繼承 (Multiple Inheritance)"
+date: 2021-01-11
+tags: [C++, OOP]
+categories: [C++]
+---
+
+最近面試被問到多重繼承相關的問題，簡單做個紀錄～
+
 # Multiple Inheritance (多重繼承)
 
 An object or class can inherit characteristics and features from more than one parent object or parent class.
 
 ![](./images/inheritance.png)
+![](/images/c++/inheritance.png)
 
 ## Virtual base classes
 
@@ -36,6 +46,7 @@ Class `A` is inherited twice to class `D`. One is through class `B` and second i
 When you want to access any data or function of class A by class D, ambiguity arises as to which data or function should be called? One inherited through and the other inherited through C. This confuses compiler, as below:
 
 ![](./images/ambiguity.png)
+![](/images/c++/ambiguity.png)
 
 ### Solution
 
