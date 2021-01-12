@@ -1,0 +1,21 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data/
+  dbGUI:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "vn503024@gmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "kaka"
+    ports:
+      - "16543:80"
+    depends_on:
+      - db

@@ -1,0 +1,13 @@
+groups:
+- name: too_many_request_count_total
+  rules:
+    # Alert for any instance that the total request > 100
+    - alert: TooMantReq
+      expr: request_count_total > 100
+      for: 10s
+      labels:
+        user: test
+      annotations:
+        description: "{{ $labels.instance }} of job {{ $labels.job }} has over 100 for more than 1 secs."
+        summary: "request_count_total is too over!"
+        username: "@channel"

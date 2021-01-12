@@ -9,7 +9,7 @@
 venv/
 .venv/
 
-# python 
+# python
 *.pyc
 *.pro
 *~
@@ -20,3 +20,6 @@ __pycache__
 
 # auth.json
 *_auth.json
+
+# postgresql
+pgdata/
