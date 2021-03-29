@@ -2,6 +2,12 @@
 
 [grpc/grpc.io](https://grpc.io/)
 
+## Prepare
+
+```bash
+$ pip3 install -r requirements.txt
+```
+
 ## Basic Steps
 
 1. Define a service in a .proto file.
