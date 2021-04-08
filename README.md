@@ -60,6 +60,4 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Point Cloud Library](https://github.com/kaka-lin/Notes/tree/master/PCL)
 
-- [Machine Learning](https://github.com/kaka-lin/Notes/tree/master/ML)
-
-- [Deep Learning](https://github.com/kaka-lin/Notes/tree/master/DL)
+- [Machine Learning](https://github.com/kaka-lin/ML-Notes)

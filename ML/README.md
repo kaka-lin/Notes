@@ -1,3 +1,3 @@
 # Machine Learning
 
-- [Clustering](Clustering/README.md)
+Move to [ML-Notes](https://github.com/kaka-lin/ML-Notes)
