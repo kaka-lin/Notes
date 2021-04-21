@@ -1,6 +1,6 @@
 import cv2
-import numpy as np
 import grpc
+import numpy as np
 
 import image_streaming_pb2
 import image_streaming_pb2_grpc
@@ -13,15 +13,19 @@ def video_thread():
 
         if ret:
             frame = cv2.resize(frame, (640, 480), interpolation=cv2.INTER_CUBIC)
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         else:
-            #print("Camera not ready!")
-            frame = np.zeros((480, 640), dtype=np.uint8)
+            print("Camera not ready!")
+            frame = np.zeros((480, 640, 1), dtype=np.uint8)
 
-        h, w = frame.shape
+        if frame.ndim == 2:
+            h, w = frame.shape
+            channel = 1
+        else:
+            h, w, channel = frame.shape
+
         frame = bytes(frame)
 
-        yield image_streaming_pb2.ImgRequest(img=frame, width=w, height=h, channel=1)
+        yield image_streaming_pb2.ImgRequest(img=frame, width=w, height=h, channel=channel)
 
 
 def run():

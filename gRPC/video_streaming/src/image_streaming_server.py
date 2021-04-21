@@ -15,9 +15,9 @@ class ImageStreamingServicer(image_streaming_pb2_grpc.ImageStreamingServicer):
     def VideoStart(self, requset_iterator, context):
         count = 1
         for req in requset_iterator:
-            frame = np.array(list(req.img)) # (bytes,)
-            frame = frame.reshape((req.height, req.width))# (h, w)
-            frame = np.array(frame, dtype=np.uint8)
+            frame = np.frombuffer(req.img, dtype=np.uint8).reshape(req.height, req.width, req.channel)
+            if frame.ndim > 2:
+                frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
             count += 1
 
             #display processed video
