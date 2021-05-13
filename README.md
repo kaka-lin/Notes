@@ -45,6 +45,10 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [gRPC](https://github.com/kaka-lin/Notes/tree/master/gRPC)
 
+### Cloud
+
+- [Azure](https://github.com/kaka-lin/azure-notes)
+
 ### DevOps & Infra
 
 - [DevOps](https://github.com/kaka-lin/Notes/tree/master/DevOps)
