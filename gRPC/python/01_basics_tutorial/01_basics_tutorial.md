@@ -2,6 +2,11 @@
 
 A basic tutorial introduction to gRPC in Python
 
+1. Define a service in a .proto file.
+2. Generate server and client code using the protocol buffer compiler.
+3. Use the Python gRPC API to write a simple client and server for your service.
+
+
 ## 1. Defining the service
 
 Define the `*.proto` file that includes the `gRPC service` and the `method request and response types` using [protocol buffer](https://developers.google.com/protocol-buffers/docs/overview)
