@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package imagestreaming;
+
+// Interface exported by server
+service ImageStreaming {
+    rpc VideoStart (stream ImgRequest) returns (stream ImgResponse) {}
+}
+
+// The request message containing the image
+message ImgRequest {
+    bytes img = 1;
+    int32 width = 2;
+    int32 height = 3;
+    int32 channel = 4;
+}
+
+// The response message containing the response
+message ImgResponse {
+    int32 counts = 1;
+}
