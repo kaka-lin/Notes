@@ -5,4 +5,4 @@
 ## Languages
 
 - [Python](./python/README.md)
-- [C++](./c++/README.md)
+- [C++](./cpp/README.md)
