@@ -24,9 +24,8 @@ int main(int argc, char** argv) {
 
   // 建立5個子行緒
   for (int i = 0; i < 5; i++) {
-    threads_.push_back(std::move(
-      std::thread(&Counter::run, Counter(i))
-    ));
+    Counter* counter = new Counter(i);
+    threads_.push_back(std::thread(&Counter::run, counter));
   }
 
   // Main Thread繼續執行自己的工作
