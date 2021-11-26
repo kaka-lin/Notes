@@ -1,0 +1,4 @@
+[submodule "Computer_Vision/hwc_to_chw/lib/pybind11"]
+	path = Computer_Vision/hwc_to_chw/lib/pybind11
+	url = https://github.com/pybind/pybind11.git
+	branch = stable
