@@ -2,4 +2,5 @@
 
 This is my study notes
 
-- [Array](https://github.com/kaka-lin/Notes/tree/master/DSA/DSA_NTU_LinHT/01_array.md)
+- [Array](./01_array/01_array.md)
+- [Linked List](./02_linked_list/02_linked_list.md)
