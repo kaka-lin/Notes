@@ -1,5 +1,11 @@
 # Convert HWC to CHW with C++
 
+## Update Submodule
+
+```bash
+$ git submodule update --init
+```
+
 ## Build
 
 ```bash

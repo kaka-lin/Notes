@@ -8,8 +8,6 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 ## Categories
 
-- [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
-
 ### Lauguages
 
 - [C++](https://github.com/kaka-lin/Notes/tree/master/C%2B%2B)
@@ -20,9 +18,12 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Rust](https://github.com/kaka-lin/Notes/tree/master/Rust)
 
+
 ### Data Structure and Algorithms
 
 - [Data Structure and Algorithms (DSA)](https://github.com/kaka-lin/Notes/tree/master/DSA)
+
+---
 
 ### Operate System
 
@@ -35,15 +36,28 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Database](https://github.com/kaka-lin/Notes/tree/master/DB)
 
+---
+
+### Desktop
+
+- [Qt](https://github.com/kaka-lin/Notes/tree/master/Qt)
+- [Electron](https://github.com/kaka-lin/Notes/tree/master/Electron)
+
+---
+
+### Network/Web Knowledge
+
+- [Network](https://github.com/kaka-lin/Notes/tree/master/Network)
+
 ### Frontend (GUI)
 
 - [React](https://github.com/kaka-lin/Notes/tree/master/React)
 
-- [Qt](https://github.com/kaka-lin/Notes/tree/master/Qt)
-
 ### Backend
 
 - [gRPC](https://github.com/kaka-lin/Notes/tree/master/gRPC)
+
+---
 
 ### Cloud
 
@@ -55,9 +69,11 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
   - [CI/CD](https://github.com/kaka-lin/Notes/tree/master/DevOps/CICD)
   - [Docker](https://github.com/kaka-lin/Notes/tree/master/DevOps/Docker)
 
-### Data & ML & DL
+### CV & Data & ML & DL & related paper
 
-- [Data Science](https://github.com/kaka-lin/Notes/tree/master/Data_Science)
+- [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
+- [Computer Vision](https://github.com/kaka-lin/Notes/tree/master/Computer%20Vision)
+- [Data Science](https://github.com/kaka-lin/Notes/tree/master/Data%20Science)
   - [Matplotlib](https://github.com/kaka-lin/Notes/tree/master/Data_Science/matplotlib)
   - [Google Trends](https://github.com/kaka-lin/Notes/tree/master/Data_Science/google_trends)
   - [JupyterHub](https://github.com/kaka-lin/Notes/tree/master/Data_Science/jupyterhub)
@@ -65,3 +81,4 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 - [Point Cloud Library](https://github.com/kaka-lin/Notes/tree/master/PCL)
 
 - [Machine Learning](https://github.com/kaka-lin/ML-Notes)
+    - [Autonomous Driving](https://github.com/kaka-lin/autonomous-driving-notes)
