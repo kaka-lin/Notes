@@ -78,7 +78,5 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
   - [Google Trends](https://github.com/kaka-lin/Notes/tree/master/Data_Science/google_trends)
   - [JupyterHub](https://github.com/kaka-lin/Notes/tree/master/Data_Science/jupyterhub)
 
-- [Point Cloud Library](https://github.com/kaka-lin/Notes/tree/master/PCL)
-
 - [Machine Learning](https://github.com/kaka-lin/ML-Notes)
     - [Autonomous Driving](https://github.com/kaka-lin/autonomous-driving-notes)
