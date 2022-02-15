@@ -8,6 +8,10 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 ## Categories
 
+### Linux
+
+- [X Window System](https://github.com/kaka-lin/Notes/tree/master/Linux/X%20Window)
+
 ### Lauguages
 
 - [C++](https://github.com/kaka-lin/Notes/tree/master/C%2B%2B)
@@ -68,6 +72,7 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 - [DevOps](https://github.com/kaka-lin/Notes/tree/master/DevOps)
   - [CI/CD](https://github.com/kaka-lin/Notes/tree/master/DevOps/CICD)
   - [Docker](https://github.com/kaka-lin/Notes/tree/master/DevOps/Docker)
+    - [Running GUI Application using Docker](https://github.com/kaka-lin/Notes/tree/master/DevOps/Docker/GUI%20in%20Container)
 
 ### CV & Data & ML & DL & related paper
 

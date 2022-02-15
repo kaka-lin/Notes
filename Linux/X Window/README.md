@@ -10,4 +10,3 @@ X是一個透過網路進行圖形介面的存取的通訊協定，當前版本�
 
 - [鳥哥: X Window 設定介紹](https://linux.vbird.org/linux_basic/centos7/0590xwindow.php)
 - [平凡備忘錄: x-window](http://blog.gitdns.org/2016/07/12/x-window/)
-
