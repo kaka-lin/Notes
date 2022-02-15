@@ -7,10 +7,15 @@
 1. [Running the container with GUI application as an X client on the local machine](01_docker_on_local.md)
 
     ```
-    X Server (local machine) -> X Clinet (docker on local machine)
+    X Server (local machine) <- X Clinet (docker on local machine)
     ```
 
 2. [Running the GUI application in a Docker container on a remote machine via `SSH`](02_docker_on_remote.md)
+
+   ```
+   [        remote machine           ]   [          local machine           ]
+   應用程式 -> X11 Client -> SSH Server -> SSH Client -> X11 Server -> Display
+   ```
 
     ![](images/mac_gui_docker_ssh.png)
 
@@ -21,3 +26,4 @@
 3. [Running Qt Application using Docker on MacOS X](https://diysar.medium.com/running-qt-application-using-docker-on-macos-x-ad2e9d34532a)
 4. [Run X application in a Docker container reliably on a server connected via SSH without "--net host"](https://stackoverflow.com/questions/48235040/run-x-application-in-a-docker-container-reliably-on-a-server-connected-via-ssh-w)
 5. [Running an X Server with Indirect GLX Rendering on MacOS for containerized applications with GUIs](https://blog.mkari.de/posts/glx-on-mac/)
+6. [ROS: Using Hardware Acceleration with Docker](http://wiki.ros.org/docker/Tutorials/Hardware%20Acceleration)
