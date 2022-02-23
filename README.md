@@ -77,7 +77,7 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 ### CV & Data & ML & DL & related paper
 
 - [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
-- [Computer Vision](https://github.com/kaka-lin/Notes/tree/master/Computer%20Vision)
+- [Computer Vision](https://github.com/kaka-lin/autonomous-driving-notes/tree/master/Computer%20Vision)
 - [Data Science](https://github.com/kaka-lin/Notes/tree/master/Data%20Science)
   - [Matplotlib](https://github.com/kaka-lin/Notes/tree/master/Data_Science/matplotlib)
   - [Google Trends](https://github.com/kaka-lin/Notes/tree/master/Data_Science/google_trends)
