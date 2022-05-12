@@ -1,17 +1,22 @@
 # Divide and Conquer
 
-Solve a problwm recursively
+`Divide and Conquer` is an `algorithm design paradigm`. A divide-and-conquer algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.
+
+```
+Breaks down a problem into sub-problem,
+Solve sub-problwm recursively.
+```
 
 ## Three steps
 
 1. Divide
 
     ```
-    Divide the problem into a number of subproblems that are smaller instances of the same problem. 
+    Divide the problem into a number of subproblems that are smaller instances of the same problem.
     ```
 
 2. Conquer
-    
+
     ```
     Conquer the subproblems by solving them recursively.
     ```
