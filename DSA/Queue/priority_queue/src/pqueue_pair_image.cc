@@ -68,7 +68,7 @@ void display_frame() {
       queue_show.pop();
       mtx_queue_show.unlock();
 
-      cv::imshow("ADAS Detection@ZU19EG DPU", frame);
+      cv::imshow("Show Image", frame);
       if (cv::waitKey(1) == 'q') {
         break;
       }
