@@ -1,17 +1,19 @@
 from typing import List
 
+
 # lomuto_partition_scheme
 def quick_sort(nums: List[int]) -> List[int]:
     """
     Sorts an array in the ascending order in O(n log n) time
 
-    @param 
+    @param
         nums: a list of numbers
     @return: the sorted list
     """
     n = len(nums)
     qsort(nums, 0, n - 1)
     return nums
+
 
 def qsort(nums, lo, hi):
     """
@@ -29,6 +31,7 @@ def qsort(nums, lo, hi):
         qsort(nums, lo, p-1)
         qsort(nums, p + 1, hi)
 
+
 def partition(nums, lo, hi):
     """ Lomuto Partition Scheme
 
@@ -43,6 +46,7 @@ def partition(nums, lo, hi):
             i += 1
     nums[i], nums[hi] = nums[hi], nums[i]
     return i
+
 
 if __name__ == "__main__":
     test = [1, 5, 3, 2, 8, 7, 6, 4]
