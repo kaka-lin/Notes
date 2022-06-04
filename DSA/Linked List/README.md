@@ -4,9 +4,7 @@
 
 ![](images/linked_list_01.png)
 
-### Singly Linked List as Abstarct Data Structure
-
-#### Access
+### Access
 
 ![](images/linked_list_02.png)
 
@@ -15,13 +13,13 @@ Compare with array:
 - linked list: sequential access
 - array: random access
 
-#### Maintenance
-
-![](images/linked_list_02.png)
-
-##### Dummy Head Node
+### Maintenance
 
 ![](images/linked_list_02_2.png)
+
+#### Dummy Head Node
+
+![](images/linked_list_02_3.png)
 
 ## Doubly Linked List
 
