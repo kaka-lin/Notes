@@ -10,30 +10,108 @@
 
 ## Traverse a Tree
 
-### Pre-order Traversal
+Binary Tree 的遍歷順序有四種:
+  - `Preorder Traversal (前序)` -> `DFS`
+  - `Inorder Traversal (中序)` -> `DFS`
+  - `Traversal Postorder (後序)` -> `DFS`
+  - `Level-order Traversal (層序)` -> `BFS`
+
+但其實可以視為 `DFS` 與 `BFS` 兩種，只不過是更動了節點的輸出順序。
 
 ```
+    4
+   / \
+  2   6
+ / \ / \
+1  3 5  7
+
+Preorder: [4, 2, 1, 3, 6, 5, 7]
+Inorder: [1, 2, 3, 4, 5, 6, 7]
+Postoder: [1, 3, 2, 5, 7, 6, 4]
+Level-order: [4, 2, 6, 1, 3, 5, 7]
+```
+
+- `前三種`遍歷方式皆使用 `DFS`
+  - 皆可以使用`遞迴 (recursion)` 或 `迭代(iterative)`來實作
+- `Level-order Traversal` 使用 `BFS`
+  - 使用`迭代(iterative)`來實作比較容易想到
+
+### Preorder Traversal
+
+```
+    4
+   / \
+  2   6
+ / \ / \
+1  3 5  7
+Preorder: [4, 2, 1, 3, 6, 5, 7]
+
 root -> left subtree -> right subtrer
 ```
 
-### In-order Traversal
+遍歷順序是：根、左子樹、右子樹。根排在前面。
+即是 `Depth-first Search (DFS)`。
+
+### Inorder Traversal
 
 ```
+    4
+   / \
+  2   6
+ / \ / \
+1  3 5  7
+Inorder: [1, 2, 3, 4, 5, 6, 7]
+
 left subtree -> root -> right subtrer
 ```
 
-Typically, for `binary search tree`, we can retrieve all the data in sorted order using in-order traversal.
-
-### Post-order Traversal
-
+遍歷順序是：左子樹、根、右子樹。根排在中間。
+實際上是採用 `Depth-first Search (DFS)`，只不過更動了節點的輸出順序。
 
 ```
+Typically, for binary search tree,
+we can retrieve all the data in
+"sorted order" using in-order traversal.
+```
+
+對`二元搜尋樹(binary search tree, BST)`而言，
+`inorder traversal` 就是`由小到大依序遍歷`。
+
+### Postorder Traversal
+
+```
+    4
+   / \
+  2   6
+ / \ / \
+1  3 5  7
+Postoder: [1, 3, 2, 5, 7, 6, 4]
+
 left subtree -> right subtrer -> root
 ```
+
+遍歷順序是：左子樹、右子樹、根。根排在後面。
+實際上是採用 `Depth-first Search (DFS)`，只不過更動了節點的輸出順序。
 
 * It is worth noting that when you `delete nodes` in a tree, deletion process will be in post-order. That is to say, when you delete a node, you will delete its left child and its right child before you delete the node itself.
 
 * Also, post-order is widely use in `mathematical expression`. It is easier to write a program to parse a post-order expression.
+
+### Level-order Traversal
+
+```
+    4
+   / \
+  2   6
+ / \ / \
+1  3 5  7
+Level-order: [4, 2, 6, 1, 3, 5, 7]
+
+first the root, then the child of the root, etc.
+```
+
+遍歷順序是：一層一層往下。
+即是 `Breadth-first Search (BFS)·。
 
 ## Solve Tree Problems Recursively
 
