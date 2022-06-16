@@ -238,10 +238,106 @@ def build_kdtree(self, points, depth=0):
     # 3. Create node and construct subtress
     return {
         'point': sorted_points[median],
-        'left': build_kdtree(sorted_points[:median], depth + 1),
-        'right': build_kdtree(sorted_points[median+1:], depth + 1)
+        'left': build_kdtree(sorted_points[:median], depth+1),
+        'right': build_kdtree(sorted_points[median+1:], depth+1)
     }
 ```
+
+## Nearest Neighbor Search in KD-Tree
+
+KD Tree 建好之後，接下來就可以使用 KD Tree 對元素搜尋最近點，步驟如下:
+
+- 查詢目標節點: Q
+- 當前最佳節點: P
+
+1. 將查詢資料 Q 從根節點開始，按照 Q 與各個節點的比較結果向下訪問Kd-Tree，直至達到葉節點(leaf node)。
+
+    - 根據 Q 在分割維度中是否小於或大於當前節點，向左或向右移動。
+
+2. 一旦算法到達葉節點，該節點被保存為當前最佳節點 P。
+
+3. 取出之前走訪過的節點 C (即`回溯`)，並計算 Q 與 C 的距離
+
+    - 如果 C 比 P 更接近 C ，則更新 P (當前最近鄰點和最小距離)。
+
+4. 檢查在 C 分割面的另一邊是否有比 P 距離更近的節點。
+
+    從概念上來說，以 Q 為中心，以 P 為半徑劃一個超球面，看這個超球面是否穿過了分割平面。
+    因為平面都是座標軸對應的，所以只需要簡單比較 `Q` 和`當前節點分割面`的距離是否比 P 距離更小。
+
+    - 如果超球面穿越分割面，那麼分割面的另外一側可能還有最近點。
+
+        所以算法必須從當前節點向下移動樹的另一個分支以尋找更近的點，遵循與整個搜索相同的遞歸過程
+
+    - 如果超球面沒有穿越分割面，則分割面的另外一邊的整個分支會被剪掉，稱為`剪枝`。
+
+        算法繼續沿樹向上走，並消除該節點另一側的整個分支
+
+5. 當算法到達根節點時，搜索就完成了。
+
+![](images/find-nearest.png)
+
+如上所示，即使綠點在平面的左側，但最近的節點在平面的右側。
+這就是為什麼我們需要通過驗證超球面是否穿過平面來檢查分割平面另一側的點。
+
+### 剪枝概念
+
+KD 演算法的核心技巧在於剪枝，如下圖所示:
+
+在已經搜索到 B 時，發現其到 B 的距離，要比到 A 的右子樹的平面距離還更短，所以整個 A 的右子樹都被剪枝，一下子剪去了一半的點。
+
+![](images/kdtree-pruning.png)
+
+### 實作
+
+Python: [kdtree.py](kdtree.py)
+```python
+def find_nearest(point, root=None, depth=0):
+    # 1. 從根節點開始搜尋
+    if root is None:
+        best = None
+        root = tree # generate by build_kdtree
+
+    k = len(point)
+    axis = depth % k # 2d: (x, y, x, y, ...)
+
+    # 2. 若不是葉節點，則繼續往下走，直至達到葉節點(leaf node)
+    if root['left'] or root['right']:
+        if point[axis] < root['point'][axis] and root['left']:
+            find_nearest(point, root['left'], depth+1)
+        elif root['right']:
+            find_nearest(point, root['right'], depth+1)
+
+    # 3. 回溯，計算 target 與當前節點 (root) 之間的距離
+    #    並更新當前最佳節點 (best)
+    dist = compute_distance(root['point'], point) # np.linalg.norm(x - y, ord=2)
+    if best is None or dist < best[0]:
+        best = (dist, root['point'])
+
+    # 4. 檢查超球面是否有穿越分割面
+    #    超球面有穿越分割面:
+    #      比較“目標節點”和“當前節點分割面”的距離是否比最佳節點距離更小
+    if abs(point[axis] - root['point'][axis]) < best[0]:
+        # 如果 target 位於左子空間，就進右子空間搜尋
+        if point[axis] < root['point'][axis] and root['right']:
+            find_nearest(point, root['right'], depth+1)
+        # 反之亦然
+        elif point[axis] >= root['point'][axis] and root['left']:
+            find_nearest(point, root['left'], depth+1)
+
+    return best
+```
+
+Target: (2.1, 3.1)
+Nearest: (2, 3), dist: 0.1414
+
+![](images/find-nearest-2.png)
+
+Target: (2, 4.5)
+Nearest: (2, 3), dist: 1.5
+
+![](images/find-nearest-3.png)
+
 
 ## Reference
 
