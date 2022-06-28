@@ -59,6 +59,8 @@ Following the guidelines we lay out above, we can implement the function as foll
 
 ## Recurrence Relation
 
+A recurrence is an equation or inequality that descirbes a function in terms of its value on smaller inputs.
+
 There are two important things that one needs to figure out before implementing a recursive function:
 
 - `recurrence relation`:
