@@ -36,8 +36,13 @@ Solve sub-problwm recursively.
 
 ![](images/Divide-and-Conquer.png)
 
+## Time Complexity
+
+![](images/time-complexity.png)
+
 ## Exmaples
 
+- [Tower of Hanoi](https://github.com/kaka-lin/Notes/tree/master/DSA/Recursion/Divide%20and%20Conquer/tower_of_hanoi)
 - [Merge Sort](https://github.com/kaka-lin/Notes/tree/master/DSA/Recursion/Divide%20and%20Conquer/merge_sort)
 - [Quick Sort](https://github.com/kaka-lin/Notes/tree/master/DSA/Recursion/Divide%20and%20Conquer/quick_sort)
 
