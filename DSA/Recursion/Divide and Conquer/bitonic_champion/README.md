@@ -18,8 +18,14 @@ Exmaple
 3 7 9 17 35 28 21 18 6 4
 ```
 
+![](images/bitonic.png)
+
 ## Bitonic Champion Problem Complexity
 
 - Upper bound: $O(logn)$
 
 - Lower bound: $\Omega(logn)$
+
+## Reference
+
+1. [ADA, NTU CSIE](https://www.youtube.com/watch?v=ke1mILIEs3A)
