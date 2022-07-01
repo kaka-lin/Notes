@@ -1,7 +1,7 @@
 def max_subarray(nums, i, j):
     if i == j:
         return (i, j, nums[i])
-    
+
     k = (i + j) // 2
     # If the maximum subarray appears in left.
     (left_i, left_j, left_sum) = max_subarray(nums, i, k)
@@ -17,6 +17,7 @@ def max_subarray(nums, i, j):
     else:
         return (middle_i, middle_j, middle_sum)
 
+
 def max_cross_subarray(nums, i, k, j):
     left_sum = float("-inf")
     _sum = 0
@@ -25,7 +26,7 @@ def max_cross_subarray(nums, i, k, j):
         if _sum > left_sum:
             left_sum = _sum
             max_left = index
-    
+
     right_sum = float("-inf")
     _sum = 0
     for index in range(k+1, j+1):
@@ -33,12 +34,14 @@ def max_cross_subarray(nums, i, k, j):
         if _sum > right_sum:
             right_sum = _sum
             max_right = index
-    
+
     return (max_left, max_right, left_sum + right_sum)
+
 
 if __name__ == "__main__":
     #test = [-2, 1, -3, 4, -1, 2, 1, -5, 4] # 6
     test = [1, 2, -1, -2, 2, 1, -2, 1, 4, -5, 4] # 6
+    # test = [1, 2] # 6
     i, j, max_sum = max_subarray(test, 0, len(test) - 1)
 
     print("original:", test)

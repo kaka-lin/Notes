@@ -12,6 +12,8 @@
 
 ## Solution 1. Divide and Conquer
 
+Time Complexity: $O(nlogn)$
+
 - Base case (n = 1)
     - Return itself (maximum subarray)
 - Recursive case (n > 1)
@@ -23,11 +25,9 @@
 
 <img src="./img/solution2.png" />
 
-## Bitonic Champion Problem Complexity
+## Solution 2. Dynamic Programming
 
-- Upper bound: $O(n)$
-
-- Lower bound: $\Omega(n)$
+Time Complexity: $O(n)$
 
 ## Reference
 
