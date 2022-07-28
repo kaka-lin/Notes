@@ -12,7 +12,7 @@ INCLUDES = -I$(KERNELHEADERS)
 
 SOURCES = $(wildcard *.c)
 OBJECTS := $(SOURCES:.c=.o)
-EXEC = example
+EXEC = fibonacci
 
 all: $(EXEC)
 
