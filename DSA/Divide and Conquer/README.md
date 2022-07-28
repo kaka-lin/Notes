@@ -36,6 +36,16 @@ Solve sub-problwm recursively.
 
 ![](images/Divide-and-Conquer.png)
 
+## Divide-and Conquer Benefits
+
+- Easy to solve difficult problems
+  - Thinking: solve easiest case + combine smaller solutions into the original solution
+- Easy to find a efficient algorithm
+  - Better time complexity
+- Suitable for parallel computing (multi-core systems)
+- More efficient memory access
+  - Subprograms and their data can be put in cache in stead of accessing main memory
+
 ## Time Complexity
 
 ![](images/time-complexity.png)
