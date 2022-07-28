@@ -130,7 +130,7 @@ If we define the function `F(n)` to represent the Fibonacci number at the index 
 - `Base Case`
 
     ```
-    F(0) = 0, F(1) = 1
+    F(0) = 1, F(1) = 1
     ```
 
 Solution:
