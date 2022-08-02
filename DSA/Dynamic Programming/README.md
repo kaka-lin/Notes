@@ -42,6 +42,33 @@ Apply four steps
 3. Compute the value of an *optimal solution*, typically in a `bottom-up` fasion
 4. Construct an *optimal solution* from computed information
 
+### Top-Down with Memoization
+
+Solve the overlapping subproblems recursively with memoization
+
+- Check the memo before making the calls
+
+![](images/top_down_1.png)
+
+![](images/top_down_2.png)
+
+![](images/top_down_3.png)
+
+Code:
+
+![](images/top_down_code.png)
+
+### Bottom-Up Method
+
+Building up solutions to larger and larger subproblems
+
+![](images/bottom_up.png)
+
+Code:
+
+![](images/bottom_up_code.png)
+
+
 ## Optimization Problem
 
 Dynamic Programming 最主要就是被用在 Optimization 的問題上
