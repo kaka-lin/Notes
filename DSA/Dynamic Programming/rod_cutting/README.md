@@ -119,3 +119,5 @@ $$ r_n = max_{1\leq i \leq n}(p_i+r_{n-i}) $$
 ### Bottom-Up with Tabulation
 
 ![](images/rod_cutting_bottom_up.png)
+
+Python: [rod_cutting_bottomup.py](https://github.com/kaka-lin/Notes/blob/master/DSA/Dynamic%20Programming/rod_cutting/rod_cutting_bottomup.py)
