@@ -37,10 +37,16 @@ Dynamic Programming like the [divide-and-conquer](https://github.com/kaka-lin/No
 
 Apply four steps
 
-1. Characterize the structure of an *optimal solution*
+1. `Characterize the structure` of an *optimal solution*
+   - Overlapping subproblems: revisit same subproblems
+   - Optimal substructure: an optimal solution to the problem contains within it optimal solutions to subproblems
 2. `Recursively` define the value of an *optimal solution*
-3. Compute the value of an *optimal solution*, typically in a `bottom-up` fasion
-4. Construct an *optimal solution* from computed information
+3. `Compute the value` of an *optimal solution*, typically in a bottom-up fashion
+4. `Construct an optimal solution` from computed information
+
+    ```
+    Step 3 and 4 maybe combined
+    ```
 
 ### Top-Down with Memoization
 
@@ -48,13 +54,12 @@ Solve the overlapping subproblems recursively with memoization
 
 - Check the memo before making the calls
 
-![](images/top_down_1.png)
+<p float="left">
+    <img src="images/top_down_1.png" width="300" height="auto" />
+    <img src="images/top_down_2.png" width="300" height="auto" height="auto"/>
+    <img src="images/top_down_3.png" width="300" height="auto" />
+</p>
 
-![](images/top_down_2.png)
-
-![](images/top_down_3.png)
-
-Code:
 
 ![](images/top_down_code.png)
 
@@ -62,12 +67,14 @@ Code:
 
 Building up solutions to larger and larger subproblems
 
-![](images/bottom_up.png)
+<p float="left">
+  <img src="images/bottom_up.png" height="200" width="auto" />
+  <img src="images/bottom_up_code.png" height="200" />
+</p>
 
-Code:
+### Top-Down v.s. Bottom-Up
 
-![](images/bottom_up_code.png)
-
+![](images/top_down_vs_bottom_up.png)
 
 ## Optimization Problem
 
