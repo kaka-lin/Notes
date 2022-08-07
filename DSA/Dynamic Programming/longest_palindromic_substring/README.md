@@ -68,3 +68,121 @@ def isPalindrome(s):
 
 - Time-Complexity: $O(n^3)$, `Time Limit Exceeded`
 
+## Method 2: Dynamic Programming
+
+[Python code](#implementing-with-python) 直接看這邊。
+
+### Step 1: Characterize an OPT Solution:
+
+- Subproblems:
+
+    - if s[i~j] is a palindrome, s[i+1~j-1] is also a palindrome.
+
+    $P(i,j) = (P(i+1,j−1)\ and\ S[i] == S[j])$
+
+- Optimal substructure: suppose we already knew that substr `"bab"` is a palindrome:
+  - Case 1: `"ababa"` must be a palindrome
+
+    因為左右兩端的字母是一樣的
+
+  - Case 2: `"bbabc"` is not a palindrome
+
+    因為左右兩端的字母不是一樣的
+
+### Step 2: Recursively Define the Value of an OPT Solution
+
+- Base case:
+  - Odd: $P(i, i) = True$
+  - Even: $P(i, i+1) = (S[i] == S[i+1])$
+
+    Example:
+
+    ```
+    odd: abcba
+           i
+
+    even: a b c c b a
+              i i+1
+    ```
+
+- Recursive case: $P(i,j) = (P(i+1,j−1)\ and\ S[i] == S[j])$
+
+    ```
+    Substring is a palindrome and the two left and right end letters are the same
+    ```
+
+### Step3: Compute Value of an OPT Solution
+
+#### Bottom-Up Tabulation
+
+Step 1. 建立一個 `N x N` 的表格，如下所示:
+
+![](images/DP_1.png)
+
+Step 2. Preporcessing: Base case
+
+在表格中，先填上 Base case 的值 (奇數與偶數情況)，如下圖所示:
+
+![](images/DP_2.png)
+
+Step 3. Compute Value
+
+Recursive Case:
+
+$$P(i,j) = (P(i+1,j−1)\ and\ S[i] == S[j])$$
+
+假設 S[i~j] 為回文，那個 S[i+1~j-1] 也必然為回文，依照表格去尋找相對應的值，判斷是否為回文，如下圖所示:
+
+![](images/DP_3.png)
+
+##### 表格 loop 方向
+
+因為 P(i,j) 需要往回查看 P(i+1, j-1)，所以我們這邊採用`『由上而下由左而右』`的方式進行搜索，如下圖所示:
+
+![](images/DP_4.png)
+
+### Implementing with Python
+
+```python
+# Bottom-Up with Tabulation
+def longestPalindrome(self, s):
+    n = len(s)
+    left = right = 0
+    max_length = 0
+    p_dp = [[0] * n for _ in range(n)]
+
+    # Base case: Odd
+    for i in range(n):
+        p_dp[i][i] = True
+        max_length = 1
+        left = i
+        right = i+1
+
+    # Base case: Even
+    for i in range(n-1):
+        if s[i] == s[i+1]:
+            p_dp[i][i+1] = True # base case
+            max_length = 2
+            left = i
+            right = i+2
+
+    # Recursive case:
+    # P(i,j) = P(i+1,j−1) and S[i] == S[j]
+    # 採用『由上而下由左而右』進行搜索。
+    for j in range(n): # End
+        for i in range(j-1): # Start
+            if s[i] == s[j] and p_dp[i+1][j-1]:
+                p_dp[i][j] = True
+                if j - i +1 > max_length:
+                    left = i
+                    right = j+1
+                    max_length = j - i + 1
+
+    return s[left:right]
+```
+
+## Refernece
+
+- [[LeetCode]5. Longest Palindromic Substring 中文](https://www.youtube.com/watch?v=ZnzvU03HtYk)
+- [花花酱 LeetCode 5. Longest Palindromic Substring - 刷题找工作 EP292](https://youtu.be/g3R-pjUNa3k)
+- [[LeetCode Python] 5. Longest Palindromic Substring— Dynamic Programming](https://home.gamer.com.tw/artwork.php?sn=5315467)
