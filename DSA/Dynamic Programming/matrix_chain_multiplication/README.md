@@ -55,6 +55,16 @@ Example:
   - $l_{i-1}$ is the number of rows of matrix $A_i$
   - $l_i$ is the number of columns of matrix $A_i$
 
+    Example:
+
+    | A1 | A2 | A3 | A4 | A5 | A6 |
+    | :-: | :-: | :-: | :-: | :-: | :-: |
+    | 30x35 | 35x15 | 15x5 | 5x10 | 10x20 | 20x25 |
+
+    > A sequence of integers is: [30, 35, 15, 5, 10, 20, 25]
+
+    For A1: $l_0$ (30) is row, $l_1$ (35) is column
+
 - Output: an `order` of performing `n-1` matrix multiplication in the minimum number of operations to obtain the product of $A_1A_2...A_n$
 
 ![](images/matrix_chain_multiplication_1.png)
@@ -69,7 +79,14 @@ Example:
 
 - Subproblems
   - `M(i, j)`: the min #operations for obtain the product of `Ai ... Aj`
-  - Goal: M(1, n)
+  - Goal: `M(1, n)`
+
+    ```
+    長度為 n 的矩陣鏈乘積，表格: M[1~n, 1~n]
+    - M[i,j]: Mi..Mj 所需的最小相乘數
+    - 目標: M[1,n] (M1M2...Mn的相乘數)
+    ```
+
 - Optimal substructure: suppose we know the OPT to `M(i, j)`, there k cases:
 
     ![](images/dp_1.png)
@@ -79,6 +96,11 @@ Example:
         ```
         左右花的運算量是 M(i, k), M(k+1, j) 的最佳解
         ```
+
+    ```
+    輔助表格 B[1~n, 1~n]: 記錄分割位置 k
+    - B[i,j]紀錄哪一個分割位置 k 造就了 M[i,j]的最小純量相乘數
+    ```
 
 ### Step 2: Recursively Define the Value of an OPT Solution
 
@@ -116,7 +138,87 @@ How many subproblems to solve:
 
 - $T(n) = \Theta(n^3)$
 
-##### 如何建立及填表格
+##### Implement with Python
+
+Input:
+
+| A1 | A2 | A3 | A4 | A5 | A6 |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| 30x35 | 35x15 | 15x5 | 5x10 | 10x20 | 20x25 |
+
+A sequence of integers l is: `[30, 35, 15, 5, 10, 20, 25]`
+
+```
+所以維度 list 的長度 = 所須相乘矩陣數量 + 1
+```
+
+Recursive case:
+
+$$M_{i,j} = M_{i,k} + M_{k+1,j} + l_{i-1}l_jl_k$$
+
+Table M:
+
+```
+*** p 就是從對角線開始往右上遍歷 (每一個橫排)，如下:
+
+n = 5
+for p = 2 to n
+  for i = 1 to n - p + 1
+    j = i + p - 1
+
+      1 2 3 4 5
+1     x # $ % @ | p = 5 (@)
+2     0 x # $ % | p = 4 (%)
+3     0 0 x # $ | p = 3 ($)
+4     0 0 0 x # | p = 2 (#)
+5     0 0 0 0 x | p = 1 (x)
+```
+
+- 表格詳細說明請看: [如何建立及填表格](#補充說明-如何建立及填表格)
+
+
+Python Code:
+
+```python
+def matrix_chain_product(l, n):
+    """
+    Matrix Chain Multiplication:
+
+    given a list of integers corresponding to the dimensions
+    of each pair of matrices forming a chain.
+
+    Args:
+        l: A list of integers corresponding to the dimensions.
+        n: The length of l
+
+    Returns:
+        M: is the minimum number of scalar multiplications needed
+          to compute the product of matrices A(i), A(i+1), ..., A(j)
+        B: is the index of the matrix after which the product
+          is split in an optimal parenthesization of the matrix product.
+    """
+    # Initialize: Build the table
+    M = [[0] * n for _ in range(n)]
+    B = [[0] * n for _ in range(n)]
+
+    # Base case: 1~n 對角線上皆為 0
+    for i in range(1, n):
+        M[i][i] = 0
+
+    # compute table
+    for p in range(2, n): # p is the chain length (subsequence lengths)
+        for i in range(1, n - p + 1): # all i, j combinations
+            j = i + p - 1
+            M[i][j] = sys.maxsize
+            for k in range(i, j): # find the best k
+                q = M[i][k] + M[k + 1][j] + l[i-1]*l[k]*l[j]
+                if q < M[i][j]:
+                    M[i][j] = q
+                    B[i][j] = k
+    return (M,B)
+```
+
+##### [補充說明]: 如何建立及填表格
 
 ![](images/dp_5.png)
 
@@ -198,7 +300,6 @@ M(1,6) = M(1,3) x M(4,6)
 如下圖所示:
 
 ![](images/dp_5_8.png)
-
 
 ### Step4: Construct an OPT Solution by Backtracking
 
