@@ -1,4 +1,6 @@
 # Binary Tree Data Structure
 
 - [Introduction](introduction.md)
-- [Expression Tree](expression_tree.md)
+- [Binary Search Tree](Binary%20Search%20Tree/README.md)
+- [Expression Tree](Expression%20Tree/expression_tree.md)
+- [Heap Tree]()
