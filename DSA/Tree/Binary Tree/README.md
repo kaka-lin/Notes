@@ -189,6 +189,49 @@ A skewed binary tree `is a pathological/degenerate` tree in which the tree is ei
            4
     ```
 
+## Binary representation of node number
+
+Consider a `Perfect Binary Tree` or `Completed Binary Tree`:
+
+```sh
+             1
+          /     \
+         2       3
+        / \     / \
+       4   5   6   7
+```
+
+二進制為:
+
+![](images/binary_representation.png)
+
+從上可知:
+
+- node number = (1 (path code)) 的 2 進制
+
+    - 在一個`二進位`制後面`加一個 0` : 就是 `*2`
+
+        ```
+        110: 6
+        1100: 12
+        ```
+
+        > C 語言中就是 `shift 一個 bit`
+
+    - 在一個`二進位`制後面`加一個 1` : 就是 `*2+1`
+
+        ```
+        110: 6
+        1101: 13
+        ```
+
+最喜歡使用編號的 data structure 為 Vector，
+所以我們可以`用一個 Vector 來表示這個特別的 full binary tree`，如下圖所示:
+
+![](images/binary_representation_2.png)
+
+
+
 ## Reference
 
 - [DSA 20200421: Tree](https://www.youtube.com/watch?v=XkNIHYd9Ruc)
@@ -198,3 +241,4 @@ A skewed binary tree `is a pathological/degenerate` tree in which the tree is ei
 - [Different Types of Binary Tree with colourful illustrations](https://towardsdatascience.com/5-types-of-binary-tree-with-cool-illustrations-9b335c430254)
 - [Binary Tree](https://web.ntnu.edu.tw/~algo/BinaryTree.html)
 - [Binary Tree: Intro(簡介)](http://alrightchiu.github.io/SecondRound/binary-tree-introjian-jie.html)
+- [Expression Tree](https://www.geeksforgeeks.org/expression-tree/)
