@@ -190,6 +190,7 @@ hashcode("apple") = hashcode("act")
   - `平方探測法(Quadratic Probing)`
 
   - `double hashing`
+- [Extendable Hash Table](#5-extendable-hash-table)
 
 #### 0. Don't care
 
@@ -274,6 +275,55 @@ Steps for insert:
 3. `double hashing`
 
     $h_i = (h_0 + i * \hat{h}(key)) \% K$
+
+#### 5. Extendable Hash Table
+
+當我們的資料越來越大時，碰撞的機率也會大大增加，
+這時候可以考慮擴增 Hash table。
+
+有兩種方法，如下:
+
+- naive (rebuild all):
+    1. set new_K = 2K
+    2. h(key) change range to { 0, 1, ..., 2K-1 }
+    3. rebuild
+
+- partial rebuild:
+
+    Example:
+
+    ```
+    h(key) = (key[0] - 'a') % K
+
+    Origin Table:       insert "egg"
+
+    {
+     0: "act", "eat"
+     1: "bird"
+     2: "good", "cat"
+     3: "dog"
+    }
+
+    變大兩倍，把 "eat", "egg" 放到新位置，
+    但是 "good" hash code 會變 6，
+    所以把尚未分家的與新家連上一個小紙條 (1-5, 2-6, 3-7)
+    當 "good" 那邊 overflow 時在分家處理
+
+    {
+     0: "act"
+     1: "bird"
+     2: "good", "cat"
+     3: "dog"
+     4: "eat", "egg"
+     5:
+     6:
+     7:
+    }
+    ```
+
+
+
+
 
 ## Reference
 
