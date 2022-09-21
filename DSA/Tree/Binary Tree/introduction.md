@@ -124,27 +124,29 @@ $$ log_2(n+1) - 1 \leq h \leq n-1 $$
 
     每個 node 的左子樹和右子樹的高度差為 0 or 1。
 
-    It is a type of binary tree in which the difference between the height of the left and the right subtree for each node is either 0 or 1.
+    - It is a type of binary tree in which the difference between the height of the left and the right subtree for each node is either 0 or 1.
+    - For each node, its left subtree is balanced
+    - For each node, its right subtree is balanced.
 
-    ```sh
-             1
-          /     \
-         2       3
-        / \
-       4   5
-    ```
+        ```sh
+                  1
+               /     \
+              2       3
+             / \
+            4   5
+        ```
 
-    ***`Unbalance`
+        ***`Unbalance`
 
-    ```sh
-             1
-          /     \
-         2       3
-        / \
-       4   5
-      /
-     6
-    ```
+        ```sh
+                1
+             /     \
+            2       3
+           / \
+          4   5
+         /
+        6
+        ```
 
     > A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes
 
