@@ -6,11 +6,10 @@ int main() {
   TreeNode *root = NULL;
   // int insert_keys[8];
 
-  // 4 2 5 6 3 7 1 8
+  // [4 2 5 6 3 7 1 8] or [4 2 5 1 3 6 7 8]
   // for (int i = 0; i < 8; i++)
   //   scanf("%d", &(insert_keys[i]));
   int insert_keys[8] = {4, 2, 5, 6, 3, 7, 1, 8};
-
 
   for (int i = 0; i < 8; i++)
     root = root->insertBsTree(root, insert_keys[i]);
@@ -38,8 +37,8 @@ int main() {
   length = strlen(preorder);
   assert(length = strlen(inorder));
   root2 = root2->reconstruct(length, preorder, inorder);
+  printf("reconstruct\n");
   root2->postorder(root2); // CDBEA (67,68,66,69,65)
-  printf("\n");
 
   return 0;
 }
