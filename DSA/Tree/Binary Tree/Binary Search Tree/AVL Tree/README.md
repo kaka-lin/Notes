@@ -22,15 +22,27 @@ AVL Tree: BST + Balanced Binary Tree
 
 在遇到不平衡情況時，為維持樹的平衡，需要調整樹的節點，這邊稱為 `Rotation`。如下所示:
 
-Example: 有三個點 3, 5, 8
+Example:
 
-```sh
-3 BF: -2                             5
- \              AVL maintain        / \
-  5 BF: -1     ==============>     3   8
-   \
-    8 : BF:9
-```
+1. 有三個點 3, 5, 8 (`RR`)
+
+    ```sh
+    3 BF: -2                             5
+     \              AVL maintain        / \
+      5 BF: -1     ==============>     3   8
+       \
+        8 BF: 0
+    ```
+
+2. 有三個點 3, 5, 4 (`RL`)
+
+    ```sh
+        3 BF: -2                     3                          4
+         \           rotate 4, 5      \      rotate 3, 4       / \
+          5 BF: 1   ==============>    4    ==============>   3   5
+         /                              \
+        4 BF: 0                          5
+    ```
 
 - Rotation 有個很重要的目的: rotation 前與後的樹的 `in-order traversal` 相同 。
 
@@ -59,10 +71,17 @@ Example: 有三個點 3, 5, 8
 
 ![](images/avl_rr_2.png)
 
-- B.left -> A
-- A.right -> B.left
+```
+只跟 A, B 點有關，就是把 B 抓起來當頭，然後
+- B 的左邊接 A
+- A 的右邊接 B 的 左邊
+```
 
-> ***只要找到第一個不平衡的地方，調整完即可。 (一次調整)
+- `逆時針旋轉`，B 變新的 root
+  - B.left -> A
+  - A.right -> B.left
+
+##### *** 只要找到第一個不平衡的地方，調整完即可。 (一次調整)
 
 ### LL型:當插入的點在該節點左邊的左邊
 
@@ -74,8 +93,54 @@ Example: 有三個點 3, 5, 8
 
 ![](images/avl_ll_2.png)
 
-- B.rigth -> A
-- A.left -> B.right
+```
+只跟 A, B 點有關，就是把 B 抓起來當頭，然後
+- B 的右邊接 A
+- A 的左邊接 B 的 右邊
+```
+
+- `順時針旋轉`，B 變新的 root
+  - B.rigth -> A
+  - A.left -> B.right
+
+##### *** 只要找到第一個不平衡的地方，調整完即可。 (一次調整)
+
+### RL型:當插入的點在該節點的右邊的左邊
+
+> `Right-left Rotation` is the combination of `RR rotation` and `LL rotation`.
+
+```
+RL = RR + LL
+```
+
+所以我們:
+
+1. 先處理 susbtree 的 LL rotation
+2. 再處理 full tree 的 RR rotation
+
+如下所示:
+
+![](images/avl_rl.png)
+
+![](images/avl_rl_2.png)
+
+### LR型:當插入的點在該節點的左邊的右邊
+
+> `Right-left Rotation` is the combination of `LL rotation` and `RR rotation`.
+
+```
+RL = LL + RR
+```
+
+所以我們:
+
+1. 先處理 susbtree 的 RR rotation
+2. 再處理 full tree 的 LL rotation
+
+如下所示:
+
+![](images/avl_lr.png)
+
 
 ### Example
 
@@ -89,3 +154,6 @@ Example: 有三個點 3, 5, 8
 
 - [NTU: DSA, Hsuan-Tien Lin](https://www.csie.ntu.edu.tw/~htlin/course/dsa20spring/)
 - [資料結構與演算法：AVL Tree](https://josephjsf2.github.io/data/structure/and/algorithm/2019/06/22/avl-tree.html)
+- [[資料結構] CH8. AVL Trees](https://hackmd.io/@Zero871015/rJksqh83X?type=view)
+- [AVL-高度平衡二元搜尋樹](https://www.notes-hz.com/post/128)
+- [AVL Tree Rotation](https://www.educba.com/avl-tree-rotation/)
