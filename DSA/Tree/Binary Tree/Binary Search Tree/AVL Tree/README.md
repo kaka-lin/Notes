@@ -2,6 +2,8 @@
 
 > 是 Balanced BST 的一種實作方式
 
+> 與2-3-4樹及紅黑樹的差異: `rebalance almost immediately`
+
 `Adelson-Velsky and Landis Tree (AVL Tree)` is a `Binary Search Tree (BST)` such that:
 
 - The `difference` between the height of the left and right subtree is either -1, 0, or +1.

@@ -3,6 +3,8 @@
 > 是一種 self-balancing tree (Balanced Tree)。
 > 比紅黑樹容易了解，但不容易 implement，所以不實用。
 
+> 與 AVL Tree 相比: `用暫存維持平衡性`，不會 rebalance immediately
+
 所謂的 2-3-4 tree 就是每個節點可以有`2, 3 或 4`個子節點。如下:
 
 - `滿足二元搜索樹的基本性質` - 左小右大，但不是二元樹 (因為可以有很多個子節點)。
