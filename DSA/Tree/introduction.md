@@ -54,7 +54,13 @@
 
 - [Binary Tree](https://github.com/kaka-lin/Notes/blob/master/DSA/Tree/Binary%20Tree/introduction.md)
 
-    A binary tree is a tree data structure in which `each node has at most two children`, which are referred to as the left child and the right child.
+    A binary tree is a tree data structure in which `each node has at most two children`, which are referred to as the left child and the right child. And we have many types of binary tree as below:
+
+    - [Expression Tree](https://github.com/kaka-lin/Notes/blob/master/DSA/Tree/Binary%20Tree/Expression%20Tree/expression_tree.md)
+    - [Heap Tree](https://github.com/kaka-lin/Notes/tree/master/DSA/Tree/Binary%20Tree/Heap%20Tree)
+    - [Binary Search Tree](https://github.com/kaka-lin/Notes/tree/master/DSA/Tree/Binary%20Tree/Binary%20Search%20Tree)
+      - [AVL Tree](https://github.com/kaka-lin/Notes/tree/master/DSA/Tree/Binary%20Tree/Binary%20Search%20Tree/AVL%20Tree)
+      - [2-3-4 Tree](https://github.com/kaka-lin/Notes/tree/master/DSA/Tree/Binary%20Tree/Binary%20Search%20Tree/2-3-4%20Tree)
 
 - [KD Tree](https://github.com/kaka-lin/Notes/tree/master/DSA/Tree/KD%20Tree)
 
