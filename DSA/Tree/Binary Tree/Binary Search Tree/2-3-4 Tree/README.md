@@ -53,40 +53,46 @@ Example:
 
 原本有一個 2-3-4 Tree 如下:
 
-```
-      5   |   16
-     /    |     \
-   3   7,11,14   18,21
-```
+![](images/2-3-4_tree.png)
 
-Step 1. insert 2 and 20 -> directly insert
+##### Step 1. insert 2 and 20
 
-```
-      5   |   16
-     /    |     \
-   3,2  7,11,14  18,20,21
-```
+節點 element 尚未滿，所以 `directly insert`
 
-Step 2. insert 13 -> upper insert and split
+![](images/2-3-4_tree_insert_1.png)
+
+##### Step 2. insert 13
+
+節點的 element 已滿，所以 `upper insert and split`
+
+![](images/2-3-4_tree_insert_2.png)
+
+處理方式如下:
 
 ```
 insert 13 -> [7, 11, 13, 14] -> Overflow!
 
-upper inser and split: 選中間值 11
+upper insert and split: 選中間值 11
 
     11  <- upper insert
    /  \
   7   13, 14
    split
-
-所以變成:
-
-      5  | 11 |  16
-     /    /  \     \
-   3,2   7  13,14   18,20,21
 ```
 
-Step 3. insert 23 -> upper insert and split
+![](images/upper_insert_split.png)
+
+所以變成
+
+![](images/2-3-4_tree_2.png)
+
+##### Step 3. insert 23
+
+節點的 element 已滿，所以 `upper insert and split`
+
+![](images/2-3-4_tree_insert_3.png)
+
+處理方式如下:
 
 ```
 insert 23 -> [18, 20, 21, 23] -> Overflow!
@@ -97,7 +103,15 @@ upper inser and split: 選中間值 20
    /  \
   18   21, 23
    split
+```
 
+![](images/upper_insert_split_2.png)
+
+所以變成
+
+![](images/2-3-4_tree_insert_4.png)
+
+```
 但此時發現上一層也發生 overflow: [5, 11, 16, 20]
 所以再一次 upper inser and split: 選中間值 11
 
@@ -105,22 +119,19 @@ upper inser and split: 選中間值 20
    /  \
   5   16, 20
    split
-
-所以變成:
-           11
-         /    \
-        5      16   |  20
-       / \     /    |   \
-     2,3  7  13,14  18   21,23
 ```
 
-![](images/2-3-4_tree.png)
+![](images/upper_insert_split_3.png)
+
+所以變成:
+
+![](images/2-3-4_tree_3.png)
 
 #### Exercise
 
 1 ~ 10 依照順序插入 2-3-4 Tree，答案如下:
 
-![](images/2-3-4_tree_2.png)
+![](images/2-3-4_tree_example.png)
 
 ## Reference
 
