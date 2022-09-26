@@ -143,7 +143,6 @@ RL = LL + RR
 
 ![](images/avl_lr.png)
 
-
 ### Example
 
 1. RR or LL

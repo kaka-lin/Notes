@@ -120,7 +120,7 @@ $$ log_2(n+1) - 1 \leq h \leq n-1 $$
          2       3
     ```
 
-- Balanced Binary Tree
+- `Balanced Binary Tree`
 
     每個 node 的左子樹和右子樹的高度差為 0 or 1。
 
