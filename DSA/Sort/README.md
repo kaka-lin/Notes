@@ -1,2 +1,49 @@
 # Sorting Algorithm
 
+在電腦科學所使用的排序演算法通常依以下標準分類：
+
+- 計算的複雜度 (Computational Complexity)
+  - `時間複雜度 (Time Complexity)`:
+
+    有分成 [Best, worst and average case](https://en.wikipedia.org/wiki/Best,_worst_and_average_case)，依據 list 的大小而言，好的行為是 $O(nlogn)$，壞的行為是 $O(n^2)$。
+
+  - `記憶體使用量 (Memory Usuage) or 空間複雜度 (Space Complexity)`
+    - "in-place" algorithms: $O(1)$
+
+- `穩定性 (Stability)`
+
+    相同鍵值的資料，排序後順序和排序前一樣。
+
+    Example:
+
+    ```
+    排序前： 2, 7(藍), 9, 3, 7(紅) ⇒ 藍7在紅7前面
+    排序後： 2, 3, 7(藍), 7(紅), 9 ⇒ 藍7保持在紅7前面
+    ```
+
+- 排序的方法
+  - 比較式排序演算法 (Compare Sorting)
+  - 非比較式排序演算法 (Non-Compare Sorting)
+
+## 常用排序演算法整理
+
+| Name | Best case | Average case | Worts case | Space Complexity | Stability | Other notes |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 選擇排序 (Selection Sort) | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | unstable | Stable with O(n) extra space, when using linked lists. |
+| 插入排序 (Insertion Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | stable | |
+| 泡沫排序 (Bubble Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | adaptive | |
+| 合併排序 (Merge Sort) | $O(nlogn)$ | $O(nlogn)$ |$O(nlogn)$ | $O(n)$ | stable | parallelizable |
+| 堆積排序 (Heap Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(1)$ | unstable | |
+| 快速排序 (Quick Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$ | average $O(logn)$ <br> worst $O(n)$| | Quicksort is usually done in-place with O(logn) stack space |
+| Tree Sort | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$ | average $O(logn)$  <br> worst $O(n) |  | |
+| Shell Sort | $O(nlogn)$ | $O(n^{4/3})$ | $O(n^{3/2})$ | $O(1)$ | unstable/adaptive | often faster than $O(n^2)$ |
+| 桶排序 (Bucket Sort) | - | $O(n)$ | $O(n^2)$ | $O(m)$ | - | Non-comparison sorts |
+
+## Sorting Algorithm Visualize
+
+- [15 Sorting Algorithms in 6 Minutes](https://www.youtube.com/watch?v=kPRA0W1kECg)
+
+## Reference
+
+- [wiki: Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm)
+- [DSA 20200609: Sorting / Summary](https://www.youtube.com/watch?v=cxbabnqtWsk&feature=youtu.be)
