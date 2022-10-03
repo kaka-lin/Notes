@@ -81,6 +81,45 @@ Heap sort 演算法分為兩大步驟:
 
 ![](images/sorting.png)
 
+## 實作範例
+
+### Python
+
+```python
+def heap_sort(arr):
+    def max_heaptify(start, end):
+        root = start
+        while True:
+            child = 2 * root + 1
+            # 若子節點指標超出範圍則結束
+            if child > end:
+                break
+
+            # 先比較左右兩個子節點大小，選擇最大的那個子節點
+            if child + 1 <= end and arr[child] < arr[child + 1]:
+                child += 1
+
+            # 如果 root 的值小於 child 最大值，則交換 (符合 max-heap 的特性)
+            if arr[root] < arr[child]:
+                arr[root], arr[child] = arr[child], arr[root]
+                root = child
+            else:
+                break
+
+    # 首先將資料轉換為 heap 資料結構
+    n = len(arr)
+    for start in range(n // 2 - 1, -1, -1):
+        max_heapity(arr, start, n-1)
+
+    # 我們將第一個元素(root)和已經排好的元素前一位(unsorted part)做交換
+    # 再重新調整 unsorted part 使其符合 max-heap 特性
+    # 直到排序完畢。
+    n = len(arr)
+    for i in range(n - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]
+        max_heapity(arr, 0, i-1)
+```
+
 ## Reference
 
 - [DSA 20200609: Sorting / Summary](https://www.youtube.com/watch?v=cxbabnqtWsk&feature=youtu.be)
