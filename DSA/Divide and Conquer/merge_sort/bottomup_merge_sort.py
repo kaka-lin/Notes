@@ -3,8 +3,8 @@
 Iteratively
 
 """
-
 from typing import List
+
 
 def merge_sort(nums: List[int]) -> List[int]:
     length = len(nums)
@@ -18,9 +18,10 @@ def merge_sort(nums: List[int]) -> List[int]:
             result[index : index + size * 2] = merge(left, right)
 
         size *= 2
-    
+
     return result
-        
+
+
 def merge(left: List[int], right: List[int]) -> List[int]:
     result = []
     while left and right:
@@ -28,13 +29,14 @@ def merge(left: List[int], right: List[int]) -> List[int]:
             result.append(left.pop(0))
         else:
             result.append(right.pop(0))
-    
+
     if left:
         result += left
     if right:
         result += right
-    
+
     return result
+
 
 if __name__ == "__main__":
     test = [1, 5, 3, 2, 8, 7, 6, 4]
