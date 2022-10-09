@@ -40,15 +40,15 @@
 
 | Name | Best case | Average case | Worts case | Space Complexity | Stability | Other notes |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 選擇排序 (Selection Sort) | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | unstable | Stable with O(n) extra space, when using linked lists. |
-| 插入排序 (Insertion Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | stable | backwise implementation `adaptive`|
-| 泡沫排序 (Bubble Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | stable<br>`adaptive` | Exchanging (old tape days) |
-| 堆積排序 (Heap Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(1)$ | unstable | usually preferred over selection (faster) |
-| 合併排序 (Merge Sort) | $O(nlogn)$ | $O(nlogn)$ |$O(nlogn)$ | $O(n)$ | stable | parallelizable |
-| 快速排序 (Quick Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$ | average $O(logn)$ <br> worst $O(n)$| unstable | Quicksort is usually done in-place with O(logn) stack space |
+| [選擇排序 (Selection Sort)](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Selection%20Sort) | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | unstable | Stable with O(n) extra space, when using linked lists. |
+| [插入排序 (Insertion Sort)](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Insertion%20Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | stable | backwise implementation `adaptive`|
+| [泡沫排序 (Bubble Sort)](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Bubble%20Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | stable<br>`adaptive` | Exchanging (old tape days) |
+| [堆積排序 (Heap Sort)](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Heap%20Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(1)$ | unstable | usually preferred over selection (faster) |
+| [合併排序 (Merge Sort)](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Merge%20Sort) | $O(nlogn)$ | $O(nlogn)$ |$O(nlogn)$ | $O(n)$ | stable | parallelizable |
+| [快速排序 (Quick Sort)](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Quick%20Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$ | average $O(logn)$ <br> worst $O(n)$| unstable | Quicksort is usually done in-place with O(logn) stack space |
 | Tree Sort | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$ | average $O(logn)$  <br> worst $O(n) |  | |
 | Shell Sort | $O(nlogn)$ | $O(n^{4/3})$ | $O(n^{3/2})$ | $O(1)$ | unstable/adaptive | often faster than $O(n^2)$ |
-| 桶排序 (Bucket Sort) | - | $O(n)$ | $O(n^2)$ | $O(m)$ | - | Non-comparison sorts |
+| [桶排序 (Bucket Sort)](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Bucket%20Sort) | - | $O(n)$ | $O(n^2)$ | $O(m)$ | - | Non-comparison sorts |
 
 ## Sorting Algorithm Visualize
 
