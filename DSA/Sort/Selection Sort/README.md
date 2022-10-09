@@ -47,6 +47,18 @@ def selection_sort(data):
     return data
 ```
 
+## 變形: 堆積排序 (Heap Sort)
+
+```
+Selection sort with a max-heap in original array
+rather than unordered pile
+```
+
+使用 `selection sort 融合 heap` 這種半排序的資料結構，能時間複雜度進化至 $O(nlogn)$。更多詳細內容請看 [Heap Sort](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Heap%20Sort)
+
+> selection sort 中的 unordered part 使用 heap 代替
+
+
 ## Reference
 
 - [DSA 20200609: Sorting / Summary](https://www.youtube.com/watch?v=cxbabnqtWsk&feature=youtu.be)
