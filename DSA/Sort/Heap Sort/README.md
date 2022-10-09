@@ -1,6 +1,6 @@
 # 堆積排序法 (Heap Sort)
 
-`堆積排序法 (Heap Sort)` 為`選擇排序法 (Selection Sort)` 的變形。同樣會將資料分為 sorted pile 與 unsorted pile，並在 unsorted pile 中尋找最大值（或最小值），加入 sorted pile 中。
+`堆積排序法 (Heap Sort)` 為`選擇排序法 (Selection Sort)` 的變形。同樣會將資料分為 `sorted pile` 與 `unsorted pile`，並在 unsorted pile 中尋找最大值（或最小值），加入 sorted pile 中。
 
 和 Selection Sort 不同的地方在於 Heap sort 使用[堆積 (heap)](https://github.com/kaka-lin/Notes/tree/master/DSA/Tree/Binary%20Tree/Heap%20Tree) 這種`半排序 (partially sorted)`的資料結構來加速排序。
 
