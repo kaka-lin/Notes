@@ -20,6 +20,17 @@
     排序前： 2, 7(藍), 9, 3, 7(紅) ⇒ 藍7在紅7前面
     排序後： 2, 3, 7(藍), 7(紅), 9 ⇒ 藍7保持在紅7前面
     ```
+- `適應性 (Adaptability)`
+
+    輸入的預排序是否會影響運行時間，我們稱其為 `adaptive`。
+
+    ```
+    Whether or not the presortedness of the input affects the running time.
+    ```
+
+     > can early stop
+
+    - 假設今天有一個 Array 已經差不多排好了，那麼它只需要花很少的力氣，就可以排好。
 
 - 排序的方法
   - 比較式排序演算法 (Compare Sorting)
@@ -31,9 +42,9 @@
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 選擇排序 (Selection Sort) | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | unstable | Stable with O(n) extra space, when using linked lists. |
 | 插入排序 (Insertion Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | stable | |
-| 泡沫排序 (Bubble Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | adaptive | |
+| 泡沫排序 (Bubble Sort) | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | stable<br>`adaptive` | Exchanging (old tape days) |
 | 合併排序 (Merge Sort) | $O(nlogn)$ | $O(nlogn)$ |$O(nlogn)$ | $O(n)$ | stable | parallelizable |
-| 堆積排序 (Heap Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(1)$ | unstable | |
+| 堆積排序 (Heap Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(nlogn)$ | $O(1)$ | unstable | usually preferred over selection (faster) |
 | 快速排序 (Quick Sort) | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$ | average $O(logn)$ <br> worst $O(n)$| | Quicksort is usually done in-place with O(logn) stack space |
 | Tree Sort | $O(nlogn)$ | $O(nlogn)$ | $O(n^2)$ | average $O(logn)$  <br> worst $O(n) |  | |
 | Shell Sort | $O(nlogn)$ | $O(n^{4/3})$ | $O(n^{3/2})$ | $O(1)$ | unstable/adaptive | often faster than $O(n^2)$ |
