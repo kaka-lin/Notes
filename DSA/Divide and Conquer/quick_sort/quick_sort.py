@@ -1,7 +1,6 @@
 from typing import List
 
 
-# lomuto_partition_scheme
 def quick_sort(nums: List[int]) -> List[int]:
     """
     Sorts an array in the ascending order in O(n log n) time
@@ -28,7 +27,7 @@ def qsort(nums, lo, hi):
 
     if lo < hi:
         p = partition(nums, lo, hi)
-        qsort(nums, lo, p-1)
+        qsort(nums, lo, p - 1)
         qsort(nums, p + 1, hi)
 
 
