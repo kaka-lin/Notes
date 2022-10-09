@@ -327,7 +327,10 @@ insertion:
 1. 從 unordered arry 變成 heap: O(nlog n)
 2. 再從 heap 去 sort: O(nlog n)
 
-Heap sort time complexity: `O(nlog n)`
+=> Heap sort time complexity: `O(nlog n)`
+
+詳細演算法可參考: [Sort/Heap Sort](https://github.com/kaka-lin/Notes/tree/master/DSA/Sort/Heap%20Sort)
+
 
 ## Reference
 
