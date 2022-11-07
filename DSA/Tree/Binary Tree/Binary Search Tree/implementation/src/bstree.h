@@ -1,10 +1,10 @@
 #ifndef BSTREE_H
 #define BSTREE_H
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct TreeNode {
   int data;
@@ -26,4 +26,4 @@ struct TreeNode {
 
 void print_bs_tree(TreeNode *root);
 
-#endif // BSTREE_H
+#endif  // BSTREE_H

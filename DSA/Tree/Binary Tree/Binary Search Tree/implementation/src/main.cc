@@ -11,9 +11,10 @@ int main() {
   //   scanf("%d", &(insert_keys[i]));
   int insert_keys[8] = {4, 2, 5, 6, 3, 7, 1, 8};
 
-  for (int i = 0; i < 8; i++)
+  for (int i = 0; i < 8; i++) {
     root = root->insertBsTree(root, insert_keys[i]);
-  //print_bs_tree(root);
+  }
+  // print_bs_tree(root);
 
   printf("preorder\n");
   root->preorder(root);
@@ -38,7 +39,7 @@ int main() {
   assert(length = strlen(inorder));
   root2 = root2->reconstruct(length, preorder, inorder);
   printf("reconstruct\n");
-  root2->postorder(root2); // CDBEA (67,68,66,69,65)
+  root2->postorder(root2);  // CDBEA (67,68,66,69,65)
 
   return 0;
 }
