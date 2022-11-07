@@ -8,17 +8,20 @@
 # Return true if there is a path from root to target.
 def DFS(root: TreeNode, target: TreeNode):
     stack = [root]
-    visited = set(root)
+    visited = set([root])
 
     while stack:
-        cur = stack.pop()
-        if cur == target:
+        # Get the current node.
+        node = stack.pop()
+        if node == target:
             return True
 
         if root.right and root.right not in visited:
             stack.append(root.right)
+            visited.add(root.right)
 
         if root.left and root.left not in visited:
             stack.append(root.left)
+            visited.add(root.left)
 
     return False

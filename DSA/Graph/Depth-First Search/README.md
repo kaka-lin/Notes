@@ -1,6 +1,6 @@
-# Depth-first Search (DFS)
+# 深度優先搜尋 (Depth-First Search, DFS)
 
-`Depth-first search (BFS)` is an algorithm to `traverse/search` in a `tree/graph`
+`Depth-First search (BFS)` is an algorithm to `traverse/search` in a `tree/graph`
 
 We can use DFS:
 

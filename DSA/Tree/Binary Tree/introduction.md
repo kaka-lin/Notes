@@ -166,7 +166,7 @@ $$ log_2(n+1) - 1 \leq h \leq n-1 $$
 
 - `Skewed Binary Tree (歪斜樹)`
 
-A skewed binary tree `is a pathological/degenerate` tree in which the tree is either dominated by the left nodes or the right nodes. Thus, there are two types of skewed binary tree:
+    A skewed binary tree `is a pathological/degenerate` tree in which the tree is either dominated by the left nodes or the right nodes. Thus, there are two types of skewed binary tree:
 
   - left-skewed binary tree (左歪斜樹): 一顆樹完全都往左邊長
 
