@@ -22,7 +22,7 @@ TreeNode *TreeNode::insertBsTree(TreeNode *root, int data) {
 
 void TreeNode::preorder(TreeNode *root) {
   if (root == NULL) return;
-  printf("data = %d\n", root->data);
+  printf("%d ", root->data);
   preorder(root->left);
   preorder(root->right);
   return;
@@ -31,7 +31,7 @@ void TreeNode::preorder(TreeNode *root) {
 void TreeNode::inorder(TreeNode *root) {
   if (root == NULL) return;
   inorder(root->left);
-  printf("data = %d\n", root->data);
+  printf("%d ", root->data);
   inorder(root->right);
   return;
 }
@@ -40,7 +40,7 @@ void TreeNode::postorder(TreeNode *root) {
   if (root == NULL) return;
   postorder(root->left);
   postorder(root->right);
-  printf("data = %d\n", root->data);
+  printf("%d ", root->data);
   return;
 }
 
@@ -78,6 +78,6 @@ void print_bs_tree(TreeNode *root) {
   if (root == NULL) return;
 
   print_bs_tree(root->left);
-  printf("data = %d\n", root->data);
+  printf("%d ", root->data);
   print_bs_tree(root->right);
 }
