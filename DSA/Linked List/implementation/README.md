@@ -7,7 +7,7 @@ Implemente the Linked List
 C/C++:
 
 - [x] insertion
-- [ ] deletion
+- [x] deletion
 
 Python:
 

@@ -7,28 +7,14 @@
 
 #include <iostream>
 
-struct ListNode {
+typedef struct listnode {
   int data;
-  struct ListNode *next;
+  struct listnode *next;
+} ListNode;
 
-  // Insertion
-  ListNode *insertion(ListNode *head, int data);
-};
+// Insertion
+ListNode *insertion(ListNode *head, int data);
 
 void print_linked_list(ListNode *head);
-
-class SortedLinkedList {
- public:
-  SortedLinkedList() : head(NULL){};
-
-  // Insertionthis
-  void insertion(int data);
-
-  // Show
-  void printList();
-
- private:
-  ListNode *head;
-};
 
 #endif  // LINKED_LIST_H
