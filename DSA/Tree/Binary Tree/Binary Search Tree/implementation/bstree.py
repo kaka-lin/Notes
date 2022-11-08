@@ -132,7 +132,8 @@ class BinarySearchTree:
                 # deletion of nodes with 2 children
                 # find the inorder successor and replace the current node
                 # inorder successor: 為右子樹中的最小值
-                node = self.findMinimum(node.right)
+                min_node = self.findMinimum(node.right)
+                node.val = min_node.val
 
                 # ** key step ** recurse on node.right but with key = node.val (min val in right subtree)
                 node.right = self._delete(node.right, node.val)
@@ -174,3 +175,26 @@ if __name__ == "__main__":
     tree.printPreorder()
     tree.printInorder()
     tree.printPostorder()
+    print("="*30)
+
+    #########################################
+    input_2 = [8, 3, 10, 1, 6, 14, 4, 7, 13]
+    print("input: {}".format(input_2))
+    print("="*30)
+
+    print(f"[Build Tree]")
+    tree = BinarySearchTree()
+    for i in input_2:
+        tree.insert(i)
+    print(tree)
+    tree.printPreorder()
+    tree.printInorder()
+    tree.printPostorder()
+
+    # Delete: 8
+    print(f"[Deletion: 3]")
+    tree.delete(3)
+    print(tree)
+    tree.printPreorder()  # [8, 4, 1, 6, 7, 10, 14, 13]
+    tree.printInorder()   # [1, 4, 6, 7, 8, 10, 13, 14]
+    tree.printPostorder() # [1, 7, 6, 4, 13, 14, 10, 8]

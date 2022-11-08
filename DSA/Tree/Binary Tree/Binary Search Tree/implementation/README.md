@@ -9,18 +9,22 @@ C/C++:
 - [x] insertion
 - [x] traversal
 - [x] reconstruct
+- [ ] deletion
 
 Python:
 
-- [ ] insertion
-- [ ] traversal
+- [x] insertion
+- [x] traversal
 - [ ] reconstruct
+- [x] deletion
 
 ## Usage
 
-Example:
+Example 1: Insertion
 
-```
+```sh
+input: [4, 2, 6, 1, 3, 5, 7], insert 8
+
     4
    / \
   2   5
@@ -35,6 +39,34 @@ Preorder: [4, 2, 1, 3, 5, 6, 7, 8]
 Inorder: [1, 2, 3, 4, 5, 6, 7, 8]
 Postoder: [1, 3, 2, 8, 7, 6, 5, 4]
 Level-order: [4, 2, 6, 1, 3, 5, 7]
+```
+
+Example 2: Deletion
+
+```sh
+input: [8, 3, 10, 1, 6, 14, 4, 7, 13], delete: 3
+
+     8
+   /   \
+  3     10
+ / \     \
+1   6    14
+   / \   /
+  4   7 13
+
+after delete:
+
+     8
+   /   \
+  4    10
+ / \     \
+1   6    14
+     \   /
+      7 13
+
+preorder:  [8, 4, 1, 6, 7, 10, 14, 13]
+inorder:  [1, 4, 6, 7, 8, 10, 13, 14]
+postorder:  [1, 7, 6, 4, 13, 14, 10, 8]
 ```
 
 ### C/C++

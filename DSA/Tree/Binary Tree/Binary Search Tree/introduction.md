@@ -19,6 +19,8 @@ input: [4, 2, 6, 1, 3, 5, 7]
 1  3 5  7
 ```
 
+實作: [完整程式](https://github.com/kaka-lin/Notes/tree/master/DSA/Tree/Binary%20Tree/Binary%20Search%20Tree/implementation)
+
 ## Traversal Binary Search Tree
 
 Binary Search Tree 的遍歷順序有四種:
@@ -157,6 +159,9 @@ def insert(root, data):
 
 ### Deletion
 
+- LeetCode: [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
+- Solution: [kakalin/00450_delete-node-in-a-bst](https://github.com/kaka-lin/leetcode/blob/main/leetcode/00450_delete-node-in-a-bst/450-delete-node-in-a-bst.py)
+
 刪除有以下三種情況:
 
 #### 1. 要刪除的節點沒有子節點 (是 leaf node)
@@ -175,6 +180,62 @@ def insert(root, data):
 如上圖，將 14 刪除的話，13 的 parent 會從 14 變成 10
 也就是說，14 原來的位置被 13 取代，
 10 的 right child 會指向 13 (記得right node 永遠比 parent大)
+```
+
+#### 3. 要刪除的節點有"二個"子節點
+
+要刪除的節點的右子樹中找到最小的節點，也稱為`中序後繼(inorder successor`，並用它替換當前節點。
+
+> Note: 因為已經右子樹中的最小值取代原本的值，所以右子樹中的最小值也要刪除。（這邊使用遞迴解決)
+
+Example:
+
+有一個 BST 如下所示:
+
+```sh
+delete: 3
+
+     8
+   /   \
+ "3"    10
+ / \     \
+1   6    14
+   / \   /
+   4 7  13
+
+Step 1. findMinimum(node.right) -> find node: 4
+Step 2. replace 3 with 4
+
+     8
+   /   \
+  4    10
+ / \     \
+1   6    14
+   / \   /
+  "4" 7  13
+
+因為已經用 6 取代 3，等同於刪除 3，但此時右子樹的 node 4 必須刪除
+所以遞迴:
+Step 3. node.right = delete(node.right, 4)
+
+Step 4. node: 6, delete key data 4
+        -> key data 4 < node.val
+        -> node.left = delete(node.left, data)
+
+Step 5. node.val = 4, delete key val = 4
+        但因為已經沒有 child 了所以回傳 None，結束
+
+     8
+   /   \
+  4    10
+ / \     \
+1   6    14
+     \    /
+      7  13
+
+preorder:  [8, 4, 1, 6, 7, 10, 14, 13]
+inorder:  [1, 4, 6, 7, 8, 10, 13, 14]
+postorder:  [1, 7, 6, 4, 13, 14, 10, 8]
 ```
 
 #### Implementation
@@ -199,9 +260,16 @@ def delete(root, data):
             # deletion of nodes with 2 children
             # find the inorder successor and replace the current node
             # inorder successor: 為右子樹中的最小值
-            root = findMinimum(root.right)
-
-            # ** key step ** recurse on root.right but with `key = root.val` (min val in right subtree)
+            min_node = findMinimum(root.right)
+            root.val = min_node.val
+            # ** key step **
+            #   recurse on root.right but with `key = root.val` (min val in right subtree)
+            #
+            # since we have replaced the node we want to delete
+            # with the `minimum node` in right subtree,
+            # now we don't want to keep the `minimum node` on this tree,
+            # so we just use our function to delete it.
+            # pass the val of `minimum node` to the right subtree and repeat the whole approach.
             root.right = delete(root.right, root.val)
     elif data < root.val:
         root.left = delete(root.left, data)
@@ -210,11 +278,6 @@ def delete(root, data):
 
     return root
 ```
-#### 3. 要刪除的節點有"二個"子節點
-
-在當前節點的右子樹中找到最小的節點，也稱為`中序後繼(inorder successor`，並用它替換當前節點。如下:
-
-![](images/bst_delete_3.png)
 
 ## Types of Binary Search Tree
 
