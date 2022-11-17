@@ -25,6 +25,8 @@ One common application of Breadth-first Search (BFS) is to find the shortest pat
 
 以下提供 BFS Template:
 
+### Python
+
 1. Tree
 
     ```python
@@ -89,6 +91,37 @@ One common application of Breadth-first Search (BFS) is to find the shortest pat
         # Our queue is empty and we did not reach the end node.
         return False
     ```
+
+### C++
+
+```C
+bool BFS(vector<list<int>> graph, int n, int start, int end) {
+  // initialize
+  vector<bool> visited;
+  visited.resize(n, false); // n node
+  queue<int> q;
+
+  visited[start] = true;
+  q.push(start);
+
+  // BFS
+  while (!q.empty()) {
+    int curr_node = q.front();
+    q.pop();
+
+    if (curr_node == end)
+      return true;
+
+    for (auto neighbor: graph[curr_node]) {
+      if (!visited[neighbor]) {
+        visited[neighbor] = true;
+        q.push(neighbor);
+      }
+    }
+  }
+  return false;
+}
+```
 
 ## Reference
 
