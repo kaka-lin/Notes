@@ -1,5 +1,7 @@
 # Least Recently Used Cache (LRU Cache)
 
+- Leetcode: [146. LRU Cache](https://leetcode.com/problems/lru-cache/description/)
+
 概念是會儲存最近用過的項目，如果 Cache 滿了會先丟棄最近最少使用的項目。通常會透過 `Hash Map` 與 `Double Linked List` 來搭配實做。如果欲常被使用，內容會被擺在 List愈前方的位置，如果快取滿了，則會從 List最末端元素開始移除。
 
 ## Implementation: Design an LRU Cache
