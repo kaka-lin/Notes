@@ -11,6 +11,7 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 ### Linux
 
 - [X Window System](https://github.com/kaka-lin/Notes/tree/master/Linux/X%20Window)
+- [NO_PUBKEY error](Linux/no_pubkey.md)
 
 ### Lauguages
 
@@ -36,22 +37,18 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
   - [Concurrency(並行) 與 Parallelism(平行)](OS/concurrency_parallelism/concurrency_parallelism.md)
   - [Corotuine(協程)](OS/coroutine/coroutine.md)
 
-### Database
-
-- [Database](https://github.com/kaka-lin/Notes/tree/master/DB)
-
 ---
+
+### Network Communication
+
+- [Network](https://github.com/kaka-lin/Notes/tree/master/Network)
+  - [socket](https://github.com/kaka-lin/Notes/tree/master/Network/socket)
+  - [ZeroMQ (ZMQ)](https://github.com/kaka-lin/Notes/tree/master/Network/zmq)
 
 ### Desktop
 
 - [Qt](https://github.com/kaka-lin/Notes/tree/master/Qt)
 - [Electron](https://github.com/kaka-lin/Notes/tree/master/Electron)
-
----
-
-### Network/Web Knowledge
-
-- [Network](https://github.com/kaka-lin/Notes/tree/master/Network)
 
 ### Frontend (GUI)
 
@@ -60,6 +57,10 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 ### Backend
 
 - [gRPC](https://github.com/kaka-lin/Notes/tree/master/gRPC)
+
+### Database
+
+- [Database](https://github.com/kaka-lin/Notes/tree/master/DB)
 
 ---
 
@@ -72,16 +73,22 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 - [DevOps](https://github.com/kaka-lin/Notes/tree/master/DevOps)
   - [CI/CD](https://github.com/kaka-lin/Notes/tree/master/DevOps/CICD)
   - [Docker](https://github.com/kaka-lin/Notes/tree/master/DevOps/Docker)
+    - [Docker and VM](DevOps/Docker/Docker%20vs%20VM/README.md)
     - [Running GUI Application using Docker](https://github.com/kaka-lin/Notes/tree/master/DevOps/Docker/GUI%20in%20Container)
+    - [Docker Compose](https://github.com/kaka-lin/Notes/tree/master/DevOps/Docker/Docker%20Compose)
 
-### CV & Data & ML & DL & related paper
+### CV & Datascience
 
-- [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
 - [Computer Vision](https://github.com/kaka-lin/autonomous-driving-notes/tree/master/Computer%20Vision)
+- [GStreamer](https://github.com/kaka-lin/Notes/tree/master/GStreamer)
 - [Data Science](https://github.com/kaka-lin/Notes/tree/master/Data%20Science)
   - [Matplotlib](https://github.com/kaka-lin/Notes/tree/master/Data_Science/matplotlib)
   - [Google Trends](https://github.com/kaka-lin/Notes/tree/master/Data_Science/google_trends)
   - [JupyterHub](https://github.com/kaka-lin/Notes/tree/master/Data_Science/jupyterhub)
 
+
+###  ML & DL & related paper
+
+- [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
 - [Machine Learning](https://github.com/kaka-lin/ML-Notes)
     - [Autonomous Driving](https://github.com/kaka-lin/autonomous-driving-notes)
