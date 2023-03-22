@@ -48,6 +48,7 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 ### Desktop
 
 - [Qt](https://github.com/kaka-lin/Notes/tree/master/Qt)
+  - [kaka-lin/qt-template](https://github.com/kaka-lin/qt-template)
 - [Electron](https://github.com/kaka-lin/Notes/tree/master/Electron)
 
 ### Frontend (GUI)
