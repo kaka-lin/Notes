@@ -11,7 +11,7 @@
   - Native (real hardware) interfaces like `can0`
   - SLCAN based interfaces like `slcan0`
 
-If you then want to send/receive data on the CAN interface, you should install [can-utils](https://github.com/linux-can/can-utils), as below:
+If you then want to `send/receive` data on the CAN interface, you should install [can-utils](https://github.com/linux-can/can-utils), as below:
 
 ```sh
 $ sudo apt install can-utils
@@ -19,7 +19,11 @@ $ sudo apt install can-utils
 
 其他 command 請看: [socketcan.sh](./socketcan.sh)
 
-## Develop CAN applications with Python
+#### SocketCAN Support for Kvaser Devices
+
+Please check [here](kvaser/README.md)
+
+#### To use SocketCAN in Python
 
 - [python-can](https://github.com/hardbyte/python-can)
 

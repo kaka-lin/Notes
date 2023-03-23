@@ -45,6 +45,7 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
   - [socket](https://github.com/kaka-lin/Notes/tree/master/Network/socket)
   - [ZeroMQ (ZMQ)](https://github.com/kaka-lin/Notes/tree/master/Network/zmq)
   - [CAN Bus](https://github.com/kaka-lin/Notes/tree/master/Network/canbus)
+    - [SocketCAN Support for Kvaser Devices](https://github.com/kaka-lin/Notes/tree/master/Network/canbus/kvaser)
 
 ### Desktop
 
