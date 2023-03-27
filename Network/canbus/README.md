@@ -19,15 +19,36 @@ $ sudo apt install can-utils
 
 其他 command 請看: [socketcan.sh](./socketcan.sh)
 
-#### SocketCAN Support for Kvaser Devices
+### SocketCAN Support for Kvaser Devices
 
 Please check [here](kvaser/README.md)
 
-#### To use SocketCAN in Python
+### SocketCAN utilities, libraries, and tools
+
+#### utilities
+
+Linux system (command line):
+
+- [can-utils](https://github.com/linux-can/can-utils)
+
+    ```sh
+    $ sudo apt-get install can-utils
+    ```
+#### libraries
+
+In C/C++ code:
+
+- [SocketCAN API](https://www.kernel.org/doc/html/latest/networking/can.html)
+
+    Example: [Example C code for SocketCAN](https://github.com/kaka-lin/Notes/tree/master/Network/canbus/can_examples)
+
+In pytho code:
 
 - [python-can](https://github.com/hardbyte/python-can)
 
-## Utils/Example
+#### Tools
+
+For more convenience use, I made it:
 
 - [CanBus Tool](https://github.com/kaka-lin/canbus-tool)
 

@@ -11,3 +11,6 @@ cansend can0 123#DEADBEEF
 
 # socketcan dump
 candump can0
+
+# show detail info
+sudo ip -details link show can0
