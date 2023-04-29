@@ -6,7 +6,7 @@
   "author": "Kaka Lin",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^15.1.1"
+    "electron": "^18.3.7"
   },
   "scripts": {
     "start": "electron ."
