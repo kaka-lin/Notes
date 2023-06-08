@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.2)
-project(opengl_example)
+project(OpenGLExample C CXX)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSION OFF)
 
@@ -36,16 +36,13 @@ if(UNIX AND NOT APPLE)
 endif()
 
 include_directories(${INCLUDE_DIRS})
+# Include all files
+include_directories("${CMAKE_SOURCE_DIR}/src")
 
-# Source files
-FILE(GLOB_RECURSE SOURCE_FILES
-    "${CMAKE_SOURCE_DIR}/src/*.cpp"
-    "${CMAKE_SOURCE_DIR}/src/*.cc"
-    "${CMAKE_SOURCE_DIR}/src/*.c"
-)
-
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-target_link_libraries(
-    ${PROJECT_NAME}
-    ${LIBRARIES}
-)
+foreach(_target
+    main main_basic)
+    add_executable(${_target}
+        "src/${_target}.cc")
+    target_link_libraries(${_target}
+        ${LIBRARIES})
+endforeach()
