@@ -8,7 +8,7 @@
 #include <GL/glut.h>
 #endif
 
-void init();
+void userInit();
 void display();
 
 int main(int argc, char* argv[]) {
@@ -25,9 +25,9 @@ int main(int argc, char* argv[]) {
 	glutInitWindowSize(300, 300);
 
   //create the window
-	glutCreateWindow("OpenGL 3D View");
+	glutCreateWindow("Hello OpenGL");
 
-	init();
+	userInit();
   //call display function
 	glutDisplayFunc(display);
 
@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
 }
 
 //like processing setting
-void init() {
+void userInit() {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 }
 
