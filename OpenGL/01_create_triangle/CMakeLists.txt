@@ -17,32 +17,27 @@ endif()
 find_package(OpenGL REQUIRED)
 # Find GLUT
 find_package(GLUT REQUIRED)
-# Linux
-# If not on macOS, we need glew.
-if(UNIX AND NOT APPLE)
-    find_package(GLEW REQUIRED)
-endif()
+# Find GLFW
+find_package(GLFW3 REQUIRED)
+# Find GLEW
+find_package(GLEW REQUIRED)
+# link_directories(/opt/homebrew/Cellar/glew/2.2.0_1/lib)
+# link_directories(/opt/homebrew/Cellar/glfw/3.3.8/lib)
 
 # OPENGL_INCLUDE_DIR, GLUT_INCLUDE_DIR, OPENGL_LIBRARIES, and
 # GLUT_LIBRARIES are CMake built-in variables defined when the packages
 # are found.
-set(INCLUDE_DIRS ${OPENGL_INCLUDE_DIR} ${GLUT_INCLUDE_DIR})
+set(INCLUDE_DIRS ${OPENGL_INCLUDE_DIR} ${GLUT_INCLUDE_DIR} ${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS})
 set(LIBRARIES ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
-
-# If not on macOS, add glew include directory and library path to lists.
-if(UNIX AND NOT APPLE)
-    list(APPEND INCLUDE_DIRS ${GLEW_INCLUDE_DIRS})
-    list(APPEND LIBRARIES ${GLEW_LIBRARIES})
-endif()
 
 include_directories(${INCLUDE_DIRS})
 # Include all files
 include_directories("${CMAKE_SOURCE_DIR}/src")
 
 foreach(_target
-    main main_basic)
+    main_glfw main_glfw_basic main_glut main_glut_basic)
     add_executable(${_target}
         "src/${_target}.cc")
     target_link_libraries(${_target}
-        ${LIBRARIES})
+        ${LIBRARIES} GLEW::glew glfw)
 endforeach()

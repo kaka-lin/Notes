@@ -1,7 +1,6 @@
 # Creat Triangle with OpenGL
 
-This example show how to create a Triangle in OpenGL
-
+This example show how to create a Triangle in OpenGL.
 
 ## Reference
 

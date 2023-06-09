@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
   glutInitWindowPosition(100, 100);
 
   //setting the window size
-	glutInitWindowSize(300, 300);
+	glutInitWindowSize(640, 480);
 
   //create the window
 	glutCreateWindow("Hello OpenGL");
