@@ -5,6 +5,7 @@ Gradio is an open-source Python package that allows you to quickly build a demo 
 ## Examples
 
 - [audio-recognition-app ](https://github.com/kaka-lin/audio-recognition-app)
+- [ EfficientSAM-tf2-demo](https://github.com/kaka-lin/EfficientSAM-tf2-demo/?tab=readme-ov-file#4-webui-that-make-with-gradio)
 
 ### Examples of Custom Component
 
