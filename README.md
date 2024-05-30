@@ -13,6 +13,10 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 - [X Window System](https://github.com/kaka-lin/Notes/tree/master/Linux/X%20Window)
 - [NO_PUBKEY error](Linux/no_pubkey.md)
 
+### Build Tools
+
+- [Bazel](https://github.com/kaka-lin/Notes/tree/master/Bazel)
+
 ### Lauguages
 
 - [C++](https://github.com/kaka-lin/Notes/tree/master/C%2B%2B)
@@ -53,11 +57,19 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
   - [kaka-lin/qt-template](https://github.com/kaka-lin/qt-template)
 - [Electron](https://github.com/kaka-lin/Notes/tree/master/Electron)
 
-### Frontend (GUI)
+### Mobile Application
+
+- [MediaPipe](https://github.com/kaka-lin/mediapipe-notes)
+
+### Web Application
+
+- [Gradio](https://github.com/kaka-lin/Notes/tree/master/Gradio)
+
+#### Frontend (GUI)
 
 - [React](https://github.com/kaka-lin/Notes/tree/master/React)
 
-### Backend
+#### Backend
 
 - [gRPC](https://github.com/kaka-lin/Notes/tree/master/gRPC)
 
@@ -84,13 +96,14 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Computer Vision](https://github.com/kaka-lin/autonomous-driving-notes/tree/master/Computer%20Vision)
 - [GStreamer](https://github.com/kaka-lin/Notes/tree/master/GStreamer)
+- [OpenGL](https://github.com/kaka-lin/Notes/tree/master/OpenGL)
 - [Data Science](https://github.com/kaka-lin/Notes/tree/master/Data%20Science)
   - [Matplotlib](https://github.com/kaka-lin/Notes/tree/master/Data_Science/matplotlib)
   - [Google Trends](https://github.com/kaka-lin/Notes/tree/master/Data_Science/google_trends)
   - [JupyterHub](https://github.com/kaka-lin/Notes/tree/master/Data_Science/jupyterhub)
 
 
-###  ML & DL & related paper
+### ML & DL & related paper
 
 - [Papers](https://github.com/kaka-lin/Notes/tree/master/Papers)
 - [Machine Learning](https://github.com/kaka-lin/ML-Notes)
