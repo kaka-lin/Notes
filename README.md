@@ -47,6 +47,8 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 - [Network](https://github.com/kaka-lin/Notes/tree/master/Network)
   - [socket](https://github.com/kaka-lin/Notes/tree/master/Network/socket)
+  - [Real-time video streaming protocol](https://github.com/kaka-lin/Notes/tree/master/Network/real-time-protocol)
+  - [gRPC](https://github.com/kaka-lin/Notes/tree/master/Network/gRPC)
   - [ZeroMQ (ZMQ)](https://github.com/kaka-lin/Notes/tree/master/Network/zmq)
   - [CAN Bus](https://github.com/kaka-lin/Notes/tree/master/Network/canbus)
     - [SocketCAN Support for Kvaser Devices](https://github.com/kaka-lin/Notes/tree/master/Network/canbus/kvaser)
@@ -70,8 +72,6 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 - [React](https://github.com/kaka-lin/Notes/tree/master/React)
 
 #### Backend
-
-- [gRPC](https://github.com/kaka-lin/Notes/tree/master/gRPC)
 
 ### Database
 
