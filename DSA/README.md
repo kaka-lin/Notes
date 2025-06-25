@@ -2,15 +2,30 @@
 
 My Learning notes of `Data Structure and Algorithms` and `Algorithm Design and Analysis`
 
-## Algorithm Design Strategy
+## Data Structures
 
-- Do not focus on `specific algorithms`
-- But `some strategies` to `design` algorithms
+- [Array](./Array/README.md)
+- [Cache](./Cache)
+- [Graph](./Graph)
+- [Hash Table](./Hash%20Table)
+- [Linked List](./Linked%20List)
+- [Queue](./Queue)
+- [Stack](./Stack)
+- [String](./String)
+- [Tree](./Tree)
 
-### Algorithms
+## Algorithms
 
-1. [Divide-and-Conquer](https://github.com/kaka-lin/Notes/tree/master/DSA/Divide%20and%20Conquer)
-2. [Dynamic Programming](https://github.com/kaka-lin/Notes/tree/master/DSA/Dynamic%20Programming)
+- [Divide-and-Conquer](./Divide%20and%20Conquer/README.md)
+- [Dynamic Programming](./Dynamic%20Programming)
+- [Recursion](./Recursion)
+- [Sort](./Sort)
+
+### Graph Algorithms
+
+- [Breadth-First Search (BFS)](./Graph/Breadth-First%20Search)
+- [Depth-First Search (DFS)](./Graph/Depth-First%20Search)
+- [Topological Sort](./Graph/Directed%20Acyclic%20Graph/Topological%20Sort)
 
 ## Courses
 
