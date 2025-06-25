@@ -30,7 +30,7 @@ My Medium: [AIoT Taipei](https://medium.com/aiot-taipei)
 
 ### Data Structure and Algorithms
 
-- [Data Structure and Algorithms (DSA)](https://github.com/kaka-lin/Notes/tree/master/DSA)
+- [Data Structure and Algorithms (DSA)](https://github.com/kaka-lin/DSA-Notes)
 
 ---
 
